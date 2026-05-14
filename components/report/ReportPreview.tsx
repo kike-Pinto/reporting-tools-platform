@@ -1,4 +1,14 @@
-export default function ReportPreview() {
+import type { DailyReportData } from '@/lib/report/types'
+
+type ReportPreviewProps = {
+  data: DailyReportData
+}
+
+function showValue(value: string, fallback: string) {
+  return value.trim() ? value : fallback
+}
+
+export default function ReportPreview({ data }: ReportPreviewProps) {
   return (
     <aside className='rounded-3xl border border-slate-200 bg-white p-6 shadow-sm lg:sticky lg:top-6 lg:self-start'>
       <div className='mb-6 flex items-start justify-between gap-4 border-b border-slate-200 pb-4'>
@@ -22,8 +32,53 @@ export default function ReportPreview() {
             Project
           </p>
           <p className='mt-1 text-sm font-semibold text-slate-900'>
-            Plant Maintenance Area 2
+            {showValue(data.projectName, 'Project / Site name')}
           </p>
+        </div>
+
+        <div className='grid gap-3 text-sm sm:grid-cols-2'>
+          <div>
+            <p className='text-xs uppercase tracking-wide text-slate-500'>
+              Company
+            </p>
+            <p className='mt-1 font-medium text-slate-900'>
+              {showValue(data.company, 'Company name')}
+            </p>
+          </div>
+
+          <div>
+            <p className='text-xs uppercase tracking-wide text-slate-500'>
+              Location
+            </p>
+            <p className='mt-1 font-medium text-slate-900'>
+              {showValue(data.location, 'Location')}
+            </p>
+          </div>
+
+          <div>
+            <p className='text-xs uppercase tracking-wide text-slate-500'>
+              Date
+            </p>
+            <p className='mt-1 font-medium text-slate-900'>
+              {showValue(data.reportDate, 'Report date')}
+            </p>
+          </div>
+
+          <div>
+            <p className='text-xs uppercase tracking-wide text-slate-500'>
+              Shift
+            </p>
+            <p className='mt-1 font-medium text-slate-900'>{data.shift}</p>
+          </div>
+
+          <div>
+            <p className='text-xs uppercase tracking-wide text-slate-500'>
+              Supervisor
+            </p>
+            <p className='mt-1 font-medium text-slate-900'>
+              {showValue(data.supervisor, 'Supervisor')}
+            </p>
+          </div>
         </div>
 
         <div className='grid grid-cols-2 gap-3'>

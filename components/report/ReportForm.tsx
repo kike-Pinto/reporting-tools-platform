@@ -1,4 +1,11 @@
-export default function ReportForm() {
+import type { DailyReportData } from '@/lib/report/types'
+
+type ReportFormProps = {
+  data: DailyReportData
+  onChange: (field: keyof DailyReportData, value: string) => void
+}
+
+export default function ReportForm({ data, onChange }: ReportFormProps) {
   return (
     <div className='rounded-3xl border border-slate-200 bg-white p-6 shadow-sm'>
       <div className='mb-6'>
@@ -20,6 +27,8 @@ export default function ReportForm() {
           </label>
           <input
             type='text'
+            value={data.projectName}
+            onChange={(event) => onChange('projectName', event.target.value)}
             placeholder='Example: Plant Maintenance Area 2'
             className='w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100'
           />
@@ -31,6 +40,8 @@ export default function ReportForm() {
           </label>
           <input
             type='text'
+            value={data.company}
+            onChange={(event) => onChange('company', event.target.value)}
             placeholder='Example: ABC Contractors'
             className='w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100'
           />
@@ -42,6 +53,8 @@ export default function ReportForm() {
           </label>
           <input
             type='text'
+            value={data.location}
+            onChange={(event) => onChange('location', event.target.value)}
             placeholder='Example: Mine Site / Building / Area'
             className='w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100'
           />
@@ -53,6 +66,8 @@ export default function ReportForm() {
           </label>
           <input
             type='date'
+            value={data.reportDate}
+            onChange={(event) => onChange('reportDate', event.target.value)}
             className='w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100'
           />
         </div>
@@ -61,7 +76,11 @@ export default function ReportForm() {
           <label className='mb-2 block text-sm font-medium text-slate-700'>
             Shift
           </label>
-          <select className='w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100'>
+          <select
+            value={data.shift}
+            onChange={(event) => onChange('shift', event.target.value)}
+            className='w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100'
+          >
             <option>Day Shift</option>
             <option>Night Shift</option>
           </select>
@@ -73,6 +92,8 @@ export default function ReportForm() {
           </label>
           <input
             type='text'
+            value={data.supervisor}
+            onChange={(event) => onChange('supervisor', event.target.value)}
             placeholder='Example: John Smith'
             className='w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100'
           />
