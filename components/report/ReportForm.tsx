@@ -11,6 +11,9 @@ type ReportFormProps = {
     field: keyof ReportActivity,
     value: string | number,
   ) => void
+
+  onRemoveActivity: (activityId: string) => void
+  onClearForm: () => void
 }
 
 export default function ReportForm({
@@ -18,7 +21,13 @@ export default function ReportForm({
   onChange,
   onAddActivity,
   onUpdateActivity,
+  onRemoveActivity,
+  onClearForm,
 }: ReportFormProps) {
+  const inputClass =
+    'w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100'
+
+  const labelClass = 'mb-2 block text-sm font-medium text-slate-700'
   return (
     <div className='space-y-6'>
       <div className='rounded-3xl border border-slate-200 bg-white p-6 shadow-sm'>
@@ -38,7 +47,7 @@ export default function ReportForm({
             placeholder='Project / Site name'
             value={data.projectName}
             onChange={(event) => onChange('projectName', event.target.value)}
-            className='rounded-xl border border-slate-300 px-4 py-3'
+            className={inputClass}
           />
 
           <input
@@ -46,7 +55,7 @@ export default function ReportForm({
             placeholder='Company'
             value={data.company}
             onChange={(event) => onChange('company', event.target.value)}
-            className='rounded-xl border border-slate-300 px-4 py-3'
+            className={inputClass}
           />
 
           <input
@@ -54,20 +63,20 @@ export default function ReportForm({
             placeholder='Location'
             value={data.location}
             onChange={(event) => onChange('location', event.target.value)}
-            className='rounded-xl border border-slate-300 px-4 py-3'
+            className={inputClass}
           />
 
           <input
             type='date'
             value={data.reportDate}
             onChange={(event) => onChange('reportDate', event.target.value)}
-            className='rounded-xl border border-slate-300 px-4 py-3'
+            className={inputClass}
           />
 
           <select
             value={data.shift}
             onChange={(event) => onChange('shift', event.target.value)}
-            className='rounded-xl border border-slate-300 px-4 py-3'
+            className={inputClass}
           >
             <option>Day Shift</option>
             <option>Night Shift</option>
@@ -78,7 +87,7 @@ export default function ReportForm({
             placeholder='Supervisor'
             value={data.supervisor}
             onChange={(event) => onChange('supervisor', event.target.value)}
-            className='rounded-xl border border-slate-300 px-4 py-3'
+            className={inputClass}
           />
         </div>
       </div>
@@ -91,7 +100,7 @@ export default function ReportForm({
           placeholder='Describe the work completed during the shift...'
           value={data.dailySummary}
           onChange={(event) => onChange('dailySummary', event.target.value)}
-          className='mt-4 w-full rounded-xl border border-slate-300 px-4 py-3'
+          className={`mt-4 ${inputClass}`}
         />
       </div>
 
@@ -117,15 +126,26 @@ export default function ReportForm({
             </div>
           )}
 
-          {data.activities.map((activity) => (
+          {data.activities.map((activity, index) => (
             <div
               key={activity.id}
-              className='grid gap-3 rounded-2xl border border-slate-200 p-4'
+              className='grid gap-3 rounded-2xl border border-slate-200 bg-white p-4'
             >
+              <div className='flex items-center justify-between gap-3'>
+                <p className='text-sm font-semibold text-slate-900'>
+                  Activity #{index + 1}
+                </p>
+
+                <button
+                  type='button'
+                  onClick={() => onRemoveActivity(activity.id)}
+                  className='rounded-lg border border-red-200 px-3 py-1.5 text-xs font-semibold text-red-600 transition hover:bg-red-50'
+                >
+                  Remove
+                </button>
+              </div>
               <div>
-                <label className='mb-2 block text-sm font-medium text-slate-700'>
-                  Activity description
-                </label>
+                <label className={labelClass}>Activity description</label>
                 <input
                   type='text'
                   placeholder='Example: Equipment inspection and pipe installation'
@@ -137,15 +157,13 @@ export default function ReportForm({
                       event.target.value,
                     )
                   }
-                  className='w-full rounded-xl border border-slate-300 px-4 py-3'
+                  className={inputClass}
                 />
               </div>
 
               <div className='grid gap-3 md:grid-cols-2'>
                 <div>
-                  <label className='mb-2 block text-sm font-medium text-slate-700'>
-                    Area
-                  </label>
+                  <label className={labelClass}>Area</label>
                   <input
                     type='text'
                     placeholder='Example: Area 2'
@@ -153,14 +171,12 @@ export default function ReportForm({
                     onChange={(event) =>
                       onUpdateActivity(activity.id, 'area', event.target.value)
                     }
-                    className='w-full rounded-xl border border-slate-300 px-4 py-3'
+                    className={inputClass}
                   />
                 </div>
 
                 <div>
-                  <label className='mb-2 block text-sm font-medium text-slate-700'>
-                    Status
-                  </label>
+                  <label className={labelClass}>Status</label>
                   <select
                     value={activity.status}
                     onChange={(event) =>
@@ -170,7 +186,7 @@ export default function ReportForm({
                         event.target.value,
                       )
                     }
-                    className='w-full rounded-xl border border-slate-300 px-4 py-3'
+                    className={inputClass}
                   >
                     <option>Completed</option>
                     <option>In Progress</option>
@@ -182,9 +198,7 @@ export default function ReportForm({
 
               <div className='grid gap-3 md:grid-cols-3'>
                 <div>
-                  <label className='mb-2 block text-sm font-medium text-slate-700'>
-                    Workers
-                  </label>
+                  <label className={labelClass}>Workers</label>
                   <input
                     type='number'
                     min='0'
@@ -197,14 +211,12 @@ export default function ReportForm({
                         Number(event.target.value),
                       )
                     }
-                    className='w-full rounded-xl border border-slate-300 px-4 py-3'
+                    className={inputClass}
                   />
                 </div>
 
                 <div>
-                  <label className='mb-2 block text-sm font-medium text-slate-700'>
-                    Hours
-                  </label>
+                  <label className={labelClass}>Hours</label>
                   <input
                     type='number'
                     min='0'
@@ -217,14 +229,12 @@ export default function ReportForm({
                         Number(event.target.value),
                       )
                     }
-                    className='w-full rounded-xl border border-slate-300 px-4 py-3'
+                    className={inputClass}
                   />
                 </div>
 
                 <div>
-                  <label className='mb-2 block text-sm font-medium text-slate-700'>
-                    Progress %
-                  </label>
+                  <label className={labelClass}>Progress %</label>
                   <input
                     type='number'
                     min='0'
@@ -238,7 +248,7 @@ export default function ReportForm({
                         Number(event.target.value),
                       )
                     }
-                    className='w-full rounded-xl border border-slate-300 px-4 py-3'
+                    className={inputClass}
                   />
                 </div>
               </div>
@@ -269,7 +279,7 @@ export default function ReportForm({
           placeholder='Incident details or safety observations...'
           value={data.incidentDetails}
           onChange={(event) => onChange('incidentDetails', event.target.value)}
-          className='mt-4 w-full rounded-xl border border-slate-300 px-4 py-3'
+          className={`mt-4 ${inputClass}`}
         />
       </div>
 
@@ -283,7 +293,7 @@ export default function ReportForm({
           placeholder='General observations...'
           value={data.observations}
           onChange={(event) => onChange('observations', event.target.value)}
-          className='mt-4 w-full rounded-xl border border-slate-300 px-4 py-3'
+          className={`mt-4 ${inputClass}`}
         />
 
         <textarea
@@ -291,8 +301,29 @@ export default function ReportForm({
           placeholder='Pending tasks for next shift...'
           value={data.pendingTasks}
           onChange={(event) => onChange('pendingTasks', event.target.value)}
-          className='mt-4 w-full rounded-xl border border-slate-300 px-4 py-3'
+          className={`mt-4 ${inputClass}`}
         />
+      </div>
+      <div className='rounded-3xl border border-slate-200 bg-white p-6 shadow-sm'>
+        <div className='flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between'>
+          <div>
+            <h3 className='text-lg font-bold text-slate-950'>
+              Ready to start over?
+            </h3>
+            <p className='mt-1 text-sm text-slate-600'>
+              Clear all fields and remove all activities from the current
+              report.
+            </p>
+          </div>
+
+          <button
+            type='button'
+            onClick={onClearForm}
+            className='rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50'
+          >
+            Clear form
+          </button>
+        </div>
       </div>
     </div>
   )

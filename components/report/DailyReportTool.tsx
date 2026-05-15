@@ -73,6 +73,19 @@ export default function DailyReportTool() {
     }))
   }
 
+  function removeActivity(activityId: string) {
+    setReportData((currentData) => ({
+      ...currentData,
+      activities: currentData.activities.filter(
+        (activity) => activity.id !== activityId,
+      ),
+    }))
+  }
+
+  function clearForm() {
+    setReportData(initialReportData)
+  }
+
   return (
     <section id='report-tool' className='mx-auto max-w-7xl px-6 py-8'>
       <div className='grid gap-6 lg:grid-cols-[1.1fr_0.9fr]'>
@@ -81,6 +94,8 @@ export default function DailyReportTool() {
           onChange={updateReportData}
           onAddActivity={addActivity}
           onUpdateActivity={updateActivity}
+          onRemoveActivity={removeActivity}
+          onClearForm={clearForm}
         />
 
         <ReportPreview data={reportData} />
