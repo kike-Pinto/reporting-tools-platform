@@ -90,7 +90,7 @@ body {
     gap: 24px;
     border-bottom: 1px solid #d1d5db;
     padding-bottom: 18px;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
   }
 
   .print-header h1 {
@@ -102,7 +102,7 @@ body {
   .print-eyebrow {
     font-size: 10px;
     text-transform: uppercase;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.08em;
     color: #2563eb;
     font-weight: 700;
     margin: 0;
@@ -116,8 +116,9 @@ body {
   .print-date-box {
     border: 1px solid #d1d5db;
     background: #f8fafc;
-    padding: 10px 14px;
-    min-width: 150px;
+    padding: 8px 10px;
+    min-width: 115px;
+    max-width: 135px;
     text-align: right;
   }
 
@@ -131,15 +132,22 @@ body {
   .print-section {
     border: 1px solid #d1d5db;
     padding: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     break-inside: avoid;
     page-break-inside: avoid;
   }
 
   .print-section h2 {
-    font-size: 14px;
-    margin: 0 0 8px;
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: -12px -12px 10px;
+    padding: 8px 12px;
     color: #111827;
+    background: #f1f5f9;
+    border-bottom: 1px solid #d1d5db;
   }
 
   .print-section p {
@@ -152,11 +160,39 @@ body {
     gap: 6px 18px;
   }
 
+  .print-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .print-details div {
+    border: 1px solid #e5e7eb;
+    background: #f8fafc;
+    padding: 10px;
+  }
+
+  .print-details span {
+    display: block;
+    font-size: 9px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #6b7280;
+    margin-bottom: 6px;
+  }
+
+  .print-details strong {
+    display: block;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #111827;
+  }
+
   .print-kpis {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 8px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
 
   .print-kpis div {
@@ -187,7 +223,7 @@ body {
   .print-table th,
   .print-table td {
     border: 1px solid #d1d5db;
-    padding: 6px;
+    padding: 8px;
     text-align: left;
     vertical-align: top;
   }
@@ -198,11 +234,13 @@ body {
   }
 
   .print-footer {
-    margin-top: 18px;
-    border-top: 1px solid #d1d5db;
-    padding-top: 10px;
+    margin-top: 10px;
+    padding-top: 8px;
     text-align: center;
-    font-size: 10px;
+    font-size: 9px;
     color: #6b7280;
+
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 }

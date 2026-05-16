@@ -24,7 +24,7 @@ export default function PrintableDailyReport({
     <div className='print-document'>
       <header className='print-header'>
         <div>
-          <p className='print-eyebrow'>Operations Reporting Tool</p>
+          <p className='print-eyebrow'>Reporting Tools Platform</p>
           <h1>Daily Report</h1>
           <p className='print-subtitle'>
             Professional operational shift report
@@ -39,25 +39,32 @@ export default function PrintableDailyReport({
 
       <section className='print-section'>
         <h2>Report Details</h2>
-        <div className='print-grid'>
-          <p>
-            <strong>Project:</strong>{' '}
-            {showValue(data.projectName, 'Not specified')}
-          </p>
-          <p>
-            <strong>Company:</strong> {showValue(data.company, 'Not specified')}
-          </p>
-          <p>
-            <strong>Location:</strong>{' '}
-            {showValue(data.location, 'Not specified')}
-          </p>
-          <p>
-            <strong>Shift:</strong> {data.shift}
-          </p>
-          <p>
-            <strong>Supervisor:</strong>{' '}
-            {showValue(data.supervisor, 'Not specified')}
-          </p>
+
+        <div className='print-details'>
+          <div>
+            <span>Project</span>
+            <strong>{showValue(data.projectName, 'Not specified')}</strong>
+          </div>
+
+          <div>
+            <span>Company</span>
+            <strong>{showValue(data.company, 'Not specified')}</strong>
+          </div>
+
+          <div>
+            <span>Location</span>
+            <strong>{showValue(data.location, 'Not specified')}</strong>
+          </div>
+
+          <div>
+            <span>Shift</span>
+            <strong>{data.shift}</strong>
+          </div>
+
+          <div>
+            <span>Supervisor</span>
+            <strong>{showValue(data.supervisor, 'Not specified')}</strong>
+          </div>
         </div>
       </section>
 
