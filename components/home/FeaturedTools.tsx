@@ -13,7 +13,7 @@ const tools = [
     title: 'Shift Handover Generator',
     description:
       'Generate professional shift handover reports for operational teams.',
-    href: '#',
+    href: '/tools/shift-handover-generator',
     status: 'Coming Soon',
   },
 
@@ -58,7 +58,7 @@ export default function FeaturedTools() {
             </p>
 
             <div className='mt-6'>
-              {tool.status === 'Available' ? (
+              {tool.status === '#' ? (
                 <Link
                   href={tool.href}
                   className='inline-flex items-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-800'
