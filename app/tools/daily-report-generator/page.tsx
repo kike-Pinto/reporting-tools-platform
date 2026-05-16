@@ -4,12 +4,23 @@ import ToolHero from '@/components/report/ToolHero'
 import DailyReportTool from '@/components/report/DailyReportTool'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
+import DailyReportSEO from '@/components/report/DailyReportSEO'
+
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Daily Report Generator',
   description:
-    'Create professional daily operational reports with automatic KPIs, activities tracking and PDF export.',
+    'Create professional daily reports for operations, construction, mining and maintenance with automatic KPIs, activities tracking and PDF export.',
+  keywords: [
+    'daily report generator',
+    'daily report template',
+    'construction daily report',
+    'mining daily report',
+    'operations daily report',
+    'daily report PDF',
+    'shift report generator',
+  ],
 }
 
 export default function DailyReportGeneratorPage() {
@@ -22,6 +33,7 @@ export default function DailyReportGeneratorPage() {
       <DailyReportTool />
 
       <HowItWorks />
+      <DailyReportSEO />
       <Footer />
     </main>
   )
