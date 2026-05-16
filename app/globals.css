@@ -26,6 +26,16 @@ body {
 }
 
 @media print {
+  @page {
+    size: A4;
+    margin: 18mm;
+  }
+
+  html,
+  body {
+    background: white !important;
+  }
+
   body * {
     visibility: hidden;
   }
@@ -40,10 +50,49 @@ body {
     left: 0;
     top: 0;
     width: 100%;
+    max-width: 100%;
+    background: white !important;
     border: none !important;
+    border-radius: 0 !important;
     box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
+  .print-area section,
+  .print-area div {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .print-area h1,
+  .print-area h2,
+  .print-area h3,
+  .print-area h4 {
+    color: black !important;
+  }
+
+  .print-area p,
+  .print-area span,
+  .print-area div {
+    color: #111827 !important;
+  }
+
+  .print-area .bg-slate-50,
+  .print-area .bg-slate-100 {
+    background: #f8fafc !important;
+  }
+
+  .print-area .border-slate-200,
+  .print-area .border-slate-300 {
+    border-color: #d1d5db !important;
+  }
+
+  .print-area .text-blue-600 {
+    color: #2563eb !important;
+  }
+
+  .print-area button,
   .no-print {
     display: none !important;
   }

@@ -22,19 +22,32 @@ export default function ReportPreview({ data }: ReportPreviewProps) {
 
   return (
     <aside className='print-area rounded-3xl border border-slate-200 bg-white p-6 shadow-sm lg:sticky lg:top-6 lg:self-start'>
-      <div className='mb-6 flex items-start justify-between gap-4 border-b border-slate-200 pb-4'>
-        <div>
-          <p className='text-xs font-semibold uppercase tracking-wide text-blue-600'>
-            Live Preview
-          </p>
-          <h2 className='mt-2 text-xl font-bold text-slate-950'>
-            Daily Report
-          </h2>
-        </div>
+      <div className='mb-8 border-b border-slate-200 pb-6'>
+        <div className='flex items-start justify-between gap-4'>
+          <div>
+            <p className='text-xs font-semibold uppercase tracking-[0.2em] text-blue-600'>
+              Operations Reporting Tool
+            </p>
 
-        <span className='rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600'>
-          PDF Preview
-        </span>
+            <h1 className='mt-3 text-3xl font-bold tracking-tight text-slate-950'>
+              Daily Report
+            </h1>
+
+            <p className='mt-2 text-sm text-slate-500'>
+              Professional operational shift report
+            </p>
+          </div>
+
+          <div className='rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-right'>
+            <p className='text-xs uppercase tracking-wide text-slate-500'>
+              Report Date
+            </p>
+
+            <p className='mt-1 text-sm font-semibold text-slate-900'>
+              {showValue(data.reportDate, 'Not specified')}
+            </p>
+          </div>
+        </div>
       </div>
 
       <div className='space-y-6'>
@@ -92,29 +105,29 @@ export default function ReportPreview({ data }: ReportPreviewProps) {
           </div>
         </section>
 
-        <section className='grid grid-cols-2 gap-3'>
-          <div className='rounded-2xl bg-slate-50 p-4'>
+        <section className='grid grid-cols-2 gap-4'>
+          <div className='rounded-2xl border border-slate-200 bg-slate-50 p-5'>
             <p className='text-xs text-slate-500'>Total HH</p>
             <p className='mt-1 text-2xl font-bold text-slate-950'>
               {totalManHours}
             </p>
           </div>
 
-          <div className='rounded-2xl bg-slate-50 p-4'>
+          <div className='rounded-2xl border border-slate-200 bg-slate-50 p-5'>
             <p className='text-xs text-slate-500'>Progress</p>
             <p className='mt-1 text-2xl font-bold text-slate-950'>
               {averageProgress}%
             </p>
           </div>
 
-          <div className='rounded-2xl bg-slate-50 p-4'>
+          <div className='rounded-2xl border border-slate-200 bg-slate-50 p-5'>
             <p className='text-xs text-slate-500'>Activities</p>
             <p className='mt-1 text-2xl font-bold text-slate-950'>
               {data.activities.length}
             </p>
           </div>
 
-          <div className='rounded-2xl bg-slate-50 p-4'>
+          <div className='rounded-2xl border border-slate-200 bg-slate-50 p-5'>
             <p className='text-xs text-slate-500'>Completed</p>
             <p className='mt-1 text-2xl font-bold text-slate-950'>
               {completedActivities}
@@ -149,9 +162,9 @@ export default function ReportPreview({ data }: ReportPreviewProps) {
               Activities will appear here as you complete the form.
             </div>
           ) : (
-            <div className='divide-y divide-slate-200'>
+            <div className='divide-y divide-slate-200 bg-white'>
               {data.activities.map((activity) => (
-                <div key={activity.id} className='p-4'>
+                <div key={activity.id} className='space-y-4 p-5'>
                   <div className='flex items-start justify-between gap-3'>
                     <div>
                       <p className='text-sm font-semibold text-slate-900'>
@@ -245,6 +258,16 @@ export default function ReportPreview({ data }: ReportPreviewProps) {
             </div>
           </div>
         </section>
+
+        <footer className='rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center'>
+          <p className='text-xs uppercase tracking-wide text-slate-500'>
+            Generated with Reporting Tools Platform
+          </p>
+
+          <p className='mt-2 text-xs text-slate-400'>
+            Daily operational reporting system
+          </p>
+        </footer>
 
         <button
           type='button'
