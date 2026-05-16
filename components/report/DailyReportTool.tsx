@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import ReportForm from './ReportForm'
 import ReportPreview from './ReportPreview'
+import PrintableDailyReport from './PrintableDailyReport'
 
 import type { DailyReportData, ReportActivity } from '@/lib/report/types'
 
@@ -88,7 +89,7 @@ export default function DailyReportTool() {
 
   return (
     <section id='report-tool' className='mx-auto max-w-7xl px-6 py-8'>
-      <div className='grid gap-6 lg:grid-cols-[1.1fr_0.9fr]'>
+      <div className='screen-tool grid gap-6 lg:grid-cols-[1.1fr_0.9fr]'>
         <ReportForm
           data={reportData}
           onChange={updateReportData}
@@ -99,6 +100,9 @@ export default function DailyReportTool() {
         />
 
         <ReportPreview data={reportData} />
+      </div>
+      <div className='print-only'>
+        <PrintableDailyReport data={reportData} />
       </div>
     </section>
   )
