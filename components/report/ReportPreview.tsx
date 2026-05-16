@@ -1,3 +1,5 @@
+'use client'
+
 import {
   calculateAverageProgress,
   calculateCompletedActivities,
@@ -19,7 +21,7 @@ export default function ReportPreview({ data }: ReportPreviewProps) {
   const completedActivities = calculateCompletedActivities(data)
 
   return (
-    <aside className='rounded-3xl border border-slate-200 bg-white p-6 shadow-sm lg:sticky lg:top-6 lg:self-start'>
+    <aside className='print-area rounded-3xl border border-slate-200 bg-white p-6 shadow-sm lg:sticky lg:top-6 lg:self-start'>
       <div className='mb-6 flex items-start justify-between gap-4 border-b border-slate-200 pb-4'>
         <div>
           <p className='text-xs font-semibold uppercase tracking-wide text-blue-600'>
@@ -244,7 +246,11 @@ export default function ReportPreview({ data }: ReportPreviewProps) {
           </div>
         </section>
 
-        <button className='w-full rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800'>
+        <button
+          type='button'
+          onClick={() => window.print()}
+          className='no-print w-full rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800'
+        >
           Download PDF
         </button>
       </div>
