@@ -1,9 +1,9 @@
 import Benefits from '@/components/home/Benefits'
 import CTA from '@/components/home/CTA'
 import FeaturedTools from '@/components/home/FeaturedTools'
-import Footer from '@/components/home/Footer'
 import Hero from '@/components/home/Hero'
-import Navbar from '@/components/home/Navbar'
+import Footer from '@/components/layout/Footer'
+import Navbar from '@/components/layout/Navbar'
 import Workflow from '@/components/home/Workflow'
 
 import type { Metadata } from 'next'
