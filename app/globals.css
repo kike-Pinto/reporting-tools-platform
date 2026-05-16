@@ -243,4 +243,13 @@ body {
     break-inside: avoid;
     page-break-inside: avoid;
   }
+
+  .print-generated-note {
+    margin-top: 12px !important;
+    padding-top: 8px !important;
+    border-top: 1px solid #e5e7eb !important;
+    font-size: 9px !important;
+    color: #6b7280 !important;
+    text-align: center !important;
+  }
 }

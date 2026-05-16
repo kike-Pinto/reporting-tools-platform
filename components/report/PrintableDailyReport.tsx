@@ -147,11 +147,11 @@ export default function PrintableDailyReport({
       <section className='print-section'>
         <h2>Pending Tasks</h2>
         <p>{showValue(data.pendingTasks, 'No pending tasks added.')}</p>
-      </section>
 
-      <footer className='print-footer'>
-        Generated with Reporting Tools Platform
-      </footer>
+        <p className='print-generated-note'>
+          Generated with Reporting Tools Platform
+        </p>
+      </section>
     </div>
   )
 }
