@@ -1,13 +1,22 @@
 import type { Metadata } from 'next'
 
 import ShiftHandoverTool from '@/components/handover/ShiftHandoverTool'
+import ShiftHandoverSEO from '@/components/handover/ShiftHandoverSEO'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
 
 export const metadata: Metadata = {
   title: 'Shift Handover Generator',
   description:
-    'Create structured shift handover reports for operations, maintenance and field teams with pending tasks, incidents and PDF export.',
+    'Create structured shift handover reports for operations, maintenance and field teams with pending tasks, incidents, risks and PDF export.',
+  keywords: [
+    'shift handover generator',
+    'shift handover report',
+    'shift handover template',
+    'handover report example',
+    'operations handover',
+    'maintenance handover report',
+  ],
 }
 
 export default function ShiftHandoverGeneratorPage() {
@@ -35,7 +44,7 @@ export default function ShiftHandoverGeneratorPage() {
       </section>
 
       <ShiftHandoverTool />
-
+      <ShiftHandoverSEO />
       <Footer />
     </main>
   )
