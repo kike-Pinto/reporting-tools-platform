@@ -28,6 +28,13 @@ export default function Navbar() {
             Tools
           </Link>
 
+          <Link
+            href='/guides'
+            className='text-sm font-medium text-slate-600 transition hover:text-slate-950'
+          >
+            Guides
+          </Link>
+
           <a
             href='#benefits'
             className='text-sm font-medium text-slate-600 transition hover:text-slate-950'
