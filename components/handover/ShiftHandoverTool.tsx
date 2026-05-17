@@ -77,7 +77,7 @@ export default function ShiftHandoverTool() {
   }
 
   return (
-    <section className='mx-auto max-w-7xl px-6 py-8'>
+    <section id='report-tool' className='mx-auto max-w-7xl px-6 py-8'>
       <div className='screen-tool grid gap-6 lg:grid-cols-[1.1fr_0.9fr]'>
         <HandoverForm
           data={handoverData}
