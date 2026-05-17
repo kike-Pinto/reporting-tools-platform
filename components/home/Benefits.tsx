@@ -1,30 +1,36 @@
 const benefits = [
   {
+    icon: 'PDF',
     title: 'Professional PDF reports',
     description:
       'Generate clean operational documents ready to share with supervisors, clients and teams.',
   },
   {
+    icon: 'KPI',
     title: 'Automatic KPI summaries',
     description:
       'Calculate useful operational metrics directly from the information entered in the form.',
   },
   {
+    icon: '↻',
     title: 'Reusable workflows',
     description:
       'Build multiple reporting tools using shared layouts, logic and export patterns.',
   },
   {
+    icon: 'No',
     title: 'No login required',
     description:
       'Use simple browser-based tools without creating an account or configuring complex systems.',
   },
   {
+    icon: 'Team',
     title: 'Designed for field teams',
     description:
       'Useful for construction, mining, maintenance, logistics and industrial operations.',
   },
   {
+    icon: 'SEO',
     title: 'SEO-ready tool pages',
     description:
       'Each tool connects with guides, internal links and structured pages for organic growth.',
@@ -57,9 +63,11 @@ export default function Benefits() {
           {benefits.map((benefit) => (
             <div
               key={benefit.title}
-              className='rounded-4xl border border-white/10 bg-white/3 p-6'
+              className='rounded-4xl border border-white/10 bg-white/3 p-6 transition hover:bg-white/6'
             >
-              <div className='mb-5 h-10 w-10 rounded-2xl bg-blue-500/20' />
+              <div className='mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-500/15 text-sm font-bold text-blue-200 ring-1 ring-blue-400/20'>
+                {benefit.icon}
+              </div>
 
               <h3 className='text-lg font-bold'>{benefit.title}</h3>
 
