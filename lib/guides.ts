@@ -20,10 +20,10 @@ export const guides: GuideItem[] = [
   {
     title: 'How to Write a Shift Handover Report',
     description:
-      'Learn how to structure shift handover notes for operational continuity.',
-    href: '#',
+      'Learn how to structure shift handover reports for operational continuity.',
+    href: '/guides/how-to-write-a-shift-handover-report',
     category: 'Shift Handover',
-    status: 'Coming Soon',
+    status: 'Available',
   },
   {
     title: 'Daily Report Template Guide',
