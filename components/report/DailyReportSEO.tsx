@@ -105,27 +105,27 @@ export default function DailyReportSEO() {
               ))}
             </div>
           </article>
-        </div>
-      </div>
-      <div className='mt-10 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm'>
-        <h3 className='text-xl font-bold text-slate-950'>
-          Related daily report resources
-        </h3>
+          <div className='mt-10 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm'>
+            <h3 className='text-xl font-bold text-slate-950'>
+              Related daily report resources
+            </h3>
 
-        <div className='mt-5 flex flex-col gap-3 sm:flex-row'>
-          <a
-            href='/guides/how-to-write-a-daily-report'
-            className='inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800'
-          >
-            Read daily report guide
-          </a>
+            <div className='mt-5 flex flex-col gap-3 sm:flex-row'>
+              <a
+                href='/guides/how-to-write-a-daily-report'
+                className='inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800'
+              >
+                Read daily report guide
+              </a>
 
-          <a
-            href='/guides'
-            className='inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50'
-          >
-            View all guides
-          </a>
+              <a
+                href='/guides'
+                className='inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50'
+              >
+                View all guides
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
