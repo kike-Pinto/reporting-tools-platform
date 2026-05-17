@@ -1,30 +1,5 @@
 import Link from 'next/link'
-
-const tools = [
-  {
-    title: 'Daily Report Generator',
-    description:
-      'Create operational daily reports with KPIs, activities and PDF export.',
-    href: '/tools/daily-report-generator',
-    status: 'Available',
-  },
-
-  {
-    title: 'Shift Handover Generator',
-    description:
-      'Generate professional shift handover reports for operational teams.',
-    href: '/tools/shift-handover-generator',
-    status: 'Coming Soon',
-  },
-
-  {
-    title: 'Maintenance Report Generator',
-    description:
-      'Create maintenance and equipment service reports with structured layouts.',
-    href: '#',
-    status: 'Coming Soon',
-  },
-]
+import { tools } from '@/lib/tools'
 
 export default function FeaturedTools() {
   return (
@@ -58,7 +33,7 @@ export default function FeaturedTools() {
             </p>
 
             <div className='mt-6'>
-              {tool.status === '#' ? (
+              {tool.href !== '#' ? (
                 <Link
                   href={tool.href}
                   className='inline-flex items-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-800'

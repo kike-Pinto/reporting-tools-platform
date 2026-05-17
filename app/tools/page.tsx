@@ -4,35 +4,13 @@ import Link from 'next/link'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
 
+import { tools } from '@/lib/tools'
+
 export const metadata: Metadata = {
   title: 'Reporting Tools',
   description:
     'Explore professional reporting tools for operations, maintenance, construction and field teams.',
 }
-
-const tools = [
-  {
-    title: 'Daily Report Generator',
-    description:
-      'Create professional daily reports with activities, KPIs and PDF export.',
-    href: '/tools/daily-report-generator',
-    status: 'Available',
-  },
-  {
-    title: 'Shift Handover Generator',
-    description:
-      'Create structured shift handover reports for operational continuity.',
-    href: '/tools/shift-handover-generator',
-    status: 'Coming Soon',
-  },
-  {
-    title: 'Maintenance Report Generator',
-    description:
-      'Generate equipment maintenance reports with structured service details.',
-    href: '#',
-    status: 'Coming Soon',
-  },
-]
 
 export default function ToolsPage() {
   return (
