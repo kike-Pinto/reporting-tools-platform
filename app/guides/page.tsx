@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { guides } from '@/lib/guides'
 
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
@@ -9,30 +10,6 @@ export const metadata: Metadata = {
   description:
     'Learn how to create professional operational reports, daily reports, shift handovers and maintenance documentation.',
 }
-
-const guides = [
-  {
-    title: 'How to Write a Daily Report',
-    description:
-      'Learn what a daily report should include and how to create professional operational reports.',
-    href: '/guides/how-to-write-a-daily-report',
-    category: 'Daily Reports',
-  },
-  {
-    title: 'How to Write a Shift Handover Report',
-    description:
-      'Learn how to structure shift handover notes for operational continuity.',
-    href: '#',
-    category: 'Shift Handover',
-  },
-  {
-    title: 'Daily Report Template Guide',
-    description:
-      'Understand how daily report templates help standardize operational documentation.',
-    href: '#',
-    category: 'Templates',
-  },
-]
 
 export default function GuidesPage() {
   return (
