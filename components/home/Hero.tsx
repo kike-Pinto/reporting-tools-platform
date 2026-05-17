@@ -37,20 +37,41 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className='mt-14 grid gap-5 sm:grid-cols-3'>
-            <div>
+          <div className='mt-14 grid gap-4 sm:grid-cols-3'>
+            <div className='rounded-2xl border border-slate-200 bg-white p-5 shadow-sm'>
               <p className='text-3xl font-bold text-slate-950'>2</p>
-              <p className='mt-1 text-sm text-slate-500'>Operational tools</p>
+
+              <p className='mt-2 text-sm font-medium text-slate-700'>
+                Operational tools
+              </p>
+
+              <p className='mt-1 text-xs leading-5 text-slate-500'>
+                Daily reports and shift handovers available online.
+              </p>
             </div>
 
-            <div>
+            <div className='rounded-2xl border border-slate-200 bg-white p-5 shadow-sm'>
               <p className='text-3xl font-bold text-slate-950'>PDF</p>
-              <p className='mt-1 text-sm text-slate-500'>Professional export</p>
+
+              <p className='mt-2 text-sm font-medium text-slate-700'>
+                Professional export
+              </p>
+
+              <p className='mt-1 text-xs leading-5 text-slate-500'>
+                Generate structured printable operational documents.
+              </p>
             </div>
 
-            <div>
+            <div className='rounded-2xl border border-slate-200 bg-white p-5 shadow-sm'>
               <p className='text-3xl font-bold text-slate-950'>SEO</p>
-              <p className='mt-1 text-sm text-slate-500'>Structured guides</p>
+
+              <p className='mt-2 text-sm font-medium text-slate-700'>
+                Structured guides
+              </p>
+
+              <p className='mt-1 text-xs leading-5 text-slate-500'>
+                Connected content designed for organic traffic growth.
+              </p>
             </div>
           </div>
         </div>
