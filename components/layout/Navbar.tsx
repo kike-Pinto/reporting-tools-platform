@@ -21,12 +21,12 @@ export default function Navbar() {
         </Link>
 
         <nav className='hidden items-center gap-6 md:flex'>
-          <a
-            href='#tools'
+          <Link
+            href='/tools'
             className='text-sm font-medium text-slate-600 transition hover:text-slate-950'
           >
             Tools
-          </a>
+          </Link>
 
           <a
             href='#benefits'
