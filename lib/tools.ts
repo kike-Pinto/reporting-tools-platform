@@ -20,7 +20,7 @@ export const tools: ToolItem[] = [
     description:
       'Create structured shift handover reports for operational continuity.',
     href: '/tools/shift-handover-generator',
-    status: 'Coming Soon',
+    status: 'Available',
   },
   {
     title: 'Maintenance Report Generator',
