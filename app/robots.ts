@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
     },
 
-    sitemap: 'https://reportingtoolsplatform.com/sitemap.xml',
+    sitemap: 'https://reporting-tools-platform.vercel.app/sitemap.xml',
   }
 }
