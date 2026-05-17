@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Reporting Tools Platform
 
-## Getting Started
+A web platform for creating professional operational reports, shift handovers and PDF documents for industrial, construction, maintenance and field teams.
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Reporting Tools Platform is focused on reducing repetitive manual reporting work by providing simple browser-based tools with structured forms, live previews, automatic KPIs and PDF export.
+
+The project is designed as a family of reusable reporting tools, not as a large ERP system.
+
+## Current Tools
+
+### Daily Report Generator
+
+Create professional daily operational reports with:
+
+- Project and shift details
+- Daily summary
+- Activities performed
+- Automatic KPIs
+- Safety / incidents section
+- Observations and pending tasks
+- Professional PDF export
+
+### Shift Handover Generator
+
+Create structured shift handover reports with:
+
+- Outgoing and incoming shift details
+- Work completed
+- Equipment status
+- Pending tasks
+- Incidents and risks
+- Recommendations
+- Professional PDF export
+
+## Guides
+
+The platform also includes SEO-focused guides:
+
+- How to Write a Daily Report
+- How to Write a Shift Handover Report
+
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- App Router
+- Browser print-to-PDF workflow
+
+## Project Structure
+
+```txt
+app/
+  tools/
+    daily-report-generator/
+    shift-handover-generator/
+  guides/
+    how-to-write-a-daily-report/
+    how-to-write-a-shift-handover-report/
+  sitemap.ts
+  robots.ts
+
+components/
+  report/
+  handover/
+  home/
+  layout/
+
+lib/
+  report/
+  handover/
+  tools.ts
+  guides.ts
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
