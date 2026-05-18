@@ -42,7 +42,7 @@ export default function GuidesPage() {
           {guides.map((guide) => (
             <article
               key={guide.title}
-              className='group rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/70'
+              className='group rounded-4xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/70'
             >
               <div className='flex items-start justify-between gap-4'>
                 <div className='flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 text-sm font-bold text-white'>
