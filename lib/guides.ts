@@ -26,6 +26,14 @@ export const guides: GuideItem[] = [
     status: 'Available',
   },
   {
+    title: 'How to Write a Maintenance Report',
+    description:
+      'Learn how to structure equipment maintenance reports with tasks, findings, parts used and recommendations.',
+    href: '/guides/how-to-write-a-maintenance-report',
+    category: 'Maintenance Reports',
+    status: 'Available',
+  },
+  {
     title: 'Daily Report Template Guide',
     description:
       'Understand how daily report templates help standardize operational documentation.',
