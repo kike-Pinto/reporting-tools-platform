@@ -34,11 +34,19 @@ export const guides: GuideItem[] = [
     status: 'Available',
   },
   {
-    title: 'Daily Report Template Guide',
+    title: 'How to Write an Incident Report',
     description:
-      'Understand how daily report templates help standardize operational documentation.',
-    href: '#',
-    category: 'Templates',
-    status: 'Coming Soon',
+      'Learn how to structure professional incident reports with corrective actions and recommendations.',
+    href: '/guides/how-to-write-an-incident-report',
+    category: 'Incident Reports',
+    status: 'Available',
   },
+  // {
+  //   title: 'Daily Report Template Guide',
+  //   description:
+  //     'Understand how daily report templates help standardize operational documentation.',
+  //   href: '#',
+  //   category: 'Templates',
+  //   status: 'Coming Soon',
+  // },
 ]
