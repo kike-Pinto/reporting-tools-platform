@@ -26,7 +26,7 @@ export const tools: ToolItem[] = [
     title: 'Maintenance Report Generator',
     description:
       'Generate equipment maintenance reports with structured service details.',
-    href: '#',
-    status: 'Coming Soon',
+    href: '/tools/maintenance-report-generator',
+    status: 'Available',
   },
 ]
