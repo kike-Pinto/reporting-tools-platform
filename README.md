@@ -34,6 +34,19 @@ Create structured shift handover reports with:
 - Recommendations
 - Professional PDF export
 
+### Maintenance Report Generator
+
+Create structured maintenance reports with:
+
+- Equipment details
+- Maintenance type
+- Work summary
+- Findings
+- Maintenance tasks
+- Parts and materials used
+- Recommendations
+- Professional PDF export
+
 ## Guides
 
 The platform also includes SEO-focused guides:
