@@ -29,4 +29,11 @@ export const tools: ToolItem[] = [
     href: '/tools/maintenance-report-generator',
     status: 'Available',
   },
+  {
+    title: 'Incident Report Generator',
+    description:
+      'Create structured incident and safety reports with corrective actions and PDF export.',
+    href: '/tools/incident-report-generator',
+    status: 'Available',
+  },
 ]

@@ -47,6 +47,18 @@ Create structured maintenance reports with:
 - Recommendations
 - Professional PDF export
 
+### Incident Report Generator
+
+Create structured incident reports with:
+
+- Incident details
+- Severity and status
+- Immediate actions
+- Root cause notes
+- Corrective actions
+- Recommendations
+- Professional PDF export
+
 ## Guides
 
 The platform also includes SEO-focused guides:
