@@ -16,9 +16,8 @@ export default function Hero() {
           </h1>
 
           <p className='mt-8 max-w-2xl text-lg leading-8 text-slate-600'>
-            Generate structured daily reports, shift handovers and operational
-            PDF documents for maintenance, construction, mining and industrial
-            teams.
+            Create structured reports with live previews, automatic KPIs and PDF
+            export for maintenance, construction, mining and industrial teams.
           </p>
 
           <div className='mt-10 flex flex-col gap-4 sm:flex-row'>
@@ -39,14 +38,15 @@ export default function Hero() {
 
           <div className='mt-14 grid gap-4 sm:grid-cols-3'>
             <div className='rounded-2xl border border-slate-200 bg-white p-5 shadow-sm'>
-              <p className='text-3xl font-bold text-slate-950'>2</p>
+              <p className='text-3xl font-bold text-slate-950'>5</p>
 
               <p className='mt-2 text-sm font-medium text-slate-700'>
                 Operational tools
               </p>
 
               <p className='mt-1 text-xs leading-5 text-slate-500'>
-                Daily reports and shift handovers available online.
+                Daily, shift, maintenance, incident and progress reporting
+                tools.
               </p>
             </div>
 
@@ -83,11 +83,11 @@ export default function Hero() {
             <div className='flex items-center justify-between border-b border-slate-200 pb-4'>
               <div>
                 <p className='text-sm font-semibold text-slate-950'>
-                  Daily Report Generator
+                  Reporting Tools Platform
                 </p>
 
                 <p className='mt-1 text-xs text-slate-500'>
-                  Live operational preview
+                  Multi-tool operational reporting
                 </p>
               </div>
 
@@ -196,7 +196,7 @@ export default function Hero() {
                     </p>
 
                     <p className='mt-1 text-xs text-slate-400'>
-                      Ready to share with supervisors and teams
+                      Ready to export and share across reporting workflows
                     </p>
                   </div>
 
