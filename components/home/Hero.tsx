@@ -105,7 +105,7 @@ export default function Hero() {
                     </p>
 
                     <p className='mt-1 font-semibold text-slate-950'>
-                      Conveyor Maintenance Area 2
+                      Conveyor Upgrade Project
                     </p>
                   </div>
 
