@@ -49,12 +49,4 @@ export const guides: GuideItem[] = [
     category: 'Progress Reports',
     status: 'Available',
   },
-  // {
-  //   title: 'Daily Report Template Guide',
-  //   description:
-  //     'Understand how daily report templates help standardize operational documentation.',
-  //   href: '#',
-  //   category: 'Templates',
-  //   status: 'Coming Soon',
-  // },
 ]

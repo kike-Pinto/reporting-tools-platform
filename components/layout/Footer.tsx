@@ -46,10 +46,31 @@ export default function Footer() {
             </Link>
 
             <Link
-              href='/tools'
+              href='/tools/maintenance-report-generator'
               className='block text-sm text-slate-600 transition hover:text-slate-950'
             >
-              All tools
+              Maintenance Report Generator
+            </Link>
+
+            <Link
+              href='/tools/incident-report-generator'
+              className='block text-sm text-slate-600 transition hover:text-slate-950'
+            >
+              Incident Report Generator
+            </Link>
+
+            <Link
+              href='/tools/progress-report-generator'
+              className='block text-sm text-slate-600 transition hover:text-slate-950'
+            >
+              Progress Report Generator
+            </Link>
+
+            <Link
+              href='/tools'
+              className='block text-sm font-semibold text-slate-900 transition hover:text-blue-600'
+            >
+              All tools →
             </Link>
           </div>
         </div>
@@ -73,10 +94,31 @@ export default function Footer() {
             </Link>
 
             <Link
-              href='/guides'
+              href='/guides/how-to-write-a-maintenance-report'
               className='block text-sm text-slate-600 transition hover:text-slate-950'
             >
-              All guides
+              Maintenance Report Guide
+            </Link>
+
+            <Link
+              href='/guides/how-to-write-an-incident-report'
+              className='block text-sm text-slate-600 transition hover:text-slate-950'
+            >
+              Incident Report Guide
+            </Link>
+
+            <Link
+              href='/guides/how-to-write-a-progress-report'
+              className='block text-sm text-slate-600 transition hover:text-slate-950'
+            >
+              Progress Report Guide
+            </Link>
+
+            <Link
+              href='/guides'
+              className='block text-sm font-semibold text-slate-900 transition hover:text-blue-600'
+            >
+              All guides →
             </Link>
           </div>
         </div>

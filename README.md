@@ -76,6 +76,9 @@ The platform also includes SEO-focused guides:
 
 - How to Write a Daily Report
 - How to Write a Shift Handover Report
+- How to Write a Maintenance Report
+- How to Write an Incident Report
+- How to Write a Progress Report
 
 ## Tech Stack
 
@@ -93,21 +96,33 @@ app/
   tools/
     daily-report-generator/
     shift-handover-generator/
+    maintenance-report-generator/
+    incident-report-generator/
+    progress-report-generator/
   guides/
     how-to-write-a-daily-report/
     how-to-write-a-shift-handover-report/
+    how-to-write-a-maintenance-report/
+    how-to-write-an-incident-report/
+    how-to-write-a-progress-report/
   sitemap.ts
   robots.ts
 
 components/
   report/
   handover/
+  maintenance/
+  incident/
+  progress/
   home/
   layout/
 
 lib/
   report/
   handover/
+  maintenance/
+  incident/
+  progress/
   tools.ts
   guides.ts
 ```
