@@ -41,6 +41,14 @@ export const guides: GuideItem[] = [
     category: 'Incident Reports',
     status: 'Available',
   },
+  {
+    title: 'How to Write a Progress Report',
+    description:
+      'Learn how to structure project progress reports with planned progress, actual progress, issues and next steps.',
+    href: '/guides/how-to-write-a-progress-report',
+    category: 'Progress Reports',
+    status: 'Available',
+  },
   // {
   //   title: 'Daily Report Template Guide',
   //   description:

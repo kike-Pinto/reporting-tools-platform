@@ -61,5 +61,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/guides/how-to-write-an-incident-report`,
       lastModified: new Date(),
     },
+    {
+      url: `${baseUrl}/guides/how-to-write-a-progress-report`,
+      lastModified: new Date(),
+    },
   ]
 }
