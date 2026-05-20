@@ -164,6 +164,63 @@ export default function ProgressReportGeneratorPage() {
         </div>
       </section>
       <ProgressReportTool />
+      <section className='mx-auto max-w-7xl px-6 pb-20'>
+        <div className='rounded-4xl border border-slate-200 bg-white p-8 shadow-sm'>
+          <div className='grid gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-center'>
+            <div>
+              <p className='text-sm font-semibold uppercase tracking-[0.18em] text-blue-600'>
+                Related Resources
+              </p>
+
+              <h2 className='mt-4 text-3xl font-bold tracking-tight text-slate-950'>
+                Learn how to structure professional progress reports
+              </h2>
+
+              <p className='mt-5 max-w-2xl leading-8 text-slate-600'>
+                Read our progress report guide to learn how to document planned
+                progress, actual progress, issues, delays and next steps for
+                project stakeholders.
+              </p>
+            </div>
+
+            <div className='space-y-4'>
+              <a
+                href='/guides/how-to-write-a-progress-report'
+                className='flex items-center justify-between rounded-2xl border border-slate-200 bg-slate-50 px-5 py-4 transition hover:bg-slate-100'
+              >
+                <div>
+                  <p className='text-sm font-semibold text-slate-950'>
+                    Read progress report guide
+                  </p>
+
+                  <p className='mt-1 text-xs text-slate-500'>
+                    Planned progress, actual progress and next steps
+                  </p>
+                </div>
+
+                <span className='text-slate-400'>→</span>
+              </a>
+
+              <a
+                href='/guides'
+                className='flex items-center justify-between rounded-2xl border border-slate-200 bg-slate-50 px-5 py-4 transition hover:bg-slate-100'
+              >
+                <div>
+                  <p className='text-sm font-semibold text-slate-950'>
+                    View all guides
+                  </p>
+
+                  <p className='mt-1 text-xs text-slate-500'>
+                    Explore operational reporting resources
+                  </p>
+                </div>
+
+                <span className='text-slate-400'>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
       <Footer />
     </main>
   )
