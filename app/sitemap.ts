@@ -35,6 +35,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
 
     {
+      url: `${baseUrl}/tools/progress-report-generator`,
+      lastModified: new Date(),
+    },
+
+    {
       url: `${baseUrl}/guides`,
       lastModified: new Date(),
     },

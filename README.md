@@ -59,6 +59,17 @@ Create structured incident reports with:
 - Recommendations
 - Professional PDF export
 
+### Progress Report Generator
+
+Create structured project progress reports with:
+
+- Project details
+- Planned vs actual progress
+- Activities tracking
+- Issues and delays
+- Next steps
+- Professional PDF export
+
 ## Guides
 
 The platform also includes SEO-focused guides:

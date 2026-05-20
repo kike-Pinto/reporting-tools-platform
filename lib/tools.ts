@@ -36,4 +36,11 @@ export const tools: ToolItem[] = [
     href: '/tools/incident-report-generator',
     status: 'Available',
   },
+  {
+    title: 'Progress Report Generator',
+    description:
+      'Create structured project progress reports with activities, completion tracking and PDF export.',
+    href: '/tools/progress-report-generator',
+    status: 'Available',
+  },
 ]
