@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://reporting-tools-platform.vercel.app/'),
+  metadataBase: new URL('https://reporting-tools-platform.vercel.app'),
 
   title: {
     default: 'Reporting Tools Platform',
@@ -23,11 +23,15 @@ export const metadata: Metadata = {
     'PDF report generator',
   ],
 
+  verification: {
+    google: 'rgBAbn7ULYgjI7L7ilydOVae5q7XBGyJGOCt5dOKE8w',
+  },
+
   openGraph: {
     title: 'Reporting Tools Platform',
     description:
       'Professional reporting tools for operations, maintenance, construction and industrial teams.',
-    url: 'https://reporting-tools-platform.vercel.app/',
+    url: 'https://reporting-tools-platform.vercel.app',
     siteName: 'Reporting Tools Platform',
     type: 'website',
   },
