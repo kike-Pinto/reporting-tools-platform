@@ -18,6 +18,14 @@ export const guides: GuideItem[] = [
     status: 'Available',
   },
   {
+    title: 'How to Write a Daily Report for Construction',
+    description:
+      'Learn how to structure construction daily reports with site activities, manpower, delays and pending tasks.',
+    href: '/guides/how-to-write-a-daily-report-for-construction',
+    category: 'Daily Reports',
+    status: 'Available',
+  },
+  {
     title: 'How to Write a Shift Handover Report',
     description:
       'Learn how to structure shift handover reports for operational continuity.',

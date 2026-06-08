@@ -50,6 +50,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
 
     {
+      url: `${baseUrl}/guides/how-to-write-a-daily-report-for-construction`,
+      lastModified: new Date(),
+    },
+
+    {
       url: `${baseUrl}/guides/how-to-write-a-shift-handover-report`,
       lastModified: new Date(),
     },
