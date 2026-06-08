@@ -51,7 +51,7 @@ export default function Navbar() {
         <button
           type='button'
           onClick={() => setIsOpen((current) => !current)}
-          className='inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 text-slate-700 transition hover:bg-slate-50 md:hidden cursor-pointer'
+          className='relative z-50 inline-flex h-10 w-10 touch-manipulation cursor-pointer items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 transition hover:bg-slate-50 md:hidden'
           aria-label='Toggle navigation menu'
           aria-expanded={isOpen}
         >
