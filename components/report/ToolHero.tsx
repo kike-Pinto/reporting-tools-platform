@@ -3,18 +3,18 @@ export default function ToolHero() {
     <section className='relative overflow-hidden border-b border-slate-200 bg-white'>
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.12),transparent_45%)]' />
 
-      <div className='relative mx-auto max-w-7xl px-6 py-20'>
+      <div className='relative mx-auto max-w-7xl px-6 py-16 sm:py-20'>
         <div className='grid gap-12 lg:grid-cols-[1fr_0.8fr] lg:items-center'>
           <div>
             <div className='inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700'>
               Operations Reporting Tool
             </div>
 
-            <h1 className='mt-8 text-5xl font-bold tracking-tight text-slate-950 sm:text-6xl'>
+            <h1 className='mt-7 text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl'>
               Daily Report Generator
             </h1>
 
-            <p className='mt-6 max-w-2xl text-lg leading-8 text-slate-600'>
+            <p className='mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8'>
               Create professional daily reports for operations, construction,
               mining and maintenance. Fill out a structured form, preview your
               report instantly and export a clean PDF.

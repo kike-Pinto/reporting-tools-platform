@@ -105,7 +105,7 @@ export default function ReportForm({
       </div>
 
       <div className='rounded-3xl border border-slate-200 bg-white p-6 shadow-sm'>
-        <div className='mb-5 flex items-center justify-between'>
+        <div className='mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between'>
           <h3 className='text-xl font-bold text-slate-950'>
             Activities performed
           </h3>
@@ -113,7 +113,7 @@ export default function ReportForm({
           <button
             type='button'
             onClick={onAddActivity}
-            className='rounded-xl bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700'
+            className='w-full rounded-xl bg-blue-600 px-4 py-3 text-xs sm:text-sm font-semibold text-white transition hover:bg-blue-700 sm:w-auto sm:py-2'
           >
             + Add activity
           </button>

@@ -21,29 +21,19 @@ export default function ReportPreview({ data }: ReportPreviewProps) {
   const completedActivities = calculateCompletedActivities(data)
 
   return (
-    <aside className='print-area rounded-3xl border border-slate-200 bg-white p-6 shadow-sm lg:sticky lg:top-6 lg:self-start print:static'>
+    <aside className='print-area rounded-3xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6 lg:sticky lg:top-24 lg:self-start print:static'>
       <div className='mb-8 border-b border-slate-200 pb-6'>
-        <div className='flex items-start justify-between gap-4'>
+        <div className='flex items-center justify-between gap-4'>
           <div>
-            <p className='text-xs font-semibold uppercase tracking-[0.2em] text-blue-600'>
-              Operations Reporting Tool
-            </p>
-
-            <h1 className='mt-3 text-3xl font-bold tracking-tight text-slate-950'>
-              Daily Report
-            </h1>
-
-            <p className='mt-2 text-sm text-slate-500'>
-              Professional operational shift report
-            </p>
+            <h1 className='text-2xl font-bold text-slate-950'>Daily Report</h1>
           </div>
 
-          <div className='rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-right'>
+          <div className='rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-right'>
             <p className='text-xs uppercase tracking-wide text-slate-500'>
               Report Date
             </p>
 
-            <p className='mt-1 text-sm font-semibold text-slate-900'>
+            <p className='mt-1 text-xs font-semibold text-slate-900 sm:text-sm'>
               {showValue(data.reportDate, 'Not specified')}
             </p>
           </div>
