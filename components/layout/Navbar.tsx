@@ -35,19 +35,19 @@ export default function Navbar() {
             Guides
           </Link>
 
-          <a
-            href='#benefits'
+          <Link
+            href='/#benefits'
             className='text-sm font-medium text-slate-600 transition hover:text-slate-950'
           >
             Benefits
-          </a>
+          </Link>
 
-          <a
-            href='#workflow'
+          <Link
+            href='/#workflow'
             className='text-sm font-medium text-slate-600 transition hover:text-slate-950'
           >
             Workflow
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
