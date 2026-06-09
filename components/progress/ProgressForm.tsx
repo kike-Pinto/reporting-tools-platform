@@ -139,7 +139,7 @@ export default function ProgressForm({
       />
 
       <div className='rounded-3xl border border-slate-200 bg-white p-6 shadow-sm'>
-        <div className='mb-5 flex items-center justify-between gap-4'>
+        <div className='mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between'>
           <h3 className='text-xl font-bold text-slate-950'>
             Progress activities
           </h3>
@@ -147,7 +147,7 @@ export default function ProgressForm({
           <button
             type='button'
             onClick={onAddActivity}
-            className='rounded-xl bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700'
+            className='w-full rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 sm:w-auto sm:py-2'
           >
             + Add activity
           </button>
@@ -317,7 +317,7 @@ export default function ProgressForm({
           <button
             type='button'
             onClick={onClearForm}
-            className='rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50'
+            className='w-full rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 sm:w-auto'
           >
             Clear form
           </button>
