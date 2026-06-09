@@ -143,7 +143,7 @@ export default function MaintenanceForm({
       />
 
       <div className='rounded-3xl border border-slate-200 bg-white p-6 shadow-sm'>
-        <div className='mb-5 flex items-center justify-between gap-4'>
+        <div className='mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between'>
           <h3 className='text-xl font-bold text-slate-950'>
             Maintenance tasks
           </h3>
@@ -151,7 +151,7 @@ export default function MaintenanceForm({
           <button
             type='button'
             onClick={onAddTask}
-            className='rounded-xl bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700'
+            className='w-full rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 sm:w-auto sm:py-2'
           >
             + Add task
           </button>
@@ -260,7 +260,7 @@ export default function MaintenanceForm({
       </div>
 
       <div className='rounded-3xl border border-slate-200 bg-white p-6 shadow-sm'>
-        <div className='mb-5 flex items-center justify-between gap-4'>
+        <div className='mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between'>
           <h3 className='text-xl font-bold text-slate-950'>
             Parts / Materials used
           </h3>
@@ -268,7 +268,7 @@ export default function MaintenanceForm({
           <button
             type='button'
             onClick={onAddPart}
-            className='rounded-xl bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700'
+            className='w-full rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 sm:w-auto sm:py-2'
           >
             + Add part
           </button>
@@ -372,7 +372,7 @@ export default function MaintenanceForm({
           <button
             type='button'
             onClick={onClearForm}
-            className='rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50'
+            className='w-full rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 sm:w-auto'
           >
             Clear form
           </button>
