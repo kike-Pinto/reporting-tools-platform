@@ -26,18 +26,18 @@ export default function IncidentReportGeneratorPage() {
       <section className='relative overflow-hidden border-b border-slate-200 bg-white'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.12),transparent_45%)]' />
 
-        <div className='relative mx-auto max-w-7xl px-6 py-20'>
+        <div className='relative mx-auto max-w-7xl px-6 py-16 sm:py-20'>
           <div className='grid gap-12 lg:grid-cols-[1fr_0.8fr] lg:items-center'>
             <div>
               <div className='inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700'>
                 Safety Reporting Tool
               </div>
 
-              <h1 className='mt-8 text-5xl font-bold tracking-tight text-slate-950 sm:text-6xl'>
+              <h1 className='mt-7 text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl'>
                 Incident Report Generator
               </h1>
 
-              <p className='mt-6 max-w-2xl text-lg leading-8 text-slate-600'>
+              <p className='mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8'>
                 Create structured incident and safety reports with severity,
                 root cause, immediate actions, corrective actions and PDF
                 export.
@@ -83,7 +83,7 @@ export default function IncidentReportGeneratorPage() {
               </div>
             </div>
 
-            <div className='rounded-4xl border border-slate-200 bg-white p-6 shadow-2xl shadow-slate-200/70'>
+            <div className='rounded-3xl border border-slate-200 bg-white p-4 shadow-2xl shadow-slate-200/70 sm:rounded-4xl sm:p-6'>
               <div className='flex items-center justify-between border-b border-slate-200 pb-4'>
                 <div>
                   <p className='text-sm font-semibold text-slate-950'>
@@ -110,7 +110,7 @@ export default function IncidentReportGeneratorPage() {
                   </p>
                 </div>
 
-                <div className='grid grid-cols-3 gap-3'>
+                <div className='grid grid-cols-3 gap-2 sm:gap-3'>
                   <div className='rounded-2xl border border-slate-200 p-4'>
                     <p className='text-xs text-slate-500'>Severity</p>
                     <p className='mt-2 text-xl font-bold text-slate-950'>
@@ -163,15 +163,15 @@ export default function IncidentReportGeneratorPage() {
         </div>
       </section>
       <IncidentReportTool />
-      <section className='mx-auto max-w-7xl px-6 pb-20'>
-        <div className='rounded-4xl border border-slate-200 bg-white p-8 shadow-sm'>
+      <section className='mx-auto max-w-7xl px-6 pb-14 sm:pb-20'>
+        <div className='rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8 lg:rounded-4xl'>
           <div className='grid gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-center'>
             <div>
               <p className='text-sm font-semibold uppercase tracking-[0.18em] text-blue-600'>
                 Related Resources
               </p>
 
-              <h2 className='mt-4 text-3xl font-bold tracking-tight text-slate-950'>
+              <h2 className='mt-4 text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl'>
                 Learn how to structure professional incident reports
               </h2>
 

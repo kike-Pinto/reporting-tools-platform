@@ -80,7 +80,10 @@ export default function IncidentReportTool() {
   }
 
   return (
-    <section id='report-tool' className='mx-auto max-w-7xl px-6 py-8'>
+    <section
+      id='report-tool'
+      className='mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-8'
+    >
       <div className='screen-tool grid gap-6 lg:grid-cols-[1.1fr_0.9fr]'>
         <IncidentForm
           data={incidentData}
