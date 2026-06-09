@@ -19,19 +19,13 @@ export default function HandoverPreview({ data }: HandoverPreviewProps) {
   const criticalItems = calculateCriticalItems(data)
 
   return (
-    <aside className='rounded-3xl border border-slate-200 bg-white p-6 shadow-sm lg:sticky lg:top-6 lg:self-start'>
+    <aside className='rounded-3xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6 lg:sticky lg:top-24 lg:self-start'>
       <div className='mb-6 border-b border-slate-200 pb-4'>
-        <p className='text-xs font-semibold uppercase tracking-wide text-blue-600'>
-          Live Preview
-        </p>
-
-        <h2 className='mt-2 text-xl font-bold text-slate-950'>
+        <h2 className='text-xl font-bold text-slate-950'>
           Shift Handover Report
         </h2>
 
-        <p className='mt-2 text-sm text-slate-500'>
-          Preview your shift handover before exporting.
-        </p>
+        <p className='mt-2 text-sm text-slate-500'>Preview before exporting.</p>
       </div>
 
       <div className='space-y-6'>

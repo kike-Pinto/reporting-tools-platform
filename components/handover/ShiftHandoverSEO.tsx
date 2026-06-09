@@ -25,14 +25,14 @@ const faqs = [
 
 export default function ShiftHandoverSEO() {
   return (
-    <section className='mx-auto max-w-7xl px-6 py-20'>
+    <section className='mx-auto max-w-7xl px-6 py-14 sm:py-16 lg:py-20'>
       <div className='grid gap-10 lg:grid-cols-[0.8fr_1.2fr]'>
         <div>
           <p className='text-sm font-semibold uppercase tracking-[0.18em] text-blue-600'>
             Shift Handover Guide
           </p>
 
-          <h2 className='mt-4 text-4xl font-bold tracking-tight text-slate-950'>
+          <h2 className='mt-4 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl'>
             Create structured shift handover reports
           </h2>
 
