@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'Reporting Tools',
   description:
     'Explore professional reporting tools for operations, maintenance, construction and field teams.',
+  alternates: {
+    canonical: 'https://reporting-tools-platform.vercel.app/tools',
+  },
 }
 
 export default function ToolsPage() {

@@ -16,6 +16,10 @@ export const metadata: Metadata = {
     'daily report example',
     'daily status report',
   ],
+  alternates: {
+    canonical:
+      'https://reporting-tools-platform.vercel.app/guides/how-to-write-a-daily-report',
+  },
 }
 
 const dailyReportSections = [

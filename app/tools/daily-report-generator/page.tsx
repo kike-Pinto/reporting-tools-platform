@@ -21,6 +21,10 @@ export const metadata: Metadata = {
     'daily report PDF',
     'shift report generator',
   ],
+  alternates: {
+    canonical:
+      'https://reporting-tools-platform.vercel.app/tools/daily-report-generator',
+  },
 }
 
 export default function DailyReportGeneratorPage() {

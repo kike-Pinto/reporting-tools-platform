@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'Reporting Guides',
   description:
     'Learn how to create professional operational reports, daily reports, shift handovers and maintenance documentation.',
+  alternates: {
+    canonical: 'https://reporting-tools-platform.vercel.app/guides',
+  },
 }
 
 export default function GuidesPage() {

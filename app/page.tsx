@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: 'Reporting Tools Platform',
   description:
     'Professional operational reporting tools with PDF export, KPI tracking and reusable workflows.',
+  alternates: {
+    canonical: 'https://reporting-tools-platform.vercel.app',
+  },
 }
 
 export default function HomePage() {
