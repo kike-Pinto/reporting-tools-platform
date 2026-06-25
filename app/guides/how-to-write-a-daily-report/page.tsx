@@ -262,6 +262,20 @@ export default function HowToWriteDailyReportPage() {
               </Link>
 
               <Link
+                href='/guides/how-to-write-a-daily-report-to-your-boss'
+                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
+              >
+                <p className='font-semibold text-slate-950'>
+                  Daily Report to Your Boss
+                </p>
+
+                <p className='mt-2 text-sm leading-6 text-slate-600'>
+                  Learn how to write a short daily report for a manager or
+                  supervisor.
+                </p>
+              </Link>
+
+              <Link
                 href='/guides/how-to-write-a-daily-report-for-construction'
                 className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
               >

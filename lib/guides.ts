@@ -26,6 +26,14 @@ export const guides: GuideItem[] = [
     status: 'Available',
   },
   {
+    title: 'How to Write a Daily Report to Your Boss',
+    description:
+      'Learn how to write a clear daily report to your boss or manager with completed work, issues, pending tasks and support needed.',
+    href: '/guides/how-to-write-a-daily-report-to-your-boss',
+    category: 'Daily Reports',
+    status: 'Available',
+  },
+  {
     title: 'How to Write a Daily Report for Construction',
     description:
       'Learn how to structure construction daily reports with site activities, manpower, delays and pending tasks.',

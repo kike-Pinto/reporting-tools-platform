@@ -55,6 +55,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
 
     {
+      url: `${baseUrl}/guides/how-to-write-a-daily-report-to-your-boss`,
+      lastModified: new Date(),
+    },
+
+    {
       url: `${baseUrl}/guides/how-to-write-a-daily-report-for-construction`,
       lastModified: new Date(),
     },
