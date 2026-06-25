@@ -246,7 +246,21 @@ export default function HowToWriteDailyReportPage() {
               Related daily report guides
             </h2>
 
-            <div className='mt-6 grid gap-4 sm:grid-cols-2'>
+            <div className='mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+              <Link
+                href='/guides/daily-work-report-sample'
+                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
+              >
+                <p className='font-semibold text-slate-950'>
+                  Daily Work Report Sample
+                </p>
+
+                <p className='mt-2 text-sm leading-6 text-slate-600'>
+                  See a practical daily work report example with completed work,
+                  issues and pending tasks.
+                </p>
+              </Link>
+
               <Link
                 href='/guides/how-to-write-a-daily-report-for-construction'
                 className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
