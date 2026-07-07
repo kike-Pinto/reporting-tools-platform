@@ -1,84 +1,123 @@
 import type { MetadataRoute } from 'next'
 
+export const dynamic = 'force-static'
+
 const baseUrl = 'https://reporting-tools-platform.vercel.app'
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date()
+
   return [
     {
       url: `${baseUrl}`,
-      lastModified: new Date(),
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 1,
     },
 
     {
       url: `${baseUrl}/tools`,
-      lastModified: new Date(),
-    },
-
-    {
-      url: `${baseUrl}/tools/daily-report-generator`,
-      lastModified: new Date(),
-    },
-
-    {
-      url: `${baseUrl}/tools/shift-handover-generator`,
-      lastModified: new Date(),
-    },
-
-    {
-      url: `${baseUrl}/tools/maintenance-report-generator`,
-      lastModified: new Date(),
-    },
-
-    {
-      url: `${baseUrl}/tools/incident-report-generator`,
-      lastModified: new Date(),
-    },
-
-    {
-      url: `${baseUrl}/tools/progress-report-generator`,
-      lastModified: new Date(),
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
     },
 
     {
       url: `${baseUrl}/guides`,
-      lastModified: new Date(),
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+
+    {
+      url: `${baseUrl}/tools/daily-report-generator`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+
+    {
+      url: `${baseUrl}/tools/shift-handover-generator`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+
+    {
+      url: `${baseUrl}/tools/maintenance-report-generator`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+
+    {
+      url: `${baseUrl}/tools/incident-report-generator`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+
+    {
+      url: `${baseUrl}/tools/progress-report-generator`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
     },
 
     {
       url: `${baseUrl}/guides/how-to-write-a-daily-report`,
-      lastModified: new Date(),
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
     },
 
     {
       url: `${baseUrl}/guides/daily-work-report-sample`,
-      lastModified: new Date(),
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
     },
 
     {
       url: `${baseUrl}/guides/how-to-write-a-daily-report-to-your-boss`,
-      lastModified: new Date(),
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
     },
 
     {
       url: `${baseUrl}/guides/how-to-write-a-daily-report-for-construction`,
-      lastModified: new Date(),
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
     },
 
     {
       url: `${baseUrl}/guides/how-to-write-a-shift-handover-report`,
-      lastModified: new Date(),
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
     },
+
     {
       url: `${baseUrl}/guides/how-to-write-a-maintenance-report`,
-      lastModified: new Date(),
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
     },
+
     {
       url: `${baseUrl}/guides/how-to-write-an-incident-report`,
-      lastModified: new Date(),
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
     },
+
     {
       url: `${baseUrl}/guides/how-to-write-a-progress-report`,
-      lastModified: new Date(),
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
     },
   ]
 }

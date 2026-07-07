@@ -42,6 +42,11 @@ export const metadata: Metadata = {
     description:
       'Professional reporting tools for operations, maintenance, construction and industrial teams.',
   },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function RootLayout({
