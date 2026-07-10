@@ -1,9 +1,22 @@
 import Link from 'next/link'
 
+const relatedPlatforms = [
+  {
+    title: 'Data Tools Platform',
+    href: 'https://data-tools-platform.vercel.app/',
+    description: 'CSV, Excel and JSON tools',
+  },
+  {
+    title: 'Dashboard Tools Platform',
+    href: 'https://dashboard-tools-platform.vercel.app/',
+    description: 'KPI dashboards from Excel and CSV',
+  },
+]
+
 export default function Footer() {
   return (
     <footer className='border-t border-slate-200 bg-white'>
-      <div className='mx-auto grid max-w-7xl gap-10 px-6 py-12 md:grid-cols-[1.2fr_0.8fr_0.8fr]'>
+      <div className='mx-auto grid max-w-7xl gap-10 px-6 py-12 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1fr]'>
         <div>
           <div className='flex items-center gap-3'>
             <div className='flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 text-sm font-bold text-white'>
@@ -120,6 +133,32 @@ export default function Footer() {
             >
               All guides →
             </Link>
+          </div>
+        </div>
+
+        <div>
+          <p className='text-sm font-semibold text-slate-950'>
+            Related Platforms
+          </p>
+
+          <div className='mt-4 space-y-4'>
+            {relatedPlatforms.map((platform) => (
+              <a
+                key={platform.href}
+                href={platform.href}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='block rounded-2xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-200 hover:bg-blue-50'
+              >
+                <p className='text-sm font-semibold text-slate-950'>
+                  {platform.title}
+                </p>
+
+                <p className='mt-1 text-xs leading-5 text-slate-500'>
+                  {platform.description}
+                </p>
+              </a>
+            ))}
           </div>
         </div>
       </div>
