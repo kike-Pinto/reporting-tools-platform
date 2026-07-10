@@ -16,6 +16,10 @@ export const metadata: Metadata = {
     'daily report examples',
     'daily work report format',
   ],
+  alternates: {
+    canonical:
+      'https://reporting-tools-platform.vercel.app/guides/daily-work-report-sample',
+  },
 }
 
 const sampleSections = [
@@ -167,6 +171,58 @@ export default function DailyWorkReportSamplePage() {
 
           <section className='mt-14'>
             <h2 className='text-3xl font-bold text-slate-950'>
+              How to write a daily work report step by step
+            </h2>
+
+            <div className='mt-8 space-y-6'>
+              <div className='rounded-2xl border border-slate-200 bg-white p-6'>
+                <h3 className='text-xl font-bold text-slate-950'>
+                  1. Record the basic work information
+                </h3>
+
+                <p className='mt-3 leading-7 text-slate-600'>
+                  Add the date, work area, project, shift and the name of the
+                  person preparing the report.
+                </p>
+              </div>
+
+              <div className='rounded-2xl border border-slate-200 bg-white p-6'>
+                <h3 className='text-xl font-bold text-slate-950'>
+                  2. Summarize completed work
+                </h3>
+
+                <p className='mt-3 leading-7 text-slate-600'>
+                  Describe the main activities completed during the day. Use
+                  clear actions, locations and measurable results when possible.
+                </p>
+              </div>
+
+              <div className='rounded-2xl border border-slate-200 bg-white p-6'>
+                <h3 className='text-xl font-bold text-slate-950'>
+                  3. Document issues and delays
+                </h3>
+
+                <p className='mt-3 leading-7 text-slate-600'>
+                  Record incidents, restrictions, equipment problems or delays
+                  that affected the planned work.
+                </p>
+              </div>
+
+              <div className='rounded-2xl border border-slate-200 bg-white p-6'>
+                <h3 className='text-xl font-bold text-slate-950'>
+                  4. Define pending tasks and next steps
+                </h3>
+
+                <p className='mt-3 leading-7 text-slate-600'>
+                  Explain what remains unfinished, who should continue the work
+                  and whether any resources, approvals or support are required.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className='mt-14'>
+            <h2 className='text-3xl font-bold text-slate-950'>
               Simple daily work report format
             </h2>
 
@@ -184,37 +240,101 @@ export default function DailyWorkReportSamplePage() {
 
           <section className='mt-14'>
             <h2 className='text-3xl font-bold text-slate-950'>
-              Related daily report resources
+              Common daily work report mistakes
             </h2>
 
             <div className='mt-6 grid gap-4 sm:grid-cols-2'>
-              <Link
-                href='/guides/how-to-write-a-daily-report'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  How to Write a Daily Report
-                </p>
+              {[
+                {
+                  title: 'Using vague descriptions',
+                  description:
+                    'Avoid phrases such as “work completed.” Explain what was done, where it happened and what result was achieved.',
+                },
+                {
+                  title: 'Leaving out delays',
+                  description:
+                    'Document delays and blockers clearly so managers understand their effect on the work plan.',
+                },
+                {
+                  title: 'Mixing completed and pending work',
+                  description:
+                    'Keep completed activities separate from tasks that still need attention.',
+                },
+                {
+                  title: 'Adding unnecessary detail',
+                  description:
+                    'Include useful operational information without turning the report into a long narrative.',
+                },
+              ].map((mistake) => (
+                <div
+                  key={mistake.title}
+                  className='rounded-2xl border border-slate-200 bg-slate-50 p-5'
+                >
+                  <h3 className='font-bold text-slate-950'>{mistake.title}</h3>
 
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Learn the full structure of a professional daily report.
-                </p>
-              </Link>
-
-              <Link
-                href='/guides/how-to-write-a-daily-report-for-construction'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  Daily Report for Construction
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  See how daily reports are used on construction sites.
-                </p>
-              </Link>
+                  <p className='mt-2 text-sm leading-6 text-slate-600'>
+                    {mistake.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </section>
+
+          <div className='mt-6 grid gap-4 sm:grid-cols-2'>
+            <Link
+              href='/guides/how-to-write-a-daily-report'
+              className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
+            >
+              <p className='font-semibold text-slate-950'>
+                How to Write a Daily Report
+              </p>
+
+              <p className='mt-2 text-sm leading-6 text-slate-600'>
+                Learn the complete structure of a professional daily report.
+              </p>
+            </Link>
+
+            <Link
+              href='/guides/how-to-write-a-daily-report-to-your-boss'
+              className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
+            >
+              <p className='font-semibold text-slate-950'>
+                Daily Report to Your Boss
+              </p>
+
+              <p className='mt-2 text-sm leading-6 text-slate-600'>
+                Learn how to summarize completed work, issues and pending tasks
+                for a manager.
+              </p>
+            </Link>
+
+            <Link
+              href='/guides/how-to-write-a-daily-report-for-construction'
+              className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
+            >
+              <p className='font-semibold text-slate-950'>
+                Daily Report for Construction
+              </p>
+
+              <p className='mt-2 text-sm leading-6 text-slate-600'>
+                See how daily reports are used to document construction site
+                activity.
+              </p>
+            </Link>
+
+            <Link
+              href='/tools/daily-report-generator'
+              className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
+            >
+              <p className='font-semibold text-slate-950'>
+                Daily Report Generator
+              </p>
+
+              <p className='mt-2 text-sm leading-6 text-slate-600'>
+                Create a structured daily work report and export it as a PDF.
+              </p>
+            </Link>
+          </div>
 
           <section className='mt-14'>
             <h2 className='text-3xl font-bold text-slate-950'>
@@ -239,7 +359,7 @@ export default function DailyWorkReportSamplePage() {
             </div>
           </section>
 
-          <section className='mt-14 rounded-3xl border border-slate-200 bg-slate-900 p-8 text-white'>
+          <section className='mt-14 rounded-3xl border border-slate-200 bg-slate-900 p-6 text-white sm:p-8'>
             <h2 className='text-3xl font-bold'>Create a daily work report</h2>
 
             <p className='mt-4 max-w-2xl text-lg leading-8 text-slate-300'>
