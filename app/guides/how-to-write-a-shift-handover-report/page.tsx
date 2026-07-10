@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   title: 'How to Write a Shift Handover Report',
   description:
     'Learn how to write structured shift handover reports for operations, maintenance and field teams.',
+  alternates: {
+    canonical:
+      'https://reporting-tools-platform.vercel.app/guides/how-to-write-a-shift-handover-report',
+  },
 }
 
 export default function HowToWriteShiftHandoverReportPage() {
@@ -15,13 +19,13 @@ export default function HowToWriteShiftHandoverReportPage() {
     <main className='min-h-screen bg-slate-50 text-slate-900'>
       <Navbar />
 
-      <article className='mx-auto max-w-4xl px-6 py-20'>
+      <article className='mx-auto max-w-4xl px-6 py-16 sm:py-20'>
         <div className='rounded-3xl border border-slate-200 bg-white p-8 shadow-sm sm:p-12'>
           <p className='text-sm font-semibold uppercase tracking-[0.18em] text-blue-600'>
             Shift Handover Guide
           </p>
 
-          <h1 className='mt-4 text-5xl font-bold tracking-tight text-slate-950'>
+          <h1 className='mt-4 text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl'>
             How to Write a Shift Handover Report
           </h1>
 

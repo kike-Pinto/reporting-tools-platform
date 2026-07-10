@@ -15,6 +15,10 @@ export const metadata: Metadata = {
     'site daily report',
     'daily construction report template',
   ],
+  alternates: {
+    canonical:
+      'https://reporting-tools-platform.vercel.app/guides/how-to-write-a-daily-report-for-construction',
+  },
 }
 
 const sections = [
@@ -56,13 +60,13 @@ export default function ConstructionDailyReportGuidePage() {
     <main className='min-h-screen bg-slate-50 text-slate-900'>
       <Navbar />
 
-      <article className='mx-auto max-w-4xl px-6 py-20'>
+      <article className='mx-auto max-w-4xl px-6 py-16 sm:py-20'>
         <div className='rounded-3xl border border-slate-200 bg-white p-8 shadow-sm sm:p-12'>
           <p className='text-sm font-semibold uppercase tracking-[0.18em] text-blue-600'>
             Construction Daily Report Guide
           </p>
 
-          <h1 className='mt-4 text-5xl font-bold tracking-tight text-slate-950'>
+          <h1 className='mt-4 text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl'>
             How to Write a Daily Report for Construction
           </h1>
 
@@ -179,6 +183,58 @@ export default function ConstructionDailyReportGuidePage() {
 
           <section className='mt-14'>
             <h2 className='text-3xl font-bold text-slate-950'>
+              How to write a construction daily report
+            </h2>
+
+            <div className='mt-8 space-y-6'>
+              <div className='rounded-2xl border border-slate-200 bg-white p-6'>
+                <h3 className='text-xl font-bold text-slate-950'>
+                  1. Record site and workforce information
+                </h3>
+
+                <p className='mt-3 leading-7 text-slate-600'>
+                  Add the project name, location, date, shift, supervisor,
+                  contractors, manpower and working hours.
+                </p>
+              </div>
+
+              <div className='rounded-2xl border border-slate-200 bg-white p-6'>
+                <h3 className='text-xl font-bold text-slate-950'>
+                  2. Describe completed activities
+                </h3>
+
+                <p className='mt-3 leading-7 text-slate-600'>
+                  Document the work completed in each area, including materials,
+                  equipment and crews involved.
+                </p>
+              </div>
+
+              <div className='rounded-2xl border border-slate-200 bg-white p-6'>
+                <h3 className='text-xl font-bold text-slate-950'>
+                  3. Document delays and safety observations
+                </h3>
+
+                <p className='mt-3 leading-7 text-slate-600'>
+                  Explain weather conditions, access restrictions, material
+                  delays, incidents or other issues affecting site progress.
+                </p>
+              </div>
+
+              <div className='rounded-2xl border border-slate-200 bg-white p-6'>
+                <h3 className='text-xl font-bold text-slate-950'>
+                  4. Define pending tasks
+                </h3>
+
+                <p className='mt-3 leading-7 text-slate-600'>
+                  Identify unfinished work, required resources and the
+                  activities planned for the next workday.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className='mt-14'>
+            <h2 className='text-3xl font-bold text-slate-950'>
               Why construction teams use daily reports
             </h2>
 
@@ -190,39 +246,61 @@ export default function ConstructionDailyReportGuidePage() {
             </p>
           </section>
 
-          <section className='mt-14'>
-            <h2 className='text-3xl font-bold text-slate-950'>
-              Related resources
-            </h2>
+          <div className='mt-6 grid gap-4 sm:grid-cols-2'>
+            <Link
+              href='/guides/how-to-write-a-daily-report'
+              className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
+            >
+              <p className='font-semibold text-slate-950'>
+                General Daily Report Guide
+              </p>
 
-            <div className='mt-6 grid gap-4 sm:grid-cols-2'>
-              <Link
-                href='/guides/how-to-write-a-daily-report'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  General Daily Report Guide
-                </p>
+              <p className='mt-2 text-sm leading-6 text-slate-600'>
+                Learn the complete structure of a professional daily report.
+              </p>
+            </Link>
 
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Learn the general structure of daily work reports.
-                </p>
-              </Link>
+            <Link
+              href='/guides/daily-work-report-sample'
+              className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
+            >
+              <p className='font-semibold text-slate-950'>
+                Daily Work Report Sample
+              </p>
 
-              <Link
-                href='/tools/daily-report-generator'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  Daily Report Generator
-                </p>
+              <p className='mt-2 text-sm leading-6 text-slate-600'>
+                Review a practical example with completed work and pending
+                tasks.
+              </p>
+            </Link>
 
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Create a daily report and export it as a PDF.
-                </p>
-              </Link>
-            </div>
-          </section>
+            <Link
+              href='/guides/how-to-write-a-daily-report-to-your-boss'
+              className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
+            >
+              <p className='font-semibold text-slate-950'>
+                Daily Report to Your Boss
+              </p>
+
+              <p className='mt-2 text-sm leading-6 text-slate-600'>
+                Learn how to summarize site progress for managers and
+                supervisors.
+              </p>
+            </Link>
+
+            <Link
+              href='/tools/daily-report-generator'
+              className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
+            >
+              <p className='font-semibold text-slate-950'>
+                Daily Report Generator
+              </p>
+
+              <p className='mt-2 text-sm leading-6 text-slate-600'>
+                Create a structured daily report and export it as a PDF.
+              </p>
+            </Link>
+          </div>
 
           <section className='mt-14'>
             <h2 className='text-3xl font-bold text-slate-950'>
