@@ -7,12 +7,81 @@ import Navbar from '@/components/layout/Navbar'
 export const metadata: Metadata = {
   title: 'How to Write a Shift Handover Report',
   description:
-    'Learn how to write structured shift handover reports for operations, maintenance and field teams.',
+    'Learn how to write a structured shift handover report with examples, completed work, pending tasks, equipment status, incidents and recommendations.',
+  keywords: [
+    'how to write a shift handover report',
+    'shift handover report',
+    'shift handover example',
+    'shift handover template',
+    'shift handover checklist',
+    'operations handover report',
+    'maintenance shift handover',
+    'shift change report',
+  ],
   alternates: {
     canonical:
       'https://reporting-tools-platform.vercel.app/guides/how-to-write-a-shift-handover-report',
   },
 }
+
+const handoverSections = [
+  'Site or project name',
+  'Date and handover time',
+  'Outgoing and incoming shift',
+  'Outgoing and incoming supervisors',
+  'Work completed',
+  'Equipment status',
+  'Pending tasks',
+  'Incidents and operational risks',
+  'Restrictions or permits',
+  'Recommendations for the next shift',
+]
+
+const handoverMistakes = [
+  {
+    title: 'Using vague descriptions',
+    description:
+      'Avoid notes such as “work ongoing.” Explain exactly what was completed, where the work occurred and what remains unfinished.',
+  },
+  {
+    title: 'Leaving out open risks',
+    description:
+      'Document hazards, equipment conditions, restrictions and incidents that the incoming shift must monitor.',
+  },
+  {
+    title: 'Not assigning pending tasks',
+    description:
+      'Specify which task remains open, its priority and who should continue or review it.',
+  },
+  {
+    title: 'Missing equipment status',
+    description:
+      'The incoming team should know which equipment is operating, unavailable, isolated or under observation.',
+  },
+]
+
+const faqs = [
+  {
+    question: 'What is a shift handover report?',
+    answer:
+      'A shift handover report is a structured document used to transfer completed work, equipment status, incidents, risks, pending tasks and recommendations from one shift to the next.',
+  },
+  {
+    question: 'What should be included in a shift handover?',
+    answer:
+      'Include shift details, supervisor information, completed work, equipment condition, pending tasks, incidents, restrictions and recommendations for the incoming shift.',
+  },
+  {
+    question: 'Why is shift handover important?',
+    answer:
+      'A clear handover reduces information loss, repeated work, missed hazards, equipment problems and delays between outgoing and incoming teams.',
+  },
+  {
+    question: 'Can I export a shift handover report as PDF?',
+    answer:
+      'Yes. A shift handover report can be exported as a PDF so it can be shared, reviewed and stored as part of the operational record.',
+  },
+]
 
 export default function HowToWriteShiftHandoverReportPage() {
   return (
@@ -20,7 +89,7 @@ export default function HowToWriteShiftHandoverReportPage() {
       <Navbar />
 
       <article className='mx-auto max-w-4xl px-6 py-16 sm:py-20'>
-        <div className='rounded-3xl border border-slate-200 bg-white p-8 shadow-sm sm:p-12'>
+        <div className='rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-12'>
           <p className='text-sm font-semibold uppercase tracking-[0.18em] text-blue-600'>
             Shift Handover Guide
           </p>
@@ -29,11 +98,11 @@ export default function HowToWriteShiftHandoverReportPage() {
             How to Write a Shift Handover Report
           </h1>
 
-          <p className='mt-6 text-lg leading-8 text-slate-600'>
+          <p className='mt-6 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8'>
             A shift handover report helps teams transfer important operational
-            information from one shift to the next. It is commonly used in
-            mining, maintenance, construction, logistics, manufacturing and
-            field operations.
+            information from one shift to the next. It documents completed work,
+            equipment condition, incidents, risks, pending tasks and
+            recommendations for the incoming team.
           </p>
 
           <div className='mt-10 rounded-2xl border border-blue-200 bg-blue-50 p-6'>
@@ -42,14 +111,15 @@ export default function HowToWriteShiftHandoverReportPage() {
             </p>
 
             <p className='mt-2 text-sm leading-6 text-blue-800'>
-              Use our Shift Handover Generator to create structured handover
-              reports with pending tasks, incidents and PDF export.
+              Use the Shift Handover Generator to create structured handover
+              reports with equipment status, pending tasks, incidents, live
+              preview and PDF export.
             </p>
 
             <div className='mt-5'>
               <Link
                 href='/tools/shift-handover-generator'
-                className='inline-flex items-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800'
+                className='inline-flex w-full items-center justify-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800 sm:w-auto'
               >
                 Open Shift Handover Generator
               </Link>
@@ -62,11 +132,11 @@ export default function HowToWriteShiftHandoverReportPage() {
             </h2>
 
             <p className='mt-5 leading-8 text-slate-600'>
-              A shift handover report is a structured document used to
-              communicate work completed, equipment condition, incidents,
-              pending tasks and recommendations to the incoming shift. Its
-              purpose is to reduce information loss and help the next team
-              continue work safely and efficiently.
+              A shift handover report is a structured operational document used
+              to communicate what happened during the outgoing shift. It gives
+              the incoming team the information required to continue work
+              safely, understand equipment conditions and prioritize unfinished
+              activities.
             </p>
           </section>
 
@@ -75,17 +145,14 @@ export default function HowToWriteShiftHandoverReportPage() {
               What should a shift handover include?
             </h2>
 
+            <p className='mt-5 leading-8 text-slate-600'>
+              A useful handover should focus on the current operational
+              situation and the information the next team needs to continue the
+              work.
+            </p>
+
             <div className='mt-6 grid gap-4 sm:grid-cols-2'>
-              {[
-                'Site or project name',
-                'Outgoing and incoming shift',
-                'Supervisor information',
-                'Work completed',
-                'Equipment status',
-                'Pending tasks',
-                'Incidents or risks',
-                'Recommendations for the next shift',
-              ].map((item) => (
+              {handoverSections.map((item) => (
                 <div
                   key={item}
                   className='rounded-2xl border border-slate-200 bg-slate-50 p-5'
@@ -98,74 +165,245 @@ export default function HowToWriteShiftHandoverReportPage() {
 
           <section className='mt-14'>
             <h2 className='text-3xl font-bold text-slate-950'>
-              Why shift handovers matter
+              Shift handover report example
             </h2>
 
-            <p className='mt-5 leading-8 text-slate-600'>
-              Poor handovers can lead to repeated work, missed risks, equipment
-              issues, safety problems and delays. A clear handover helps teams
-              understand what happened, what remains open and what must be
-              monitored during the next shift.
-            </p>
-          </section>
+            <div className='mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-6'>
+              <p className='font-semibold text-slate-950'>
+                Shift Handover Report — Example
+              </p>
 
-          <section className='mt-14'>
-            <h2 className='text-3xl font-bold text-slate-950'>
-              Example shift handover workflow
-            </h2>
-
-            <div className='mt-8 space-y-6'>
-              <div className='rounded-2xl border border-slate-200 bg-white p-6'>
-                <h3 className='text-xl font-bold text-slate-950'>
-                  1. Summarize completed work
-                </h3>
-
-                <p className='mt-3 leading-7 text-slate-600'>
-                  Document the main activities completed during the outgoing
-                  shift, including inspections, maintenance work, operational
-                  progress and important field observations.
+              <div className='mt-5 space-y-4 text-sm leading-7 text-slate-700'>
+                <p>
+                  <strong>Site:</strong> Concentrator Plant Area 2
                 </p>
-              </div>
 
-              <div className='rounded-2xl border border-slate-200 bg-white p-6'>
-                <h3 className='text-xl font-bold text-slate-950'>
-                  2. Record pending tasks and incidents
-                </h3>
-
-                <p className='mt-3 leading-7 text-slate-600'>
-                  List tasks that must continue, open risks, incidents,
-                  restrictions and any equipment condition that requires
-                  monitoring.
+                <p>
+                  <strong>Outgoing shift:</strong> Day Shift
                 </p>
-              </div>
 
-              <div className='rounded-2xl border border-slate-200 bg-white p-6'>
-                <h3 className='text-xl font-bold text-slate-950'>
-                  3. Add recommendations for the incoming shift
-                </h3>
+                <p>
+                  <strong>Incoming shift:</strong> Night Shift
+                </p>
 
-                <p className='mt-3 leading-7 text-slate-600'>
-                  Provide clear recommendations so the incoming team knows what
-                  to check, prioritize or escalate during their shift.
+                <p>
+                  <strong>Work completed:</strong> The mechanical team completed
+                  conveyor alignment checks, inspected the drive unit and
+                  replaced two damaged rollers.
+                </p>
+
+                <p>
+                  <strong>Equipment status:</strong> Conveyor B is available for
+                  operation. Vibration monitoring remains active during startup.
+                </p>
+
+                <p>
+                  <strong>Pending tasks:</strong> Complete final guarding
+                  inspection and verify bearing temperature after two hours of
+                  operation.
+                </p>
+
+                <p>
+                  <strong>Incidents and risks:</strong> No injuries were
+                  reported. Access to the transfer area remains restricted.
+                </p>
+
+                <p>
+                  <strong>Recommendations:</strong> The incoming shift should
+                  monitor vibration and stop the equipment if abnormal readings
+                  are detected.
                 </p>
               </div>
             </div>
           </section>
 
-          <section className='mt-14 rounded-3xl border border-slate-200 bg-slate-900 p-8 text-white'>
+          <section className='mt-14'>
+            <h2 className='text-3xl font-bold text-slate-950'>
+              How to write a shift handover report step by step
+            </h2>
+
+            <div className='mt-8 space-y-6'>
+              <div className='rounded-2xl border border-slate-200 bg-white p-6'>
+                <h3 className='text-xl font-bold text-slate-950'>
+                  1. Record shift and supervisor details
+                </h3>
+
+                <p className='mt-3 leading-7 text-slate-600'>
+                  Add the site, date, outgoing shift, incoming shift and the
+                  names of the supervisors responsible for the handover.
+                </p>
+              </div>
+
+              <div className='rounded-2xl border border-slate-200 bg-white p-6'>
+                <h3 className='text-xl font-bold text-slate-950'>
+                  2. Summarize completed work
+                </h3>
+
+                <p className='mt-3 leading-7 text-slate-600'>
+                  Describe the inspections, maintenance activities, production
+                  work and important observations completed during the shift.
+                </p>
+              </div>
+
+              <div className='rounded-2xl border border-slate-200 bg-white p-6'>
+                <h3 className='text-xl font-bold text-slate-950'>
+                  3. Record equipment status and open risks
+                </h3>
+
+                <p className='mt-3 leading-7 text-slate-600'>
+                  Explain which equipment is operating, unavailable or under
+                  monitoring. Include incidents, restrictions and hazards that
+                  remain active.
+                </p>
+              </div>
+
+              <div className='rounded-2xl border border-slate-200 bg-white p-6'>
+                <h3 className='text-xl font-bold text-slate-950'>
+                  4. Define pending tasks and recommendations
+                </h3>
+
+                <p className='mt-3 leading-7 text-slate-600'>
+                  List unfinished activities, priorities and the actions the
+                  incoming shift should complete, monitor or escalate.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className='mt-14'>
+            <h2 className='text-3xl font-bold text-slate-950'>
+              Why shift handovers matter
+            </h2>
+
+            <p className='mt-5 leading-8 text-slate-600'>
+              Poor handovers can lead to repeated work, missed hazards,
+              equipment damage, production interruptions and delays. A clear
+              report gives the incoming shift a reliable operational picture and
+              helps maintain continuity between teams.
+            </p>
+          </section>
+
+          <section className='mt-14'>
+            <h2 className='text-3xl font-bold text-slate-950'>
+              Common shift handover mistakes
+            </h2>
+
+            <div className='mt-6 grid gap-4 sm:grid-cols-2'>
+              {handoverMistakes.map((mistake) => (
+                <div
+                  key={mistake.title}
+                  className='rounded-2xl border border-slate-200 bg-slate-50 p-5'
+                >
+                  <h3 className='font-bold text-slate-950'>{mistake.title}</h3>
+
+                  <p className='mt-2 text-sm leading-6 text-slate-600'>
+                    {mistake.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className='mt-14'>
+            <h2 className='text-3xl font-bold text-slate-950'>
+              Related shift handover resources
+            </h2>
+
+            <div className='mt-6 grid gap-4 sm:grid-cols-2'>
+              <Link
+                href='/tools/shift-handover-generator'
+                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
+              >
+                <p className='font-semibold text-slate-950'>
+                  Shift Handover Generator
+                </p>
+
+                <p className='mt-2 text-sm leading-6 text-slate-600'>
+                  Create a structured handover report and export it as a PDF.
+                </p>
+              </Link>
+
+              <Link
+                href='/guides/how-to-write-a-daily-report'
+                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
+              >
+                <p className='font-semibold text-slate-950'>
+                  Daily Report Guide
+                </p>
+
+                <p className='mt-2 text-sm leading-6 text-slate-600'>
+                  Learn how to record daily operational work and pending tasks.
+                </p>
+              </Link>
+
+              <Link
+                href='/guides/how-to-write-a-maintenance-report'
+                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
+              >
+                <p className='font-semibold text-slate-950'>
+                  Maintenance Report Guide
+                </p>
+
+                <p className='mt-2 text-sm leading-6 text-slate-600'>
+                  Learn how to document equipment work, findings and
+                  recommendations.
+                </p>
+              </Link>
+
+              <Link
+                href='/guides/how-to-write-an-incident-report'
+                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
+              >
+                <p className='font-semibold text-slate-950'>
+                  Incident Report Guide
+                </p>
+
+                <p className='mt-2 text-sm leading-6 text-slate-600'>
+                  Learn how to document operational incidents and corrective
+                  actions.
+                </p>
+              </Link>
+            </div>
+          </section>
+
+          <section className='mt-14'>
+            <h2 className='text-3xl font-bold text-slate-950'>
+              Frequently asked questions
+            </h2>
+
+            <div className='mt-6 space-y-4'>
+              {faqs.map((faq) => (
+                <div
+                  key={faq.question}
+                  className='rounded-2xl border border-slate-200 bg-slate-50 p-6'
+                >
+                  <h3 className='text-lg font-bold text-slate-950'>
+                    {faq.question}
+                  </h3>
+
+                  <p className='mt-3 text-sm leading-6 text-slate-600'>
+                    {faq.answer}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className='mt-14 rounded-3xl border border-slate-200 bg-slate-900 p-6 text-white sm:p-8'>
             <h2 className='text-3xl font-bold'>
               Create a shift handover report
             </h2>
 
             <p className='mt-4 max-w-2xl text-lg leading-8 text-slate-300'>
-              Use the Shift Handover Generator to create a structured report
-              with pending tasks, incidents, recommendations and PDF export.
+              Use the Shift Handover Generator to create structured reports with
+              equipment status, pending tasks, incidents, recommendations, live
+              preview and PDF export.
             </p>
 
             <div className='mt-8'>
               <Link
                 href='/tools/shift-handover-generator'
-                className='inline-flex items-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-100'
+                className='inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-100 sm:w-auto'
               >
                 Open Shift Handover Generator
               </Link>
