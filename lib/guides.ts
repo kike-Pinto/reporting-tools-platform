@@ -142,6 +142,22 @@ export const guides: GuideItem[] = [
     category: 'Incident Reports',
     status: 'Available',
   },
+  {
+    title: 'Near Miss Report',
+    description:
+      'Learn how to document near miss events, potential consequences, immediate controls and corrective actions.',
+    href: '/guides/near-miss-report',
+    category: 'Incident Reports',
+    status: 'Available',
+  },
+  {
+    title: 'Corrective Action Report',
+    description:
+      'Learn how to document root causes, corrective actions, responsible persons, due dates and effectiveness reviews.',
+    href: '/guides/corrective-action-report',
+    category: 'Incident Reports',
+    status: 'Available',
+  },
   //
   //
   //
