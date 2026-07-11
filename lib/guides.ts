@@ -43,7 +43,7 @@ export const guides: GuideItem[] = [
   },
   //
   //
-  // nuevas guias agregadas
+  // nuevas guias agregadas (daily reports)
   {
     title: 'Daily Report Examples',
     description:
@@ -84,11 +84,28 @@ export const guides: GuideItem[] = [
     category: 'Daily Reports',
     status: 'Available',
   },
+  // nuevas guias agregadas (maintenance)
   {
     title: 'Maintenance Report Example',
     description:
       'Review practical preventive and corrective maintenance report examples with findings, parts used and recommendations.',
     href: '/guides/maintenance-report-example',
+    category: 'Maintenance Reports',
+    status: 'Available',
+  },
+  {
+    title: 'Maintenance Reporting Guide',
+    description:
+      'Learn how maintenance reporting works, including report types, equipment information, KPIs and best practices.',
+    href: '/guides/maintenance-reporting-guide',
+    category: 'Maintenance Reports',
+    status: 'Available',
+  },
+  {
+    title: 'Preventive Maintenance Report',
+    description:
+      'Learn how to document scheduled maintenance, inspections, findings, measurements and follow-up recommendations.',
+    href: '/guides/preventive-maintenance-report',
     category: 'Maintenance Reports',
     status: 'Available',
   },
