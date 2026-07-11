@@ -41,6 +41,26 @@ export const guides: GuideItem[] = [
     category: 'Daily Reports',
     status: 'Available',
   },
+  // nuevas guias agregadas
+  {
+    title: 'Daily Report Examples',
+    description:
+      'Review practical daily report examples for office work, construction, maintenance and operational teams.',
+    href: '/guides/daily-report-examples',
+    category: 'Daily Reports',
+    status: 'Available',
+  },
+  {
+    title: 'Daily Report Format',
+    description:
+      'Use a clear daily report format for completed work, progress, issues, pending tasks and next steps.',
+    href: '/guides/daily-report-format',
+    category: 'Daily Reports',
+    status: 'Available',
+  },
+  //
+  //
+  //
   {
     title: 'How to Write a Shift Handover Report',
     description:
