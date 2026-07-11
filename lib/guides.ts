@@ -158,6 +158,23 @@ export const guides: GuideItem[] = [
     category: 'Incident Reports',
     status: 'Available',
   },
+  // nuevas guias agregadas (progress)
+  {
+    title: 'Weekly Progress Report',
+    description:
+      'Learn how to report weekly project progress, completed work, schedule variance, risks and next-week priorities.',
+    href: '/guides/weekly-progress-report',
+    category: 'Progress Reports',
+    status: 'Available',
+  },
+  {
+    title: 'Project Status Report',
+    description:
+      'Learn how to summarize project health, progress, schedule, budget, issues, risks and stakeholder decisions.',
+    href: '/guides/project-status-report',
+    category: 'Progress Reports',
+    status: 'Available',
+  },
   //
   //
   //
