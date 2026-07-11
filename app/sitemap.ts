@@ -121,7 +121,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     //
     //
-    // nuevas guias agregadas
+    // nuevas guias agregadas (daily reports)
     {
       url: `${baseUrl}/guides/daily-report-examples`,
       lastModified: now,
@@ -152,6 +152,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.75,
     },
+    // maintenance guides
     {
       url: `${baseUrl}/guides/maintenance-report-example`,
       lastModified: now,
@@ -178,6 +179,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/guides/maintenance-checklist`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
+    },
+    // incident guides
+    {
+      url: `${baseUrl}/guides/incident-report-example`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/guides/safety-incident-report`,
       lastModified: now,
       changeFrequency: 'weekly' as const,
       priority: 0.75,

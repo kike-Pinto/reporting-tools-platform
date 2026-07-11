@@ -125,6 +125,23 @@ export const guides: GuideItem[] = [
     category: 'Maintenance Reports',
     status: 'Available',
   },
+  // nuevas guias agregadas (incident)
+  {
+    title: 'Incident Report Example',
+    description:
+      'Review practical workplace and equipment incident report examples with immediate actions and corrective actions.',
+    href: '/guides/incident-report-example',
+    category: 'Incident Reports',
+    status: 'Available',
+  },
+  {
+    title: 'Safety Incident Report',
+    description:
+      'Learn how to document workplace safety incidents, severity, immediate controls and corrective actions.',
+    href: '/guides/safety-incident-report',
+    category: 'Incident Reports',
+    status: 'Available',
+  },
   //
   //
   //
