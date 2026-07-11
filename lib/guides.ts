@@ -109,6 +109,22 @@ export const guides: GuideItem[] = [
     category: 'Maintenance Reports',
     status: 'Available',
   },
+  {
+    title: 'Equipment Maintenance Report',
+    description:
+      'Learn how to document equipment condition, completed repairs, parts, test results and final operational status.',
+    href: '/guides/equipment-maintenance-report',
+    category: 'Maintenance Reports',
+    status: 'Available',
+  },
+  {
+    title: 'Maintenance Checklist',
+    description:
+      'Use a practical checklist for work preparation, equipment inspection, completed maintenance and final testing.',
+    href: '/guides/maintenance-checklist',
+    category: 'Maintenance Reports',
+    status: 'Available',
+  },
   //
   //
   //
