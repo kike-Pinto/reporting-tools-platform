@@ -58,6 +58,22 @@ export const guides: GuideItem[] = [
     category: 'Daily Reports',
     status: 'Available',
   },
+  {
+    title: 'Daily Activity Report',
+    description:
+      'Learn how to document completed activities, working hours, results, issues and next steps in a daily activity report.',
+    href: '/guides/daily-activity-report',
+    category: 'Daily Reports',
+    status: 'Available',
+  },
+  {
+    title: 'Daily Status Report to Manager',
+    description:
+      'Learn how to prepare a clear daily status report for a manager with progress, blockers, pending work and next steps.',
+    href: '/guides/daily-status-report-to-manager',
+    category: 'Daily Reports',
+    status: 'Available',
+  },
   //
   //
   //
