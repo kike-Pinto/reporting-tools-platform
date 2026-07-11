@@ -41,6 +41,8 @@ export const guides: GuideItem[] = [
     category: 'Daily Reports',
     status: 'Available',
   },
+  //
+  //
   // nuevas guias agregadas
   {
     title: 'Daily Report Examples',
@@ -72,6 +74,22 @@ export const guides: GuideItem[] = [
       'Learn how to prepare a clear daily status report for a manager with progress, blockers, pending work and next steps.',
     href: '/guides/daily-status-report-to-manager',
     category: 'Daily Reports',
+    status: 'Available',
+  },
+  {
+    title: 'End of Day Report',
+    description:
+      'Learn how to prepare an end of day report with completed work, progress, blockers, pending tasks and next steps.',
+    href: '/guides/end-of-day-report',
+    category: 'Daily Reports',
+    status: 'Available',
+  },
+  {
+    title: 'Maintenance Report Example',
+    description:
+      'Review practical preventive and corrective maintenance report examples with findings, parts used and recommendations.',
+    href: '/guides/maintenance-report-example',
+    category: 'Maintenance Reports',
     status: 'Available',
   },
   //

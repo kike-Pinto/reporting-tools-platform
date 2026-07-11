@@ -119,6 +119,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.75,
     },
+    //
+    //
     // nuevas guias agregadas
     {
       url: `${baseUrl}/guides/daily-report-examples`,
@@ -140,6 +142,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/guides/daily-status-report-to-manager`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/guides/end-of-day-report`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/guides/maintenance-report-example`,
       lastModified: now,
       changeFrequency: 'weekly' as const,
       priority: 0.75,
