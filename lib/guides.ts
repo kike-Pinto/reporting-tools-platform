@@ -175,6 +175,23 @@ export const guides: GuideItem[] = [
     category: 'Progress Reports',
     status: 'Available',
   },
+  // nuevas guias agregadas (handover)
+  {
+    title: 'Shift Handover Example',
+    description:
+      'Review practical shift handover examples with completed work, equipment status, pending tasks, risks and recommendations.',
+    href: '/guides/shift-handover-example',
+    category: 'Shift Handover',
+    status: 'Available',
+  },
+  {
+    title: 'Shift Handover Checklist',
+    description:
+      'Use a practical checklist to review completed work, equipment condition, pending tasks, permits and active risks.',
+    href: '/guides/shift-handover-checklist',
+    category: 'Shift Handover',
+    status: 'Available',
+  },
   //
   //
   //
