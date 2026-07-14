@@ -89,6 +89,22 @@ export const guides: GuideItem[] = [
     category: 'Daily Reports',
     status: 'Available',
   },
+  {
+    title: 'Daily Work Report Template',
+    description:
+      'Use a professional daily work report template for completed work, hours, issues, pending tasks and next steps.',
+    href: '/guides/daily-work-report-template',
+    category: 'Daily Reports',
+    status: 'Available',
+  },
+  {
+    title: 'Daily Site Report',
+    description:
+      'Learn how to document site activities, workforce, equipment, materials, delays, safety observations and next steps.',
+    href: '/guides/daily-site-report',
+    category: 'Daily Reports',
+    status: 'Available',
+  },
 
   // Maintenance Reports
   {

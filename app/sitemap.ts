@@ -152,6 +152,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.75,
     },
+    {
+      url: `${baseUrl}/guides/daily-work-report-template`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/guides/daily-site-report`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
+    },
     // maintenance guides
     {
       url: `${baseUrl}/guides/maintenance-report-example`,
