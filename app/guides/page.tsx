@@ -23,6 +23,8 @@ type CategoryConfig = {
   accentClasses: string
   iconClasses: string
   countClasses: string
+  navClasses: string
+  navCountClasses: string
 }
 
 const guideCategories: CategoryConfig[] = [
@@ -36,6 +38,9 @@ const guideCategories: CategoryConfig[] = [
     accentClasses: 'border-blue-200 bg-blue-50',
     iconClasses: 'bg-blue-600 text-white',
     countClasses: 'bg-blue-100 text-blue-700',
+    navClasses:
+      'border-blue-200 bg-blue-50 text-blue-700 hover:border-blue-300 hover:bg-blue-100',
+    navCountClasses: 'bg-white text-blue-700',
   },
   {
     name: 'Maintenance Reports',
@@ -47,6 +52,9 @@ const guideCategories: CategoryConfig[] = [
     accentClasses: 'border-amber-200 bg-amber-50',
     iconClasses: 'bg-amber-500 text-white',
     countClasses: 'bg-amber-100 text-amber-700',
+    navClasses:
+      'border-amber-200 bg-amber-50 text-amber-700 hover:border-amber-300 hover:bg-amber-100',
+    navCountClasses: 'bg-white text-amber-700',
   },
   {
     name: 'Incident Reports',
@@ -58,6 +66,9 @@ const guideCategories: CategoryConfig[] = [
     accentClasses: 'border-red-200 bg-red-50',
     iconClasses: 'bg-red-500 text-white',
     countClasses: 'bg-red-100 text-red-700',
+    navClasses:
+      'border-red-200 bg-red-50 text-red-700 hover:border-red-300 hover:bg-red-100',
+    navCountClasses: 'bg-white text-red-700',
   },
   {
     name: 'Progress Reports',
@@ -69,6 +80,9 @@ const guideCategories: CategoryConfig[] = [
     accentClasses: 'border-emerald-200 bg-emerald-50',
     iconClasses: 'bg-emerald-600 text-white',
     countClasses: 'bg-emerald-100 text-emerald-700',
+    navClasses:
+      'border-emerald-200 bg-emerald-50 text-emerald-700 hover:border-emerald-300 hover:bg-emerald-100',
+    navCountClasses: 'bg-white text-emerald-700',
   },
   {
     name: 'Shift Handover',
@@ -80,6 +94,9 @@ const guideCategories: CategoryConfig[] = [
     accentClasses: 'border-violet-200 bg-violet-50',
     iconClasses: 'bg-violet-600 text-white',
     countClasses: 'bg-violet-100 text-violet-700',
+    navClasses:
+      'border-violet-200 bg-violet-50 text-violet-700 hover:border-violet-300 hover:bg-violet-100',
+    navCountClasses: 'bg-white text-violet-700',
   },
 ]
 
@@ -89,7 +106,7 @@ function getGuidesByCategory(category: GuideCategory) {
 
 export default function GuidesPage() {
   return (
-    <main className='min-h-screen bg-slate-50 text-slate-900'>
+    <main className='min-h-screen scroll-smooth bg-slate-50 text-slate-900'>
       <Navbar />
 
       <section className='relative overflow-hidden border-b border-slate-200 bg-white'>
@@ -127,11 +144,13 @@ export default function GuidesPage() {
                 <a
                   key={category.id}
                   href={`#${category.id}`}
-                  className='inline-flex shrink-0 items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700'
+                  className={`inline-flex shrink-0 items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${category.navClasses}`}
                 >
                   {category.shortName}
 
-                  <span className='rounded-full bg-white px-2 py-0.5 text-xs text-slate-500'>
+                  <span
+                    className={`rounded-full px-2 py-0.5 text-xs font-semibold ${category.navCountClasses}`}
+                  >
                     {guideCount}
                   </span>
                 </a>
