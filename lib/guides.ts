@@ -1,14 +1,22 @@
 export type GuideStatus = 'Available' | 'Coming Soon'
 
+export type GuideCategory =
+  | 'Daily Reports'
+  | 'Maintenance Reports'
+  | 'Incident Reports'
+  | 'Progress Reports'
+  | 'Shift Handover'
+
 export type GuideItem = {
   title: string
   description: string
   href: string
-  category: string
+  category: GuideCategory
   status: GuideStatus
 }
 
 export const guides: GuideItem[] = [
+  // Daily Reports
   {
     title: 'How to Write a Daily Report',
     description:
@@ -41,9 +49,6 @@ export const guides: GuideItem[] = [
     category: 'Daily Reports',
     status: 'Available',
   },
-  //
-  //
-  // nuevas guias agregadas (daily reports)
   {
     title: 'Daily Report Examples',
     description:
@@ -84,7 +89,16 @@ export const guides: GuideItem[] = [
     category: 'Daily Reports',
     status: 'Available',
   },
-  // nuevas guias agregadas (maintenance)
+
+  // Maintenance Reports
+  {
+    title: 'How to Write a Maintenance Report',
+    description:
+      'Learn how to structure equipment maintenance reports with tasks, findings, parts used and recommendations.',
+    href: '/guides/how-to-write-a-maintenance-report',
+    category: 'Maintenance Reports',
+    status: 'Available',
+  },
   {
     title: 'Maintenance Report Example',
     description:
@@ -125,7 +139,16 @@ export const guides: GuideItem[] = [
     category: 'Maintenance Reports',
     status: 'Available',
   },
-  // nuevas guias agregadas (incident)
+
+  // Incident Reports
+  {
+    title: 'How to Write an Incident Report',
+    description:
+      'Learn how to structure professional incident reports with corrective actions and recommendations.',
+    href: '/guides/how-to-write-an-incident-report',
+    category: 'Incident Reports',
+    status: 'Available',
+  },
   {
     title: 'Incident Report Example',
     description:
@@ -158,7 +181,16 @@ export const guides: GuideItem[] = [
     category: 'Incident Reports',
     status: 'Available',
   },
-  // nuevas guias agregadas (progress)
+
+  // Progress Reports
+  {
+    title: 'How to Write a Progress Report',
+    description:
+      'Learn how to structure project progress reports with planned progress, actual progress, issues and next steps.',
+    href: '/guides/how-to-write-a-progress-report',
+    category: 'Progress Reports',
+    status: 'Available',
+  },
   {
     title: 'Weekly Progress Report',
     description:
@@ -175,7 +207,16 @@ export const guides: GuideItem[] = [
     category: 'Progress Reports',
     status: 'Available',
   },
-  // nuevas guias agregadas (handover)
+
+  // Shift Handover
+  {
+    title: 'How to Write a Shift Handover Report',
+    description:
+      'Learn how to structure shift handover reports for operational continuity.',
+    href: '/guides/how-to-write-a-shift-handover-report',
+    category: 'Shift Handover',
+    status: 'Available',
+  },
   {
     title: 'Shift Handover Example',
     description:
@@ -190,41 +231,6 @@ export const guides: GuideItem[] = [
       'Use a practical checklist to review completed work, equipment condition, pending tasks, permits and active risks.',
     href: '/guides/shift-handover-checklist',
     category: 'Shift Handover',
-    status: 'Available',
-  },
-  //
-  //
-  //
-  {
-    title: 'How to Write a Shift Handover Report',
-    description:
-      'Learn how to structure shift handover reports for operational continuity.',
-    href: '/guides/how-to-write-a-shift-handover-report',
-    category: 'Shift Handover',
-    status: 'Available',
-  },
-  {
-    title: 'How to Write a Maintenance Report',
-    description:
-      'Learn how to structure equipment maintenance reports with tasks, findings, parts used and recommendations.',
-    href: '/guides/how-to-write-a-maintenance-report',
-    category: 'Maintenance Reports',
-    status: 'Available',
-  },
-  {
-    title: 'How to Write an Incident Report',
-    description:
-      'Learn how to structure professional incident reports with corrective actions and recommendations.',
-    href: '/guides/how-to-write-an-incident-report',
-    category: 'Incident Reports',
-    status: 'Available',
-  },
-  {
-    title: 'How to Write a Progress Report',
-    description:
-      'Learn how to structure project progress reports with planned progress, actual progress, issues and next steps.',
-    href: '/guides/how-to-write-a-progress-report',
-    category: 'Progress Reports',
     status: 'Available',
   },
 ]
