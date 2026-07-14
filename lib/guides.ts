@@ -105,6 +105,14 @@ export const guides: GuideItem[] = [
     category: 'Daily Reports',
     status: 'Available',
   },
+  {
+    title: 'Employee Daily Report',
+    description:
+      'Learn how to document employee tasks, results, working hours, blockers, support needed and next-day priorities.',
+    href: '/guides/employee-daily-report',
+    category: 'Daily Reports',
+    status: 'Available',
+  },
 
   // Maintenance Reports
   {
@@ -220,6 +228,14 @@ export const guides: GuideItem[] = [
     description:
       'Learn how to summarize project health, progress, schedule, budget, issues, risks and stakeholder decisions.',
     href: '/guides/project-status-report',
+    category: 'Progress Reports',
+    status: 'Available',
+  },
+  {
+    title: 'Monthly Progress Report',
+    description:
+      'Learn how to summarize monthly project progress, milestones, schedule, cost, issues, risks and next-month priorities.',
+    href: '/guides/monthly-progress-report',
     category: 'Progress Reports',
     status: 'Available',
   },
