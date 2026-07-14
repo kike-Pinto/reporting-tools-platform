@@ -1,5 +1,9 @@
 @import 'tailwindcss';
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -44,10 +48,6 @@ body {
 
   body * {
     visibility: hidden !important;
-  }
-
-  html {
-    scroll-behavior: smooth;
   }
 
   .print-only,

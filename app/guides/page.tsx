@@ -106,7 +106,7 @@ function getGuidesByCategory(category: GuideCategory) {
 
 export default function GuidesPage() {
   return (
-    <main className='min-h-screen scroll-smooth bg-slate-50 text-slate-900'>
+    <main className='min-h-screen bg-slate-50 text-slate-900'>
       <Navbar />
 
       <section className='relative overflow-hidden border-b border-slate-200 bg-white'>
