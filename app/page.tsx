@@ -1,6 +1,7 @@
 import Benefits from '@/components/home/Benefits'
 import CTA from '@/components/home/CTA'
 import FeaturedTools from '@/components/home/FeaturedTools'
+import GuideCategories from '@/components/home/GuideCategories'
 import Hero from '@/components/home/Hero'
 import ReportingCategories from '@/components/home/ReportingCategories'
 import Footer from '@/components/layout/Footer'
@@ -27,6 +28,7 @@ export default function HomePage() {
       <FeaturedTools />
       <Benefits />
       <Workflow />
+      <GuideCategories />
       <CTA />
       <Footer />
     </main>
