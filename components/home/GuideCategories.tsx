@@ -9,7 +9,7 @@ const guideCategories = [
     topics: ['Daily report formats', 'Work report examples', 'Manager updates'],
     featuredGuide: 'How to Write a Daily Report',
     featuredGuideHref: '/guides/how-to-write-a-daily-report',
-    categoryHref: '/guides#daily-reports',
+    categoryHref: '/guides/daily-reports',
     icon: 'DR',
     containerClasses: 'border-blue-200 bg-blue-50',
     iconClasses: 'bg-blue-600 text-white',

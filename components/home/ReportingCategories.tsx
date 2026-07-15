@@ -7,7 +7,7 @@ const reportingCategories = [
     description:
       'Create clear daily work reports, activity summaries, site reports and management updates.',
     guideCount: 12,
-    guidesHref: '/guides#daily-reports',
+    guidesHref: '/guides/daily-reports',
     toolName: 'Daily Report Generator',
     toolHref: '/tools/daily-report-generator',
     containerClasses: 'border-blue-200 bg-blue-50',
