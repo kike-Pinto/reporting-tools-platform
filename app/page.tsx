@@ -2,6 +2,7 @@ import Benefits from '@/components/home/Benefits'
 import CTA from '@/components/home/CTA'
 import FeaturedTools from '@/components/home/FeaturedTools'
 import Hero from '@/components/home/Hero'
+import ReportingCategories from '@/components/home/ReportingCategories'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
 import Workflow from '@/components/home/Workflow'
@@ -22,6 +23,7 @@ export default function HomePage() {
     <main className='min-h-screen bg-slate-50 text-slate-900'>
       <Navbar />
       <Hero />
+      <ReportingCategories />
       <FeaturedTools />
       <Benefits />
       <Workflow />
