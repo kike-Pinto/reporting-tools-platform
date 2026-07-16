@@ -45,7 +45,7 @@ const guideCategories = [
     topics: ['Incident examples', 'Near miss reports', 'Corrective actions'],
     featuredGuide: 'How to Write an Incident Report',
     featuredGuideHref: '/guides/how-to-write-an-incident-report',
-    categoryHref: '/guides#incident-reports',
+    categoryHref: '/guides/incident-reports',
     icon: 'IR',
     containerClasses: 'border-red-200 bg-red-50',
     iconClasses: 'bg-red-500 text-white',

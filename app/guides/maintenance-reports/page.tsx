@@ -116,7 +116,7 @@ const relatedCategories = [
     title: 'Incident Reports',
     description:
       'Record safety incidents, equipment damage and corrective actions.',
-    href: '/guides#incident-reports',
+    href: '/guides/incident-reports',
   },
   {
     title: 'Progress Reports',

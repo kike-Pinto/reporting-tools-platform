@@ -44,6 +44,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
 
     {
+      url: `${baseUrl}/guides/incident-reports`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+
+    {
       url: `${baseUrl}/tools/daily-report-generator`,
       lastModified: now,
       changeFrequency: 'weekly' as const,

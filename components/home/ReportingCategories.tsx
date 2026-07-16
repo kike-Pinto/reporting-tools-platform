@@ -35,7 +35,7 @@ const reportingCategories = [
     description:
       'Report safety incidents, near misses, root causes, risks and corrective actions.',
     guideCount: 5,
-    guidesHref: '/guides#incident-reports',
+    guidesHref: '/guides/incident-reports',
     toolName: 'Incident Report Generator',
     toolHref: '/tools/incident-report-generator',
     containerClasses: 'border-red-200 bg-red-50',
