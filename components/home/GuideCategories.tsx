@@ -61,7 +61,7 @@ const guideCategories = [
     topics: ['Weekly progress', 'Monthly reporting', 'Project status'],
     featuredGuide: 'How to Write a Progress Report',
     featuredGuideHref: '/guides/how-to-write-a-progress-report',
-    categoryHref: '/guides#progress-reports',
+    categoryHref: '/guides/progress-reports',
     icon: 'PR',
     containerClasses: 'border-emerald-200 bg-emerald-50',
     iconClasses: 'bg-emerald-600 text-white',

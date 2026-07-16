@@ -114,7 +114,7 @@ const relatedCategories = [
     title: 'Progress Reports',
     description:
       'Track weekly and monthly project performance, issues and next steps.',
-    href: '/guides#progress-reports',
+    href: '/guides/progress-reports',
   },
   {
     title: 'Shift Handover',

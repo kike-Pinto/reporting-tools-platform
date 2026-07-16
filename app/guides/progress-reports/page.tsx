@@ -6,102 +6,102 @@ import Navbar from '@/components/layout/Navbar'
 import { guides } from '@/lib/guides'
 
 export const metadata: Metadata = {
-  title: 'Incident Report Guides, Examples and Corrective Actions',
+  title: 'Progress Report Guides, Examples and Project Status Resources',
   description:
-    'Explore incident report guides and examples for workplace incidents, safety events, near misses, root causes and corrective actions.',
+    'Explore progress report guides for weekly and monthly reporting, project status, planned versus actual progress, risks, delays and next steps.',
   keywords: [
-    'incident report guides',
-    'incident report example',
-    'workplace incident report',
-    'safety incident report',
-    'near miss report',
-    'corrective action report',
-    'incident investigation report',
-    'incident documentation',
+    'progress report guides',
+    'project progress report',
+    'weekly progress report',
+    'monthly progress report',
+    'project status report',
+    'progress report example',
+    'planned vs actual progress',
+    'project reporting',
   ],
   alternates: {
     canonical:
-      'https://reporting-tools-platform.vercel.app/guides/incident-reports',
+      'https://reporting-tools-platform.vercel.app/guides/progress-reports',
   },
 }
 
-const incidentGuides = guides.filter(
-  (guide) => guide.category === 'Incident Reports',
+const progressGuides = guides.filter(
+  (guide) => guide.category === 'Progress Reports',
 )
 
-const incidentTopics = [
+const progressTopics = [
   {
-    title: 'Incident report fundamentals',
+    title: 'Progress report fundamentals',
     description:
-      'Learn how to document the event, date, location, people involved, severity and current status.',
+      'Learn how to summarize project status, completed work, planned progress, actual progress and next steps.',
   },
   {
-    title: 'Safety incidents',
+    title: 'Weekly progress reporting',
     description:
-      'Record workplace injuries, unsafe conditions, immediate controls and required follow-up actions.',
+      'Track short-term activities, schedule variance, blockers, risks and priorities for the following week.',
   },
   {
-    title: 'Near miss reporting',
+    title: 'Monthly progress reporting',
     description:
-      'Document events that could have caused injury, equipment damage or operational disruption.',
+      'Review broader trends, milestones, cost performance, schedule health and next-month objectives.',
   },
   {
-    title: 'Immediate actions',
+    title: 'Project status reporting',
     description:
-      'Explain the controls used to protect people, isolate equipment and stabilize the work area.',
+      'Communicate overall project health, schedule, budget, issues, risks and stakeholder decisions.',
   },
   {
-    title: 'Root causes',
+    title: 'Planned versus actual progress',
     description:
-      'Identify contributing factors and underlying causes instead of focusing only on the final event.',
+      'Compare expected completion with actual results and explain important deviations.',
   },
   {
-    title: 'Corrective actions',
+    title: 'Risks, delays and recovery actions',
     description:
-      'Assign responsible persons, due dates, priorities and effectiveness reviews for required actions.',
+      'Document the cause, impact, owner and corrective response for project performance problems.',
   },
 ]
 
-const incidentWorkflow = [
-  'Record the incident date, location and people involved',
-  'Describe what happened using clear and objective language',
-  'Document immediate controls and actions taken',
-  'Identify contributing factors and possible root causes',
-  'Assign corrective actions, owners and due dates',
+const progressWorkflow = [
+  'Define the project and reporting period',
+  'Record planned and actual progress',
+  'Document completed activities and milestones',
+  'Explain issues, risks and schedule variance',
+  'Define recovery actions and next priorities',
 ]
 
 const recommendedPath = [
   {
     step: '1',
-    title: 'Learn the incident report structure',
+    title: 'Learn the report structure',
     description:
-      'Understand which event details, actions, causes and recommendations belong in the report.',
-    href: '/guides/how-to-write-an-incident-report',
-    linkLabel: 'Read the incident report guide',
+      'Understand the core sections required for a professional project progress report.',
+    href: '/guides/how-to-write-a-progress-report',
+    linkLabel: 'Read the progress report guide',
   },
   {
     step: '2',
-    title: 'Review a practical example',
+    title: 'Review weekly performance',
     description:
-      'See how event details, immediate actions and corrective actions can be documented.',
-    href: '/guides/incident-report-example',
-    linkLabel: 'View an incident report example',
+      'Learn how to summarize short-term progress, blockers and next-week priorities.',
+    href: '/guides/weekly-progress-report',
+    linkLabel: 'Read the weekly progress guide',
   },
   {
     step: '3',
-    title: 'Document preventive actions',
+    title: 'Evaluate project health',
     description:
-      'Learn how to assign corrective actions, responsible persons, due dates and reviews.',
-    href: '/guides/corrective-action-report',
-    linkLabel: 'Read the corrective action guide',
+      'Review schedule, budget, risks, issues and decisions in a project status report.',
+    href: '/guides/project-status-report',
+    linkLabel: 'Open the project status guide',
   },
   {
     step: '4',
     title: 'Create the finished report',
     description:
-      'Complete a structured incident form and export a professional PDF document.',
-    href: '/tools/incident-report-generator',
-    linkLabel: 'Open the Incident Report Generator',
+      'Enter project activities, percentages, issues and next steps before exporting a PDF.',
+    href: '/tools/progress-report-generator',
+    linkLabel: 'Open the Progress Report Generator',
   },
 ]
 
@@ -109,74 +109,74 @@ const relatedCategories = [
   {
     title: 'Daily Reports',
     description:
-      'Document daily activities, completed work, blockers and safety observations.',
+      'Document daily activities, completed work, blockers and pending tasks.',
     href: '/guides/daily-reports',
   },
   {
     title: 'Maintenance Reports',
     description:
-      'Record equipment findings, failures, repairs and final operational status.',
+      'Record equipment work, findings, repairs, testing and recommendations.',
     href: '/guides/maintenance-reports',
   },
   {
-    title: 'Progress Reports',
+    title: 'Incident Reports',
     description:
-      'Track project issues, risks, delays, schedule performance and priorities.',
-    href: '/guides/progress-reports',
+      'Document incidents, immediate actions, causes and corrective actions.',
+    href: '/guides/incident-reports',
   },
   {
     title: 'Shift Handover',
     description:
-      'Transfer active risks, restrictions, incidents and pending actions between shifts.',
+      'Transfer project status, active constraints, risks and pending actions.',
     href: '/guides#shift-handover',
   },
 ]
 
-export default function IncidentReportsHubPage() {
+export default function ProgressReportsHubPage() {
   return (
     <main className='min-h-screen bg-slate-50 text-slate-900'>
       <Navbar />
 
-      <section className='relative overflow-hidden border-b border-red-200 bg-red-50'>
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(239,68,68,0.18),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(248,113,113,0.1),transparent_34%)]' />
+      <section className='relative overflow-hidden border-b border-emerald-200 bg-emerald-50'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.2),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(52,211,153,0.1),transparent_34%)]' />
 
         <div className='relative mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-24'>
           <nav
             aria-label='Breadcrumb'
             className='flex flex-wrap items-center gap-2 text-sm text-slate-600'
           >
-            <Link href='/' className='transition hover:text-red-700'>
+            <Link href='/' className='transition hover:text-emerald-700'>
               Home
             </Link>
 
             <span aria-hidden='true'>/</span>
 
-            <Link href='/guides' className='transition hover:text-red-700'>
+            <Link href='/guides' className='transition hover:text-emerald-700'>
               Guides
             </Link>
 
             <span aria-hidden='true'>/</span>
 
             <span className='font-semibold text-slate-900'>
-              Incident Reports
+              Progress Reports
             </span>
           </nav>
 
           <div className='mt-10 grid gap-10 lg:grid-cols-[1fr_0.7fr] lg:items-center'>
             <div>
-              <div className='inline-flex items-center gap-2 rounded-full border border-red-200 bg-white/80 px-4 py-2 text-sm font-semibold text-red-700'>
-                <span>IR</span>
-                <span>{incidentGuides.length} practical guides</span>
+              <div className='inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/80 px-4 py-2 text-sm font-semibold text-emerald-700'>
+                <span>PR</span>
+                <span>{progressGuides.length} practical guides</span>
               </div>
 
               <h1 className='mt-6 max-w-4xl text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl'>
-                Incident Report Guides, Examples and Corrective Actions
+                Progress Report Guides and Project Status Resources
               </h1>
 
               <p className='mt-6 max-w-3xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8'>
-                Learn how to document workplace incidents, safety events, near
-                misses, immediate controls, contributing factors, root causes
-                and corrective actions.
+                Learn how to report weekly and monthly performance, compare
+                planned and actual progress, communicate project health and
+                define recovery actions and next priorities.
               </p>
 
               <div className='mt-8 flex flex-col gap-3 sm:flex-row'>
@@ -188,27 +188,27 @@ export default function IncidentReportsHubPage() {
                 </Link>
 
                 <Link
-                  href='/tools/incident-report-generator'
-                  className='inline-flex items-center justify-center rounded-xl border border-red-300 bg-white px-5 py-3 text-sm font-semibold text-red-700 transition hover:bg-red-100'
+                  href='/tools/progress-report-generator'
+                  className='inline-flex items-center justify-center rounded-xl border border-emerald-300 bg-white px-5 py-3 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-100'
                 >
-                  Open Incident Report Generator
+                  Open Progress Report Generator
                 </Link>
               </div>
             </div>
 
-            <div className='rounded-3xl border border-red-200 bg-white p-6 shadow-xl shadow-red-100/70 sm:p-8'>
-              <p className='text-xs font-semibold uppercase tracking-[0.18em] text-red-600'>
-                Incident reporting workflow
+            <div className='rounded-3xl border border-emerald-200 bg-white p-6 shadow-xl shadow-emerald-100/70 sm:p-8'>
+              <p className='text-xs font-semibold uppercase tracking-[0.18em] text-emerald-600'>
+                Progress reporting workflow
               </p>
 
               <h2 className='mt-3 text-2xl font-bold text-slate-950'>
-                From the initial event to corrective action
+                From project data to a clear status report
               </h2>
 
               <div className='mt-6 space-y-4'>
-                {incidentWorkflow.map((item, index) => (
+                {progressWorkflow.map((item, index) => (
                   <div key={item} className='flex items-start gap-3'>
-                    <span className='flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-red-100 text-xs font-bold text-red-700'>
+                    <span className='flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-xs font-bold text-emerald-700'>
                       {index + 1}
                     </span>
 
@@ -224,23 +224,23 @@ export default function IncidentReportsHubPage() {
       <section className='border-b border-slate-200 bg-white'>
         <div className='mx-auto max-w-7xl px-6 py-14 sm:py-16'>
           <div className='max-w-3xl'>
-            <p className='text-sm font-semibold uppercase tracking-[0.18em] text-red-600'>
-              Incident Reporting Topics
+            <p className='text-sm font-semibold uppercase tracking-[0.18em] text-emerald-600'>
+              Progress Reporting Topics
             </p>
 
             <h2 className='mt-4 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl'>
-              Create clear and actionable incident records
+              Communicate project performance with clarity
             </h2>
 
             <p className='mt-4 leading-7 text-slate-600'>
-              Cover the complete incident-reporting process, from documenting
-              the event and immediate response to assigning actions that reduce
-              the risk of recurrence.
+              Cover the complete reporting cycle, from planned progress and
+              completed milestones to schedule variance, risks and future
+              priorities.
             </p>
           </div>
 
           <div className='mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3'>
-            {incidentTopics.map((topic) => (
+            {progressTopics.map((topic) => (
               <article
                 key={topic.title}
                 className='rounded-3xl border border-slate-200 bg-slate-50 p-6'
@@ -262,34 +262,34 @@ export default function IncidentReportsHubPage() {
         <div className='mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-24'>
           <div className='flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between'>
             <div className='max-w-3xl'>
-              <p className='text-sm font-semibold uppercase tracking-[0.18em] text-red-600'>
-                Incident Report Library
+              <p className='text-sm font-semibold uppercase tracking-[0.18em] text-emerald-600'>
+                Progress Report Library
               </p>
 
               <h2 className='mt-4 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl'>
-                Explore all incident reporting guides
+                Explore all progress reporting guides
               </h2>
 
               <p className='mt-4 leading-7 text-slate-600'>
-                Choose a resource based on the event type, investigation stage
-                or corrective-action workflow you need.
+                Choose a resource based on the reporting period, audience or
+                level of project performance detail you need.
               </p>
             </div>
 
-            <span className='w-fit rounded-full bg-red-100 px-4 py-2 text-sm font-semibold text-red-700'>
-              {incidentGuides.length} guides
+            <span className='w-fit rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold text-emerald-700'>
+              {progressGuides.length} guides
             </span>
           </div>
 
           <div className='mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3'>
-            {incidentGuides.map((guide) => (
+            {progressGuides.map((guide) => (
               <article
                 key={guide.href}
-                className='group flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-red-200 hover:shadow-xl hover:shadow-slate-200/60'
+                className='group flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-emerald-200 hover:shadow-xl hover:shadow-slate-200/60'
               >
                 <div className='flex items-start justify-between gap-4'>
-                  <div className='flex h-11 w-11 items-center justify-center rounded-2xl bg-red-500 text-xs font-bold text-white'>
-                    IR
+                  <div className='flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-600 text-xs font-bold text-white'>
+                    PR
                   </div>
 
                   <span className='rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700'>
@@ -308,7 +308,7 @@ export default function IncidentReportsHubPage() {
                 <div className='mt-7'>
                   <Link
                     href={guide.href}
-                    className='inline-flex items-center text-sm font-semibold text-red-700 transition group-hover:text-red-900'
+                    className='inline-flex items-center text-sm font-semibold text-emerald-700 transition group-hover:text-emerald-900'
                   >
                     Read guide →
                   </Link>
@@ -322,12 +322,12 @@ export default function IncidentReportsHubPage() {
       <section className='border-y border-slate-200 bg-white'>
         <div className='mx-auto max-w-7xl px-6 py-16 sm:py-20'>
           <div className='max-w-3xl'>
-            <p className='text-sm font-semibold uppercase tracking-[0.18em] text-red-600'>
+            <p className='text-sm font-semibold uppercase tracking-[0.18em] text-emerald-600'>
               Recommended Learning Path
             </p>
 
             <h2 className='mt-4 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl'>
-              Learn the structure, review an example and assign actions
+              Learn the structure, evaluate performance and create the report
             </h2>
           </div>
 
@@ -351,7 +351,7 @@ export default function IncidentReportsHubPage() {
 
                 <Link
                   href={item.href}
-                  className='mt-6 text-sm font-semibold text-red-700 transition hover:text-red-900'
+                  className='mt-6 text-sm font-semibold text-emerald-700 transition hover:text-emerald-900'
                 >
                   {item.linkLabel} →
                 </Link>
@@ -365,32 +365,31 @@ export default function IncidentReportsHubPage() {
         <div className='mx-auto max-w-7xl px-6 py-16 sm:py-20'>
           <div className='grid gap-8 lg:grid-cols-[1fr_0.85fr]'>
             <div className='rounded-4xl bg-slate-950 p-6 text-white sm:p-8 lg:p-10'>
-              <p className='text-sm font-semibold uppercase tracking-[0.18em] text-red-300'>
-                Incident Report Generator
+              <p className='text-sm font-semibold uppercase tracking-[0.18em] text-emerald-300'>
+                Progress Report Generator
               </p>
 
               <h2 className='mt-4 text-3xl font-bold tracking-tight sm:text-4xl'>
-                Create a professional incident report
+                Create a professional project progress report
               </h2>
 
               <p className='mt-5 max-w-2xl leading-8 text-slate-300'>
-                Document incident details, severity, immediate actions, root
-                causes, corrective actions and recommendations before exporting
-                a consistent PDF report.
+                Document planned progress, actual progress, activities, delays,
+                risks and next steps before exporting a consistent PDF report.
               </p>
 
               <div className='mt-8'>
                 <Link
-                  href='/tools/incident-report-generator'
-                  className='inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-red-50 sm:w-auto'
+                  href='/tools/progress-report-generator'
+                  className='inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-emerald-50 sm:w-auto'
                 >
-                  Open Incident Report Generator
+                  Open Progress Report Generator
                 </Link>
               </div>
             </div>
 
             <div>
-              <p className='text-sm font-semibold uppercase tracking-[0.18em] text-red-600'>
+              <p className='text-sm font-semibold uppercase tracking-[0.18em] text-emerald-600'>
                 Other Reporting Categories
               </p>
 
@@ -399,7 +398,7 @@ export default function IncidentReportsHubPage() {
                   <Link
                     key={category.title}
                     href={category.href}
-                    className='rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-red-200 hover:bg-red-50'
+                    className='rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-emerald-200 hover:bg-emerald-50'
                   >
                     <p className='font-semibold text-slate-950'>
                       {category.title}

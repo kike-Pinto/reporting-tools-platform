@@ -49,7 +49,7 @@ const reportingCategories = [
     description:
       'Track planned and actual progress, milestones, delays, risks and project priorities.',
     guideCount: 4,
-    guidesHref: '/guides#progress-reports',
+    guidesHref: '/guides/progress-reports',
     toolName: 'Progress Report Generator',
     toolHref: '/tools/progress-report-generator',
     containerClasses: 'border-emerald-200 bg-emerald-50',
