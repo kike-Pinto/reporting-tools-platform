@@ -128,7 +128,7 @@ const relatedCategories = [
     title: 'Shift Handover',
     description:
       'Transfer equipment status, maintenance restrictions and pending work.',
-    href: '/guides#shift-handover',
+    href: '/guides/shift-handover',
   },
 ]
 

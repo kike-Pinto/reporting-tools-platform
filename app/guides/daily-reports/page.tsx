@@ -120,7 +120,7 @@ const relatedCategories = [
     title: 'Shift Handover',
     description:
       'Transfer operational information, equipment status and pending tasks.',
-    href: '/guides#shift-handover',
+    href: '/guides/shift-handover',
   },
 ]
 

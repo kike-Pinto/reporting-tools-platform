@@ -128,7 +128,7 @@ const relatedCategories = [
     title: 'Shift Handover',
     description:
       'Transfer project status, active constraints, risks and pending actions.',
-    href: '/guides#shift-handover',
+    href: '/guides/shift-handover',
   },
 ]
 

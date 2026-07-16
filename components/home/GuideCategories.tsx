@@ -77,7 +77,7 @@ const guideCategories = [
     topics: ['Handover structure', 'Practical examples', 'Handover checklists'],
     featuredGuide: 'How to Write a Shift Handover Report',
     featuredGuideHref: '/guides/how-to-write-a-shift-handover-report',
-    categoryHref: '/guides#shift-handover',
+    categoryHref: '/guides/shift-handover',
     icon: 'SH',
     containerClasses: 'border-violet-200 bg-violet-50',
     iconClasses: 'bg-violet-600 text-white',

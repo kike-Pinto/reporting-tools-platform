@@ -63,7 +63,7 @@ const reportingCategories = [
     description:
       'Transfer completed work, equipment condition, pending tasks and active risks between shifts.',
     guideCount: 3,
-    guidesHref: '/guides#shift-handover',
+    guidesHref: '/guides/shift-handover',
     toolName: 'Shift Handover Generator',
     toolHref: '/tools/shift-handover-generator',
     containerClasses: 'border-violet-200 bg-violet-50',

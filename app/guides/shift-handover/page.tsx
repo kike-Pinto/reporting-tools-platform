@@ -6,102 +6,102 @@ import Navbar from '@/components/layout/Navbar'
 import { guides } from '@/lib/guides'
 
 export const metadata: Metadata = {
-  title: 'Incident Report Guides, Examples and Corrective Actions',
+  title: 'Shift Handover Guides, Examples and Checklists',
   description:
-    'Explore incident report guides and examples for workplace incidents, safety events, near misses, root causes and corrective actions.',
+    'Explore shift handover guides, examples and checklists for completed work, equipment status, pending tasks, risks and incoming shift priorities.',
   keywords: [
-    'incident report guides',
-    'incident report example',
-    'workplace incident report',
-    'safety incident report',
-    'near miss report',
-    'corrective action report',
-    'incident investigation report',
-    'incident documentation',
+    'shift handover guides',
+    'shift handover report',
+    'shift handover example',
+    'shift handover checklist',
+    'shift change report',
+    'operations handover report',
+    'maintenance shift handover',
+    'shift turnover report',
   ],
   alternates: {
     canonical:
-      'https://reporting-tools-platform.vercel.app/guides/incident-reports',
+      'https://reporting-tools-platform.vercel.app/guides/shift-handover',
   },
 }
 
-const incidentGuides = guides.filter(
-  (guide) => guide.category === 'Incident Reports',
+const handoverGuides = guides.filter(
+  (guide) => guide.category === 'Shift Handover',
 )
 
-const incidentTopics = [
+const handoverTopics = [
   {
-    title: 'Incident report fundamentals',
+    title: 'Shift handover fundamentals',
     description:
-      'Learn how to document the event, date, location, people involved, severity and current status.',
+      'Learn how to transfer the most important operational information from the outgoing shift to the incoming team.',
   },
   {
-    title: 'Safety incidents',
+    title: 'Completed work',
     description:
-      'Record workplace injuries, unsafe conditions, immediate controls and required follow-up actions.',
+      'Summarize activities, inspections, maintenance tasks and operational progress completed during the shift.',
   },
   {
-    title: 'Near miss reporting',
+    title: 'Equipment status',
     description:
-      'Document events that could have caused injury, equipment damage or operational disruption.',
+      'Record equipment condition, restrictions, alarms, isolations and items requiring monitoring.',
   },
   {
-    title: 'Immediate actions',
+    title: 'Pending tasks',
     description:
-      'Explain the controls used to protect people, isolate equipment and stabilize the work area.',
+      'Identify unfinished work, responsible persons, priorities and expected continuation during the next shift.',
   },
   {
-    title: 'Root causes',
+    title: 'Risks and incidents',
     description:
-      'Identify contributing factors and underlying causes instead of focusing only on the final event.',
+      'Communicate active hazards, safety events, temporary controls and unresolved corrective actions.',
   },
   {
-    title: 'Corrective actions',
+    title: 'Incoming shift priorities',
     description:
-      'Assign responsible persons, due dates, priorities and effectiveness reviews for required actions.',
+      'Define the inspections, tasks, decisions and escalations the next team should address first.',
   },
 ]
 
-const incidentWorkflow = [
-  'Record the incident date, location and people involved',
-  'Describe what happened using clear and objective language',
-  'Document immediate controls and actions taken',
-  'Identify contributing factors and possible root causes',
-  'Assign corrective actions, owners and due dates',
+const handoverWorkflow = [
+  'Record the outgoing and incoming shift details',
+  'Summarize completed activities and operational progress',
+  'Document equipment condition and active restrictions',
+  'List pending tasks, incidents and unresolved risks',
+  'Add recommendations and priorities for the incoming shift',
 ]
 
 const recommendedPath = [
   {
     step: '1',
-    title: 'Learn the incident report structure',
+    title: 'Learn the handover structure',
     description:
-      'Understand which event details, actions, causes and recommendations belong in the report.',
-    href: '/guides/how-to-write-an-incident-report',
-    linkLabel: 'Read the incident report guide',
+      'Understand the essential sections required for a clear operational shift handover.',
+    href: '/guides/how-to-write-a-shift-handover-report',
+    linkLabel: 'Read the shift handover guide',
   },
   {
     step: '2',
     title: 'Review a practical example',
     description:
-      'See how event details, immediate actions and corrective actions can be documented.',
-    href: '/guides/incident-report-example',
-    linkLabel: 'View an incident report example',
+      'See how completed work, equipment status, risks and pending tasks are documented.',
+    href: '/guides/shift-handover-example',
+    linkLabel: 'View a shift handover example',
   },
   {
     step: '3',
-    title: 'Document preventive actions',
+    title: 'Use a handover checklist',
     description:
-      'Learn how to assign corrective actions, responsible persons, due dates and reviews.',
-    href: '/guides/corrective-action-report',
-    linkLabel: 'Read the corrective action guide',
+      'Review tasks, permits, equipment condition and active risks before closing the shift.',
+    href: '/guides/shift-handover-checklist',
+    linkLabel: 'Open the handover checklist',
   },
   {
     step: '4',
     title: 'Create the finished report',
     description:
-      'Complete a structured incident form and export a professional PDF document.',
-    href: '/tools/incident-report-generator',
-    linkLabel: 'Open the Incident Report Generator',
+      'Complete the structured form and export a professional shift handover PDF.',
+    href: '/tools/shift-handover-generator',
+    linkLabel: 'Open the Shift Handover Generator',
   },
 ]
 
@@ -109,74 +109,72 @@ const relatedCategories = [
   {
     title: 'Daily Reports',
     description:
-      'Document daily activities, completed work, blockers and safety observations.',
+      'Document daily activities, completed work, blockers and next priorities.',
     href: '/guides/daily-reports',
   },
   {
     title: 'Maintenance Reports',
     description:
-      'Record equipment findings, failures, repairs and final operational status.',
+      'Record equipment inspections, maintenance tasks, findings and recommendations.',
     href: '/guides/maintenance-reports',
+  },
+  {
+    title: 'Incident Reports',
+    description:
+      'Document incidents, immediate controls, root causes and corrective actions.',
+    href: '/guides/incident-reports',
   },
   {
     title: 'Progress Reports',
     description:
-      'Track project issues, risks, delays, schedule performance and priorities.',
+      'Track project performance, milestones, risks, delays and recovery actions.',
     href: '/guides/progress-reports',
-  },
-  {
-    title: 'Shift Handover',
-    description:
-      'Transfer active risks, restrictions, incidents and pending actions between shifts.',
-    href: '/guides/shift-handover',
   },
 ]
 
-export default function IncidentReportsHubPage() {
+export default function ShiftHandoverHubPage() {
   return (
     <main className='min-h-screen bg-slate-50 text-slate-900'>
       <Navbar />
 
-      <section className='relative overflow-hidden border-b border-red-200 bg-red-50'>
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(239,68,68,0.18),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(248,113,113,0.1),transparent_34%)]' />
+      <section className='relative overflow-hidden border-b border-violet-200 bg-violet-50'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(139,92,246,0.2),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(167,139,250,0.1),transparent_34%)]' />
 
         <div className='relative mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-24'>
           <nav
             aria-label='Breadcrumb'
             className='flex flex-wrap items-center gap-2 text-sm text-slate-600'
           >
-            <Link href='/' className='transition hover:text-red-700'>
+            <Link href='/' className='transition hover:text-violet-700'>
               Home
             </Link>
 
             <span aria-hidden='true'>/</span>
 
-            <Link href='/guides' className='transition hover:text-red-700'>
+            <Link href='/guides' className='transition hover:text-violet-700'>
               Guides
             </Link>
 
             <span aria-hidden='true'>/</span>
 
-            <span className='font-semibold text-slate-900'>
-              Incident Reports
-            </span>
+            <span className='font-semibold text-slate-900'>Shift Handover</span>
           </nav>
 
           <div className='mt-10 grid gap-10 lg:grid-cols-[1fr_0.7fr] lg:items-center'>
             <div>
-              <div className='inline-flex items-center gap-2 rounded-full border border-red-200 bg-white/80 px-4 py-2 text-sm font-semibold text-red-700'>
-                <span>IR</span>
-                <span>{incidentGuides.length} practical guides</span>
+              <div className='inline-flex items-center gap-2 rounded-full border border-violet-200 bg-white/80 px-4 py-2 text-sm font-semibold text-violet-700'>
+                <span>SH</span>
+                <span>{handoverGuides.length} practical guides</span>
               </div>
 
               <h1 className='mt-6 max-w-4xl text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl'>
-                Incident Report Guides, Examples and Corrective Actions
+                Shift Handover Guides, Examples and Checklists
               </h1>
 
               <p className='mt-6 max-w-3xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8'>
-                Learn how to document workplace incidents, safety events, near
-                misses, immediate controls, contributing factors, root causes
-                and corrective actions.
+                Learn how to transfer completed work, equipment condition,
+                pending tasks, incidents, active risks and operational
+                priorities between shifts.
               </p>
 
               <div className='mt-8 flex flex-col gap-3 sm:flex-row'>
@@ -188,27 +186,27 @@ export default function IncidentReportsHubPage() {
                 </Link>
 
                 <Link
-                  href='/tools/incident-report-generator'
-                  className='inline-flex items-center justify-center rounded-xl border border-red-300 bg-white px-5 py-3 text-sm font-semibold text-red-700 transition hover:bg-red-100'
+                  href='/tools/shift-handover-generator'
+                  className='inline-flex items-center justify-center rounded-xl border border-violet-300 bg-white px-5 py-3 text-sm font-semibold text-violet-700 transition hover:bg-violet-100'
                 >
-                  Open Incident Report Generator
+                  Open Shift Handover Generator
                 </Link>
               </div>
             </div>
 
-            <div className='rounded-3xl border border-red-200 bg-white p-6 shadow-xl shadow-red-100/70 sm:p-8'>
-              <p className='text-xs font-semibold uppercase tracking-[0.18em] text-red-600'>
-                Incident reporting workflow
+            <div className='rounded-3xl border border-violet-200 bg-white p-6 shadow-xl shadow-violet-100/70 sm:p-8'>
+              <p className='text-xs font-semibold uppercase tracking-[0.18em] text-violet-600'>
+                Shift handover workflow
               </p>
 
               <h2 className='mt-3 text-2xl font-bold text-slate-950'>
-                From the initial event to corrective action
+                From the outgoing shift to operational continuity
               </h2>
 
               <div className='mt-6 space-y-4'>
-                {incidentWorkflow.map((item, index) => (
+                {handoverWorkflow.map((item, index) => (
                   <div key={item} className='flex items-start gap-3'>
-                    <span className='flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-red-100 text-xs font-bold text-red-700'>
+                    <span className='flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-violet-100 text-xs font-bold text-violet-700'>
                       {index + 1}
                     </span>
 
@@ -224,23 +222,23 @@ export default function IncidentReportsHubPage() {
       <section className='border-b border-slate-200 bg-white'>
         <div className='mx-auto max-w-7xl px-6 py-14 sm:py-16'>
           <div className='max-w-3xl'>
-            <p className='text-sm font-semibold uppercase tracking-[0.18em] text-red-600'>
-              Incident Reporting Topics
+            <p className='text-sm font-semibold uppercase tracking-[0.18em] text-violet-600'>
+              Shift Handover Topics
             </p>
 
             <h2 className='mt-4 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl'>
-              Create clear and actionable incident records
+              Protect operational continuity between shifts
             </h2>
 
             <p className='mt-4 leading-7 text-slate-600'>
-              Cover the complete incident-reporting process, from documenting
-              the event and immediate response to assigning actions that reduce
-              the risk of recurrence.
+              Cover the complete handover process, from completed work and
+              equipment condition to open tasks, active risks and incoming-shift
+              priorities.
             </p>
           </div>
 
           <div className='mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3'>
-            {incidentTopics.map((topic) => (
+            {handoverTopics.map((topic) => (
               <article
                 key={topic.title}
                 className='rounded-3xl border border-slate-200 bg-slate-50 p-6'
@@ -262,34 +260,34 @@ export default function IncidentReportsHubPage() {
         <div className='mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-24'>
           <div className='flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between'>
             <div className='max-w-3xl'>
-              <p className='text-sm font-semibold uppercase tracking-[0.18em] text-red-600'>
-                Incident Report Library
+              <p className='text-sm font-semibold uppercase tracking-[0.18em] text-violet-600'>
+                Shift Handover Library
               </p>
 
               <h2 className='mt-4 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl'>
-                Explore all incident reporting guides
+                Explore all shift handover guides
               </h2>
 
               <p className='mt-4 leading-7 text-slate-600'>
-                Choose a resource based on the event type, investigation stage
-                or corrective-action workflow you need.
+                Choose a resource based on whether you need the complete
+                structure, a practical example or a repeatable checklist.
               </p>
             </div>
 
-            <span className='w-fit rounded-full bg-red-100 px-4 py-2 text-sm font-semibold text-red-700'>
-              {incidentGuides.length} guides
+            <span className='w-fit rounded-full bg-violet-100 px-4 py-2 text-sm font-semibold text-violet-700'>
+              {handoverGuides.length} guides
             </span>
           </div>
 
           <div className='mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3'>
-            {incidentGuides.map((guide) => (
+            {handoverGuides.map((guide) => (
               <article
                 key={guide.href}
-                className='group flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-red-200 hover:shadow-xl hover:shadow-slate-200/60'
+                className='group flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-violet-200 hover:shadow-xl hover:shadow-slate-200/60'
               >
                 <div className='flex items-start justify-between gap-4'>
-                  <div className='flex h-11 w-11 items-center justify-center rounded-2xl bg-red-500 text-xs font-bold text-white'>
-                    IR
+                  <div className='flex h-11 w-11 items-center justify-center rounded-2xl bg-violet-600 text-xs font-bold text-white'>
+                    SH
                   </div>
 
                   <span className='rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700'>
@@ -308,7 +306,7 @@ export default function IncidentReportsHubPage() {
                 <div className='mt-7'>
                   <Link
                     href={guide.href}
-                    className='inline-flex items-center text-sm font-semibold text-red-700 transition group-hover:text-red-900'
+                    className='inline-flex items-center text-sm font-semibold text-violet-700 transition group-hover:text-violet-900'
                   >
                     Read guide →
                   </Link>
@@ -322,12 +320,12 @@ export default function IncidentReportsHubPage() {
       <section className='border-y border-slate-200 bg-white'>
         <div className='mx-auto max-w-7xl px-6 py-16 sm:py-20'>
           <div className='max-w-3xl'>
-            <p className='text-sm font-semibold uppercase tracking-[0.18em] text-red-600'>
+            <p className='text-sm font-semibold uppercase tracking-[0.18em] text-violet-600'>
               Recommended Learning Path
             </p>
 
             <h2 className='mt-4 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl'>
-              Learn the structure, review an example and assign actions
+              Learn the structure, review an example and complete the handover
             </h2>
           </div>
 
@@ -351,7 +349,7 @@ export default function IncidentReportsHubPage() {
 
                 <Link
                   href={item.href}
-                  className='mt-6 text-sm font-semibold text-red-700 transition hover:text-red-900'
+                  className='mt-6 text-sm font-semibold text-violet-700 transition hover:text-violet-900'
                 >
                   {item.linkLabel} →
                 </Link>
@@ -365,32 +363,32 @@ export default function IncidentReportsHubPage() {
         <div className='mx-auto max-w-7xl px-6 py-16 sm:py-20'>
           <div className='grid gap-8 lg:grid-cols-[1fr_0.85fr]'>
             <div className='rounded-4xl bg-slate-950 p-6 text-white sm:p-8 lg:p-10'>
-              <p className='text-sm font-semibold uppercase tracking-[0.18em] text-red-300'>
-                Incident Report Generator
+              <p className='text-sm font-semibold uppercase tracking-[0.18em] text-violet-300'>
+                Shift Handover Generator
               </p>
 
               <h2 className='mt-4 text-3xl font-bold tracking-tight sm:text-4xl'>
-                Create a professional incident report
+                Create a professional shift handover report
               </h2>
 
               <p className='mt-5 max-w-2xl leading-8 text-slate-300'>
-                Document incident details, severity, immediate actions, root
-                causes, corrective actions and recommendations before exporting
-                a consistent PDF report.
+                Document completed work, equipment status, pending tasks,
+                incidents, active risks and recommendations before exporting a
+                consistent PDF report.
               </p>
 
               <div className='mt-8'>
                 <Link
-                  href='/tools/incident-report-generator'
-                  className='inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-red-50 sm:w-auto'
+                  href='/tools/shift-handover-generator'
+                  className='inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-violet-50 sm:w-auto'
                 >
-                  Open Incident Report Generator
+                  Open Shift Handover Generator
                 </Link>
               </div>
             </div>
 
             <div>
-              <p className='text-sm font-semibold uppercase tracking-[0.18em] text-red-600'>
+              <p className='text-sm font-semibold uppercase tracking-[0.18em] text-violet-600'>
                 Other Reporting Categories
               </p>
 
@@ -399,7 +397,7 @@ export default function IncidentReportsHubPage() {
                   <Link
                     key={category.title}
                     href={category.href}
-                    className='rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-red-200 hover:bg-red-50'
+                    className='rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-violet-200 hover:bg-violet-50'
                   >
                     <p className='font-semibold text-slate-950'>
                       {category.title}
