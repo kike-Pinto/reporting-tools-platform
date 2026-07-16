@@ -20,11 +20,14 @@ type CategoryConfig = {
   shortName: string
   description: string
   icon: string
+  hubHref: string
+  hubLabel: string
   accentClasses: string
   iconClasses: string
   countClasses: string
   navClasses: string
   navCountClasses: string
+  hubClasses: string
 }
 
 const guideCategories: CategoryConfig[] = [
@@ -35,12 +38,16 @@ const guideCategories: CategoryConfig[] = [
     description:
       'Create clearer daily work reports, activity summaries, construction updates and management reports.',
     icon: 'DR',
+    hubHref: '/guides/daily-reports',
+    hubLabel: 'Explore Daily Reports',
     accentClasses: 'border-blue-200 bg-blue-50',
     iconClasses: 'bg-blue-600 text-white',
     countClasses: 'bg-blue-100 text-blue-700',
     navClasses:
       'border-blue-200 bg-blue-50 text-blue-700 hover:border-blue-300 hover:bg-blue-100',
     navCountClasses: 'bg-white text-blue-700',
+    hubClasses:
+      'border-blue-200 bg-white text-blue-700 hover:border-blue-300 hover:bg-blue-100',
   },
   {
     name: 'Maintenance Reports',
@@ -49,12 +56,16 @@ const guideCategories: CategoryConfig[] = [
     description:
       'Document equipment inspections, preventive maintenance, repairs, parts used and operational status.',
     icon: 'MR',
+    hubHref: '/guides/maintenance-reports',
+    hubLabel: 'Explore Maintenance Reports',
     accentClasses: 'border-amber-200 bg-amber-50',
     iconClasses: 'bg-amber-500 text-white',
     countClasses: 'bg-amber-100 text-amber-700',
     navClasses:
       'border-amber-200 bg-amber-50 text-amber-700 hover:border-amber-300 hover:bg-amber-100',
     navCountClasses: 'bg-white text-amber-700',
+    hubClasses:
+      'border-amber-200 bg-white text-amber-700 hover:border-amber-300 hover:bg-amber-100',
   },
   {
     name: 'Incident Reports',
@@ -63,12 +74,16 @@ const guideCategories: CategoryConfig[] = [
     description:
       'Report safety incidents, near misses, contributing factors and corrective actions.',
     icon: 'IR',
+    hubHref: '/guides/incident-reports',
+    hubLabel: 'Explore Incident Reports',
     accentClasses: 'border-red-200 bg-red-50',
     iconClasses: 'bg-red-500 text-white',
     countClasses: 'bg-red-100 text-red-700',
     navClasses:
       'border-red-200 bg-red-50 text-red-700 hover:border-red-300 hover:bg-red-100',
     navCountClasses: 'bg-white text-red-700',
+    hubClasses:
+      'border-red-200 bg-white text-red-700 hover:border-red-300 hover:bg-red-100',
   },
   {
     name: 'Progress Reports',
@@ -77,12 +92,16 @@ const guideCategories: CategoryConfig[] = [
     description:
       'Track project progress, weekly performance, schedule variance, risks and next steps.',
     icon: 'PR',
+    hubHref: '/guides/progress-reports',
+    hubLabel: 'Explore Progress Reports',
     accentClasses: 'border-emerald-200 bg-emerald-50',
     iconClasses: 'bg-emerald-600 text-white',
     countClasses: 'bg-emerald-100 text-emerald-700',
     navClasses:
       'border-emerald-200 bg-emerald-50 text-emerald-700 hover:border-emerald-300 hover:bg-emerald-100',
     navCountClasses: 'bg-white text-emerald-700',
+    hubClasses:
+      'border-emerald-200 bg-white text-emerald-700 hover:border-emerald-300 hover:bg-emerald-100',
   },
   {
     name: 'Shift Handover',
@@ -91,12 +110,16 @@ const guideCategories: CategoryConfig[] = [
     description:
       'Transfer completed work, equipment condition, pending tasks and risks between shifts.',
     icon: 'SH',
+    hubHref: '/guides/shift-handover',
+    hubLabel: 'Explore Shift Handover',
     accentClasses: 'border-violet-200 bg-violet-50',
     iconClasses: 'bg-violet-600 text-white',
     countClasses: 'bg-violet-100 text-violet-700',
     navClasses:
       'border-violet-200 bg-violet-50 text-violet-700 hover:border-violet-300 hover:bg-violet-100',
     navCountClasses: 'bg-white text-violet-700',
+    hubClasses:
+      'border-violet-200 bg-white text-violet-700 hover:border-violet-300 hover:bg-violet-100',
   },
 ]
 
@@ -127,6 +150,22 @@ export default function GuidesPage() {
               maintenance, safety incidents, project progress and operational
               shift handovers.
             </p>
+
+            <div className='mt-8 flex flex-col gap-3 sm:flex-row'>
+              <Link
+                href='/tools'
+                className='inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800'
+              >
+                Explore report generators
+              </Link>
+
+              <Link
+                href='/'
+                className='inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700'
+              >
+                Return to homepage
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -173,7 +212,7 @@ export default function GuidesPage() {
               <div
                 className={`rounded-3xl border p-6 sm:p-8 ${category.accentClasses}`}
               >
-                <div className='flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between'>
+                <div className='flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between'>
                   <div className='flex items-start gap-4'>
                     <div
                       className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl text-sm font-bold ${category.iconClasses}`}
@@ -196,12 +235,21 @@ export default function GuidesPage() {
                     </div>
                   </div>
 
-                  <span
-                    className={`w-fit shrink-0 rounded-full px-4 py-2 text-sm font-semibold ${category.countClasses}`}
-                  >
-                    {categoryGuides.length}{' '}
-                    {categoryGuides.length === 1 ? 'guide' : 'guides'}
-                  </span>
+                  <div className='flex shrink-0 flex-col items-start gap-3 sm:flex-row sm:items-center lg:flex-col lg:items-end'>
+                    <span
+                      className={`w-fit rounded-full px-4 py-2 text-sm font-semibold ${category.countClasses}`}
+                    >
+                      {categoryGuides.length}{' '}
+                      {categoryGuides.length === 1 ? 'guide' : 'guides'}
+                    </span>
+
+                    <Link
+                      href={category.hubHref}
+                      className={`inline-flex w-full items-center justify-center rounded-xl border px-4 py-2.5 text-sm font-semibold transition sm:w-auto ${category.hubClasses}`}
+                    >
+                      {category.hubLabel} →
+                    </Link>
+                  </div>
                 </div>
               </div>
 
@@ -209,6 +257,15 @@ export default function GuidesPage() {
                 {categoryGuides.map((guide) => (
                   <GuideCard key={guide.href} guide={guide} />
                 ))}
+              </div>
+
+              <div className='mt-7 flex justify-center'>
+                <Link
+                  href={category.hubHref}
+                  className={`inline-flex w-full items-center justify-center rounded-xl border bg-white px-5 py-3 text-sm font-semibold transition sm:w-auto ${category.hubClasses}`}
+                >
+                  View the complete {category.name} library →
+                </Link>
               </div>
             </section>
           )
@@ -231,6 +288,15 @@ export default function GuidesPage() {
                 Learn the report structure, complete the corresponding tool and
                 export a professional document from your browser.
               </p>
+
+              <div className='mt-6'>
+                <Link
+                  href='/tools'
+                  className='inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800'
+                >
+                  Explore all report generators
+                </Link>
+              </div>
             </div>
 
             <div className='grid gap-4 sm:grid-cols-3'>
