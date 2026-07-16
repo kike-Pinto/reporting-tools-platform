@@ -29,7 +29,7 @@ const guideCategories = [
     ],
     featuredGuide: 'How to Write a Maintenance Report',
     featuredGuideHref: '/guides/how-to-write-a-maintenance-report',
-    categoryHref: '/guides#maintenance-reports',
+    categoryHref: '/guides/maintenance-reports',
     icon: 'MR',
     containerClasses: 'border-amber-200 bg-amber-50',
     iconClasses: 'bg-amber-500 text-white',

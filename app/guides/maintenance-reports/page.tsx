@@ -6,167 +6,177 @@ import Navbar from '@/components/layout/Navbar'
 import { guides } from '@/lib/guides'
 
 export const metadata: Metadata = {
-  title: 'Daily Report Guides, Examples and Templates',
+  title: 'Maintenance Report Guides, Examples and Checklists',
   description:
-    'Explore daily report guides, examples, formats and templates for employees, managers, construction sites and operational teams.',
+    'Explore maintenance report guides, examples and checklists for preventive maintenance, equipment repairs, inspections, findings and recommendations.',
   keywords: [
-    'daily report guides',
-    'daily report examples',
-    'daily report template',
-    'daily work report',
-    'daily activity report',
-    'daily report format',
-    'employee daily report',
-    'construction daily report',
+    'maintenance report guides',
+    'maintenance report example',
+    'maintenance report template',
+    'preventive maintenance report',
+    'equipment maintenance report',
+    'maintenance checklist',
+    'maintenance reporting',
+    'maintenance documentation',
   ],
   alternates: {
     canonical:
-      'https://reporting-tools-platform.vercel.app/guides/daily-reports',
+      'https://reporting-tools-platform.vercel.app/guides/maintenance-reports',
   },
 }
 
-const dailyReportGuides = guides.filter(
-  (guide) => guide.category === 'Daily Reports',
+const maintenanceGuides = guides.filter(
+  (guide) => guide.category === 'Maintenance Reports',
 )
 
-const dailyReportTopics = [
+const maintenanceTopics = [
   {
-    title: 'Daily report fundamentals',
+    title: 'Maintenance report fundamentals',
     description:
-      'Learn the essential structure, purpose and information every professional daily report should contain.',
+      'Learn how to document equipment information, maintenance activities, findings, parts and recommendations.',
   },
   {
-    title: 'Examples and templates',
+    title: 'Preventive maintenance',
     description:
-      'Review practical samples and reusable formats for different teams and reporting situations.',
+      'Record scheduled inspections, measurements, service tasks and follow-up actions designed to prevent failures.',
   },
   {
-    title: 'Manager communication',
+    title: 'Corrective maintenance',
     description:
-      'Prepare concise status updates with completed work, blockers, pending tasks and support needed.',
+      'Document equipment failures, completed repairs, replaced parts, testing and final operational condition.',
   },
   {
-    title: 'Construction and site reporting',
+    title: 'Equipment condition',
     description:
-      'Document manpower, activities, equipment, materials, weather, delays and safety observations.',
+      'Create a traceable record of equipment status, defects, restrictions and maintenance history.',
   },
   {
-    title: 'Employee work reports',
+    title: 'Maintenance checklists',
     description:
-      'Track individual tasks, results, working hours and next-day priorities.',
+      'Use repeatable inspection and verification steps before, during and after maintenance work.',
   },
   {
-    title: 'End-of-day reporting',
+    title: 'Findings and recommendations',
     description:
-      'Summarize daily performance and prepare a clear transition into the following workday.',
+      'Communicate abnormal conditions, required actions, priorities and future maintenance needs.',
   },
 ]
 
 const recommendedPath = [
   {
     step: '1',
-    title: 'Learn the basic structure',
+    title: 'Understand the report structure',
     description:
-      'Start with the complete guide to understand what a daily report should include.',
-    href: '/guides/how-to-write-a-daily-report',
-    linkLabel: 'Read the daily report guide',
+      'Learn which equipment, task, finding and recommendation fields belong in a professional maintenance report.',
+    href: '/guides/how-to-write-a-maintenance-report',
+    linkLabel: 'Read the maintenance report guide',
   },
   {
     step: '2',
-    title: 'Review a practical example',
+    title: 'Review practical examples',
     description:
-      'See how completed work, issues, pending tasks and next steps are documented.',
-    href: '/guides/daily-work-report-sample',
-    linkLabel: 'View a work report sample',
+      'See how preventive and corrective maintenance work can be documented clearly.',
+    href: '/guides/maintenance-report-example',
+    linkLabel: 'View maintenance report examples',
   },
   {
     step: '3',
-    title: 'Choose a reusable format',
+    title: 'Use a maintenance checklist',
     description:
-      'Use a structured template to create consistent reports every day.',
-    href: '/guides/daily-work-report-template',
-    linkLabel: 'Open the report template guide',
+      'Review preparation, inspection, task completion and final testing requirements.',
+    href: '/guides/maintenance-checklist',
+    linkLabel: 'Open the maintenance checklist',
   },
   {
     step: '4',
     title: 'Create the finished report',
     description:
-      'Complete the browser-based form, review the preview and export a PDF.',
-    href: '/tools/daily-report-generator',
-    linkLabel: 'Open the Daily Report Generator',
+      'Enter equipment details, tasks, parts and findings before exporting the report as PDF.',
+    href: '/tools/maintenance-report-generator',
+    linkLabel: 'Open the Maintenance Report Generator',
   },
+]
+
+const maintenanceWorkflow = [
+  'Identify the equipment and maintenance type',
+  'Record inspections, findings and abnormal conditions',
+  'Document completed tasks and replaced parts',
+  'Confirm testing and final equipment status',
+  'Add recommendations and follow-up actions',
 ]
 
 const relatedCategories = [
   {
-    title: 'Maintenance Reports',
+    title: 'Daily Reports',
     description:
-      'Document equipment inspections, service work, repairs and recommendations.',
-    href: '/guides/maintenance-reports',
+      'Document completed work, daily activities, blockers and pending tasks.',
+    href: '/guides/daily-reports',
   },
   {
     title: 'Incident Reports',
     description:
-      'Record workplace incidents, near misses and corrective actions.',
+      'Record safety incidents, equipment damage and corrective actions.',
     href: '/guides#incident-reports',
   },
   {
     title: 'Progress Reports',
     description:
-      'Track weekly and monthly project performance, issues and next steps.',
+      'Track project milestones, schedule performance, issues and priorities.',
     href: '/guides#progress-reports',
   },
   {
     title: 'Shift Handover',
     description:
-      'Transfer operational information, equipment status and pending tasks.',
+      'Transfer equipment status, maintenance restrictions and pending work.',
     href: '/guides#shift-handover',
   },
 ]
 
-export default function DailyReportsHubPage() {
+export default function MaintenanceReportsHubPage() {
   return (
     <main className='min-h-screen bg-slate-50 text-slate-900'>
       <Navbar />
 
-      <section className='relative overflow-hidden border-b border-blue-200 bg-blue-50'>
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.2),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(14,165,233,0.1),transparent_34%)]' />
+      <section className='relative overflow-hidden border-b border-amber-200 bg-amber-50'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.2),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(251,191,36,0.12),transparent_34%)]' />
 
         <div className='relative mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-24'>
           <nav
             aria-label='Breadcrumb'
             className='flex flex-wrap items-center gap-2 text-sm text-slate-600'
           >
-            <Link href='/' className='transition hover:text-blue-700'>
+            <Link href='/' className='transition hover:text-amber-700'>
               Home
             </Link>
 
             <span aria-hidden='true'>/</span>
 
-            <Link href='/guides' className='transition hover:text-blue-700'>
+            <Link href='/guides' className='transition hover:text-amber-700'>
               Guides
             </Link>
 
             <span aria-hidden='true'>/</span>
 
-            <span className='font-semibold text-slate-900'>Daily Reports</span>
+            <span className='font-semibold text-slate-900'>
+              Maintenance Reports
+            </span>
           </nav>
 
           <div className='mt-10 grid gap-10 lg:grid-cols-[1fr_0.7fr] lg:items-center'>
             <div>
-              <div className='inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/80 px-4 py-2 text-sm font-semibold text-blue-700'>
-                <span>DR</span>
-                <span>{dailyReportGuides.length} practical guides</span>
+              <div className='inline-flex items-center gap-2 rounded-full border border-amber-200 bg-white/80 px-4 py-2 text-sm font-semibold text-amber-700'>
+                <span>MR</span>
+                <span>{maintenanceGuides.length} practical guides</span>
               </div>
 
               <h1 className='mt-6 max-w-4xl text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl'>
-                Daily Report Guides, Examples and Templates
+                Maintenance Report Guides, Examples and Checklists
               </h1>
 
               <p className='mt-6 max-w-3xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8'>
-                Learn how to create clear daily work reports for employees,
-                managers, construction sites, maintenance teams and operational
-                environments.
+                Learn how to document preventive maintenance, equipment repairs,
+                inspections, findings, parts used, testing and follow-up
+                recommendations.
               </p>
 
               <div className='mt-8 flex flex-col gap-3 sm:flex-row'>
@@ -178,33 +188,27 @@ export default function DailyReportsHubPage() {
                 </Link>
 
                 <Link
-                  href='/tools/daily-report-generator'
-                  className='inline-flex items-center justify-center rounded-xl border border-blue-300 bg-white px-5 py-3 text-sm font-semibold text-blue-700 transition hover:bg-blue-100'
+                  href='/tools/maintenance-report-generator'
+                  className='inline-flex items-center justify-center rounded-xl border border-amber-300 bg-white px-5 py-3 text-sm font-semibold text-amber-700 transition hover:bg-amber-100'
                 >
-                  Open Daily Report Generator
+                  Open Maintenance Report Generator
                 </Link>
               </div>
             </div>
 
-            <div className='rounded-3xl border border-blue-200 bg-white p-6 shadow-xl shadow-blue-100/70 sm:p-8'>
-              <p className='text-xs font-semibold uppercase tracking-[0.18em] text-blue-600'>
-                Daily reporting workflow
+            <div className='rounded-3xl border border-amber-200 bg-white p-6 shadow-xl shadow-amber-100/70 sm:p-8'>
+              <p className='text-xs font-semibold uppercase tracking-[0.18em] text-amber-600'>
+                Maintenance reporting workflow
               </p>
 
               <h2 className='mt-3 text-2xl font-bold text-slate-950'>
-                From completed work to a professional PDF
+                From equipment inspection to final status
               </h2>
 
               <div className='mt-6 space-y-4'>
-                {[
-                  'Record completed activities and results',
-                  'Document issues, blockers and delays',
-                  'Identify pending work and next priorities',
-                  'Review the structured report preview',
-                  'Export and share the final PDF',
-                ].map((item, index) => (
+                {maintenanceWorkflow.map((item, index) => (
                   <div key={item} className='flex items-start gap-3'>
-                    <span className='flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-100 text-xs font-bold text-blue-700'>
+                    <span className='flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-amber-100 text-xs font-bold text-amber-700'>
                       {index + 1}
                     </span>
 
@@ -220,17 +224,23 @@ export default function DailyReportsHubPage() {
       <section className='border-b border-slate-200 bg-white'>
         <div className='mx-auto max-w-7xl px-6 py-14 sm:py-16'>
           <div className='max-w-3xl'>
-            <p className='text-sm font-semibold uppercase tracking-[0.18em] text-blue-600'>
-              Daily Reporting Topics
+            <p className='text-sm font-semibold uppercase tracking-[0.18em] text-amber-600'>
+              Maintenance Reporting Topics
             </p>
 
             <h2 className='mt-4 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl'>
-              Everything needed for consistent daily reporting
+              Build clear and traceable maintenance records
             </h2>
+
+            <p className='mt-4 leading-7 text-slate-600'>
+              Cover the complete maintenance workflow, from initial equipment
+              condition through completed work, final testing and future
+              recommendations.
+            </p>
           </div>
 
           <div className='mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3'>
-            {dailyReportTopics.map((topic) => (
+            {maintenanceTopics.map((topic) => (
               <article
                 key={topic.title}
                 className='rounded-3xl border border-slate-200 bg-slate-50 p-6'
@@ -248,38 +258,38 @@ export default function DailyReportsHubPage() {
         </div>
       </section>
 
-      <section id='daily-report-guides' className='scroll-mt-24 bg-slate-50'>
+      <section className='bg-slate-50'>
         <div className='mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-24'>
           <div className='flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between'>
             <div className='max-w-3xl'>
-              <p className='text-sm font-semibold uppercase tracking-[0.18em] text-blue-600'>
-                Daily Report Library
+              <p className='text-sm font-semibold uppercase tracking-[0.18em] text-amber-600'>
+                Maintenance Report Library
               </p>
 
               <h2 className='mt-4 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl'>
-                Explore all daily report guides
+                Explore all maintenance reporting guides
               </h2>
 
               <p className='mt-4 leading-7 text-slate-600'>
-                Choose a guide based on the report type, work environment or
-                audience you need to communicate with.
+                Choose a resource based on the equipment condition, maintenance
+                type or documentation workflow you need.
               </p>
             </div>
 
-            <span className='w-fit rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700'>
-              {dailyReportGuides.length} guides
+            <span className='w-fit rounded-full bg-amber-100 px-4 py-2 text-sm font-semibold text-amber-700'>
+              {maintenanceGuides.length} guides
             </span>
           </div>
 
           <div className='mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3'>
-            {dailyReportGuides.map((guide) => (
+            {maintenanceGuides.map((guide) => (
               <article
                 key={guide.href}
-                className='group flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-slate-200/60'
+                className='group flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-amber-200 hover:shadow-xl hover:shadow-slate-200/60'
               >
                 <div className='flex items-start justify-between gap-4'>
-                  <div className='flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-600 text-xs font-bold text-white'>
-                    DR
+                  <div className='flex h-11 w-11 items-center justify-center rounded-2xl bg-amber-500 text-xs font-bold text-white'>
+                    MR
                   </div>
 
                   <span className='rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700'>
@@ -298,7 +308,7 @@ export default function DailyReportsHubPage() {
                 <div className='mt-7'>
                   <Link
                     href={guide.href}
-                    className='inline-flex items-center text-sm font-semibold text-blue-700 transition group-hover:text-blue-900'
+                    className='inline-flex items-center text-sm font-semibold text-amber-700 transition group-hover:text-amber-900'
                   >
                     Read guide →
                   </Link>
@@ -312,12 +322,12 @@ export default function DailyReportsHubPage() {
       <section className='border-y border-slate-200 bg-white'>
         <div className='mx-auto max-w-7xl px-6 py-16 sm:py-20'>
           <div className='max-w-3xl'>
-            <p className='text-sm font-semibold uppercase tracking-[0.18em] text-blue-600'>
+            <p className='text-sm font-semibold uppercase tracking-[0.18em] text-amber-600'>
               Recommended Learning Path
             </p>
 
             <h2 className='mt-4 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl'>
-              Learn the structure, review an example and create the report
+              Learn the structure, review examples and document the work
             </h2>
           </div>
 
@@ -341,7 +351,7 @@ export default function DailyReportsHubPage() {
 
                 <Link
                   href={item.href}
-                  className='mt-6 text-sm font-semibold text-blue-700 transition hover:text-blue-900'
+                  className='mt-6 text-sm font-semibold text-amber-700 transition hover:text-amber-900'
                 >
                   {item.linkLabel} →
                 </Link>
@@ -355,31 +365,32 @@ export default function DailyReportsHubPage() {
         <div className='mx-auto max-w-7xl px-6 py-16 sm:py-20'>
           <div className='grid gap-8 lg:grid-cols-[1fr_0.85fr]'>
             <div className='rounded-4xl bg-slate-950 p-6 text-white sm:p-8 lg:p-10'>
-              <p className='text-sm font-semibold uppercase tracking-[0.18em] text-blue-300'>
-                Daily Report Generator
+              <p className='text-sm font-semibold uppercase tracking-[0.18em] text-amber-300'>
+                Maintenance Report Generator
               </p>
 
               <h2 className='mt-4 text-3xl font-bold tracking-tight sm:text-4xl'>
-                Create a professional daily report in your browser
+                Create a professional maintenance report
               </h2>
 
               <p className='mt-5 max-w-2xl leading-8 text-slate-300'>
-                Complete a structured form, review the live preview and export a
-                consistent PDF report without manually formatting a document.
+                Document equipment details, completed tasks, parts, findings,
+                final status and recommendations before exporting a consistent
+                PDF report.
               </p>
 
               <div className='mt-8'>
                 <Link
-                  href='/tools/daily-report-generator'
-                  className='inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-blue-50 sm:w-auto'
+                  href='/tools/maintenance-report-generator'
+                  className='inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-amber-50 sm:w-auto'
                 >
-                  Open Daily Report Generator
+                  Open Maintenance Report Generator
                 </Link>
               </div>
             </div>
 
             <div>
-              <p className='text-sm font-semibold uppercase tracking-[0.18em] text-blue-600'>
+              <p className='text-sm font-semibold uppercase tracking-[0.18em] text-amber-600'>
                 Other Reporting Categories
               </p>
 
@@ -388,7 +399,7 @@ export default function DailyReportsHubPage() {
                   <Link
                     key={category.title}
                     href={category.href}
-                    className='rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-blue-200 hover:bg-blue-50'
+                    className='rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-amber-200 hover:bg-amber-50'
                   >
                     <p className='font-semibold text-slate-950'>
                       {category.title}

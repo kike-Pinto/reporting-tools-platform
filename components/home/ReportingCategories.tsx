@@ -21,7 +21,7 @@ const reportingCategories = [
     description:
       'Document inspections, preventive maintenance, equipment repairs, findings and parts used.',
     guideCount: 6,
-    guidesHref: '/guides#maintenance-reports',
+    guidesHref: '/guides/maintenance-reports',
     toolName: 'Maintenance Report Generator',
     toolHref: '/tools/maintenance-report-generator',
     containerClasses: 'border-amber-200 bg-amber-50',
