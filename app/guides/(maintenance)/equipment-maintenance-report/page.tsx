@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import RelatedGuides from '@/components/guides/RelatedGuides'
+import FaqSchema from '@/components/seo/FaqSchema'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
 
@@ -150,6 +151,8 @@ const faqs = [
 export default function EquipmentMaintenanceReportPage() {
   return (
     <main className='min-h-screen bg-slate-50 text-slate-900'>
+      <FaqSchema faqs={faqs} />
+
       <Navbar />
 
       <article className='mx-auto max-w-4xl px-6 py-16 sm:py-20'>
