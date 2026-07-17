@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+import RelatedGuides from '@/components/guides/RelatedGuides'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
 
@@ -306,67 +307,11 @@ export default function HowToWriteProgressReportPage() {
             </div>
           </section>
 
-          <section className='mt-14'>
-            <h2 className='text-3xl font-bold text-slate-950'>
-              Related progress report resources
-            </h2>
-
-            <div className='mt-6 grid gap-4 sm:grid-cols-2'>
-              <Link
-                href='/tools/progress-report-generator'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  Progress Report Generator
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Create a structured project progress report and export it as a
-                  PDF.
-                </p>
-              </Link>
-
-              <Link
-                href='/guides/how-to-write-a-daily-report'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  Daily Report Guide
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Learn how to document daily work and operational progress.
-                </p>
-              </Link>
-
-              <Link
-                href='/guides/how-to-write-a-maintenance-report'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  Maintenance Report Guide
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Learn how to document equipment work, findings and follow-up
-                  actions.
-                </p>
-              </Link>
-
-              <Link
-                href='/guides/how-to-write-an-incident-report'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  Incident Report Guide
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Learn how to record incidents, causes and corrective actions.
-                </p>
-              </Link>
-            </div>
-          </section>
+          <RelatedGuides
+            currentHref='/guides/how-to-write-a-progress-report'
+            category='Progress Reports'
+            title='Related progress guides'
+          />
 
           <section className='mt-14'>
             <h2 className='text-3xl font-bold text-slate-950'>
