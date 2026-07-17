@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+import RelatedGuides from '@/components/guides/RelatedGuides'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
 
@@ -426,65 +427,11 @@ export default function ShiftHandoverExamplePage() {
             </div>
           </section>
 
-          <section className='mt-14'>
-            <h2 className='text-3xl font-bold text-slate-950'>
-              Related shift handover resources
-            </h2>
-
-            <div className='mt-6 grid gap-4 sm:grid-cols-2'>
-              <Link
-                href='/guides/how-to-write-a-shift-handover-report'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  How to Write a Shift Handover Report
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Learn the full handover report structure.
-                </p>
-              </Link>
-
-              <Link
-                href='/guides/shift-handover-checklist'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  Shift Handover Checklist
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Review the information before transferring responsibility.
-                </p>
-              </Link>
-
-              <Link
-                href='/guides/equipment-maintenance-report'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  Equipment Maintenance Report
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Document equipment status and completed maintenance.
-                </p>
-              </Link>
-
-              <Link
-                href='/tools/shift-handover-generator'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  Shift Handover Generator
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Create and export a professional handover report.
-                </p>
-              </Link>
-            </div>
-          </section>
+          <RelatedGuides
+            currentHref='/guides/shift-handover-example'
+            category='Shift Handover'
+            title='Related shift handover guides'
+          />
 
           <section className='mt-14'>
             <h2 className='text-3xl font-bold text-slate-950'>
