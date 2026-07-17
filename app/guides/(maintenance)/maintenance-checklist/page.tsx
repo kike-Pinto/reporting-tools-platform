@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+import RelatedGuides from '@/components/guides/RelatedGuides'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
 
@@ -349,65 +350,11 @@ export default function MaintenanceChecklistPage() {
             </div>
           </section>
 
-          <section className='mt-14'>
-            <h2 className='text-3xl font-bold text-slate-950'>
-              Related maintenance resources
-            </h2>
-
-            <div className='mt-6 grid gap-4 sm:grid-cols-2'>
-              <Link
-                href='/guides/preventive-maintenance-report'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  Preventive Maintenance Report
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Learn how to document planned inspections and servicing.
-                </p>
-              </Link>
-
-              <Link
-                href='/guides/equipment-maintenance-report'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  Equipment Maintenance Report
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Learn how to report equipment condition and completed work.
-                </p>
-              </Link>
-
-              <Link
-                href='/guides/maintenance-reporting-guide'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  Maintenance Reporting Guide
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Build a consistent maintenance reporting process.
-                </p>
-              </Link>
-
-              <Link
-                href='/tools/maintenance-report-generator'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  Maintenance Report Generator
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Convert maintenance results into a professional PDF report.
-                </p>
-              </Link>
-            </div>
-          </section>
+          <RelatedGuides
+            currentHref='/guides/maintenance-checklist'
+            category='Maintenance Reports'
+            title='Related maintenance guides'
+          />
 
           <section className='mt-14'>
             <h2 className='text-3xl font-bold text-slate-950'>
