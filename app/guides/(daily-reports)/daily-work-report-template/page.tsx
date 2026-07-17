@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+import RelatedGuides from '@/components/guides/RelatedGuides'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
 
@@ -157,6 +158,12 @@ export default function DailyWorkReportTemplatePage() {
             </ul>
           </section>
 
+          <RelatedGuides
+            currentHref='/guides/daily-work-report-template'
+            category='Daily Reports'
+            title='Related daily report guides'
+          />
+
           <section className='mt-14'>
             <h2 className='text-3xl font-bold'>Frequently Asked Questions</h2>
 
@@ -171,40 +178,6 @@ export default function DailyWorkReportTemplatePage() {
                   <p className='mt-3 leading-7 text-slate-600'>{faq.answer}</p>
                 </div>
               ))}
-            </div>
-          </section>
-
-          <section className='mt-14'>
-            <h2 className='text-3xl font-bold'>Related Daily Report Guides</h2>
-
-            <div className='mt-6 grid gap-4 sm:grid-cols-2'>
-              <Link
-                href='/guides/daily-report-format'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 hover:bg-slate-100'
-              >
-                Daily Report Format
-              </Link>
-
-              <Link
-                href='/guides/daily-report-examples'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 hover:bg-slate-100'
-              >
-                Daily Report Examples
-              </Link>
-
-              <Link
-                href='/guides/end-of-day-report'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 hover:bg-slate-100'
-              >
-                End of Day Report
-              </Link>
-
-              <Link
-                href='/guides/how-to-write-a-daily-report'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 hover:bg-slate-100'
-              >
-                How to Write a Daily Report
-              </Link>
             </div>
           </section>
 

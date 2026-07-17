@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+import RelatedGuides from '@/components/guides/RelatedGuides'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
 
@@ -250,65 +251,11 @@ export default function DailyReportToBossPage() {
             </ul>
           </section>
 
-          <section className='mt-14'>
-            <h2 className='text-3xl font-bold text-slate-950'>
-              Related daily report resources
-            </h2>
-
-            <div className='mt-6 grid gap-4 sm:grid-cols-2'>
-              <Link
-                href='/guides/how-to-write-a-daily-report'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  How to Write a Daily Report
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Learn the complete structure of a professional daily report.
-                </p>
-              </Link>
-
-              <Link
-                href='/guides/daily-work-report-sample'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  Daily Work Report Sample
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Review a practical daily work report example.
-                </p>
-              </Link>
-
-              <Link
-                href='/guides/how-to-write-a-daily-report-for-construction'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  Daily Report for Construction
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Learn how construction teams document daily site activity.
-                </p>
-              </Link>
-
-              <Link
-                href='/tools/daily-report-generator'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  Daily Report Generator
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Create and export a structured daily report as a PDF.
-                </p>
-              </Link>
-            </div>
-          </section>
+          <RelatedGuides
+            currentHref='/guides/how-to-write-a-daily-report-to-your-boss'
+            category='Daily Reports'
+            title='Related daily report guides'
+          />
 
           <section className='mt-14'>
             <h2 className='text-3xl font-bold text-slate-950'>

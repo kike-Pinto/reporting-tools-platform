@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+import RelatedGuides from '@/components/guides/RelatedGuides'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
 
@@ -383,65 +384,11 @@ export default function DailyReportExamplesPage() {
             </div>
           </section>
 
-          <section className='mt-14'>
-            <h2 className='text-3xl font-bold text-slate-950'>
-              Related daily report resources
-            </h2>
-
-            <div className='mt-6 grid gap-4 sm:grid-cols-2'>
-              <Link
-                href='/guides/daily-report-format'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  Daily Report Format
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Review a reusable structure for daily work reports.
-                </p>
-              </Link>
-
-              <Link
-                href='/guides/daily-work-report-sample'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  Daily Work Report Sample
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  See a complete daily work report sample.
-                </p>
-              </Link>
-
-              <Link
-                href='/guides/how-to-write-a-daily-report-to-your-boss'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  Daily Report to Your Boss
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Learn how to report completed work and blockers to a manager.
-                </p>
-              </Link>
-
-              <Link
-                href='/tools/daily-report-generator'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  Daily Report Generator
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Create a structured report and export it as a PDF.
-                </p>
-              </Link>
-            </div>
-          </section>
+          <RelatedGuides
+            currentHref='/guides/daily-report-examples'
+            category='Daily Reports'
+            title='Related daily report guides'
+          />
 
           <section className='mt-14'>
             <h2 className='text-3xl font-bold text-slate-950'>
