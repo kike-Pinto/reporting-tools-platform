@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+import RelatedGuides from '@/components/guides/RelatedGuides'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
 
@@ -429,63 +430,11 @@ export default function IncidentReportExamplePage() {
             </div>
           </section>
 
-          <section className='mt-14'>
-            <h2 className='text-3xl font-bold text-slate-950'>
-              Related incident resources
-            </h2>
-
-            <div className='mt-6 grid gap-4 sm:grid-cols-2'>
-              <Link
-                href='/guides/how-to-write-an-incident-report'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  How to Write an Incident Report
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Learn the complete incident report structure.
-                </p>
-              </Link>
-
-              <Link
-                href='/guides/safety-incident-report'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  Safety Incident Report
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Learn how to document workplace safety incidents.
-                </p>
-              </Link>
-
-              <Link
-                href='/guides/near-miss-report'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>Near Miss Report</p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Learn how to document events that could have caused harm.
-                </p>
-              </Link>
-
-              <Link
-                href='/tools/incident-report-generator'
-                className='rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:bg-slate-100'
-              >
-                <p className='font-semibold text-slate-950'>
-                  Incident Report Generator
-                </p>
-
-                <p className='mt-2 text-sm leading-6 text-slate-600'>
-                  Create and export a professional incident report.
-                </p>
-              </Link>
-            </div>
-          </section>
+          <RelatedGuides
+            currentHref='/guides/incident-report-example'
+            category='Incident Reports'
+            title='Related incident guides'
+          />
 
           <section className='mt-14'>
             <h2 className='text-3xl font-bold text-slate-950'>
