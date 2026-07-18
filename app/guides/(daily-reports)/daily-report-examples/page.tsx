@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import RelatedGuides from '@/components/guides/RelatedGuides'
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
 import FaqSchema from '@/components/seo/FaqSchema'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
@@ -103,6 +104,26 @@ const faqs = [
 export default function DailyReportExamplesPage() {
   return (
     <main className='min-h-screen bg-slate-50 text-slate-900'>
+      <BreadcrumbSchema
+        items={[
+          {
+            name: 'Home',
+            url: 'https://reporting-tools-platform.vercel.app',
+          },
+          {
+            name: 'Guides',
+            url: 'https://reporting-tools-platform.vercel.app/guides',
+          },
+          {
+            name: 'Daily Reports',
+            url: 'https://reporting-tools-platform.vercel.app/guides/daily-reports',
+          },
+          {
+            name: 'Daily Report Examples',
+            url: 'https://reporting-tools-platform.vercel.app/guides/daily-report-examples',
+          },
+        ]}
+      />
       <FaqSchema faqs={faqs} />
 
       <Navbar />
