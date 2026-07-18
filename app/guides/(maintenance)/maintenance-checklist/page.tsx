@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import RelatedGuides from '@/components/guides/RelatedGuides'
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
 import FaqSchema from '@/components/seo/FaqSchema'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
@@ -115,6 +116,27 @@ const faqs = [
 export default function MaintenanceChecklistPage() {
   return (
     <main className='min-h-screen bg-slate-50 text-slate-900'>
+      <BreadcrumbSchema
+        items={[
+          {
+            name: 'Home',
+            url: 'https://reporting-tools-platform.vercel.app',
+          },
+          {
+            name: 'Guides',
+            url: 'https://reporting-tools-platform.vercel.app/guides',
+          },
+          {
+            name: 'Maintenance Reports',
+            url: 'https://reporting-tools-platform.vercel.app/guides/maintenance-reports',
+          },
+          {
+            name: 'Maintenance Checklist',
+            url: 'https://reporting-tools-platform.vercel.app/guides/maintenance-checklist',
+          },
+        ]}
+      />
+
       <FaqSchema faqs={faqs} />
       <Navbar />
 
