@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import RelatedGuides from '@/components/guides/RelatedGuides'
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
 import FaqSchema from '@/components/seo/FaqSchema'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
@@ -114,6 +115,27 @@ const faqs = [
 export default function ShiftHandoverChecklistPage() {
   return (
     <main className='min-h-screen bg-slate-50 text-slate-900'>
+      <BreadcrumbSchema
+        items={[
+          {
+            name: 'Home',
+            url: 'https://reporting-tools-platform.vercel.app',
+          },
+          {
+            name: 'Guides',
+            url: 'https://reporting-tools-platform.vercel.app/guides',
+          },
+          {
+            name: 'Shift Handover',
+            url: 'https://reporting-tools-platform.vercel.app/guides/shift-handover',
+          },
+          {
+            name: 'Shift Handover Checklist',
+            url: 'https://reporting-tools-platform.vercel.app/guides/shift-handover-checklist',
+          },
+        ]}
+      />
+
       <FaqSchema faqs={faqs} />
 
       <Navbar />
