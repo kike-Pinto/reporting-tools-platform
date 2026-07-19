@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
 import { tools } from '@/lib/tools'
@@ -177,6 +178,18 @@ export default function ToolsPage() {
 
   return (
     <main className='min-h-screen bg-slate-50 text-slate-900'>
+      <BreadcrumbSchema
+        items={[
+          {
+            name: 'Home',
+            url: 'https://reporting-tools-platform.vercel.app',
+          },
+          {
+            name: 'Tools',
+            url: 'https://reporting-tools-platform.vercel.app/tools',
+          },
+        ]}
+      />
       <Navbar />
 
       <section className='relative overflow-hidden bg-slate-950 text-white'>

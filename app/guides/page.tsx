@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
 import { guides, type GuideCategory, type GuideItem } from '@/lib/guides'
@@ -130,6 +131,19 @@ function getGuidesByCategory(category: GuideCategory) {
 export default function GuidesPage() {
   return (
     <main className='min-h-screen bg-slate-50 text-slate-900'>
+      <BreadcrumbSchema
+        items={[
+          {
+            name: 'Home',
+            url: 'https://reporting-tools-platform.vercel.app',
+          },
+          {
+            name: 'Guides',
+            url: 'https://reporting-tools-platform.vercel.app/guides',
+          },
+        ]}
+      />
+
       <Navbar />
 
       <section className='relative overflow-hidden border-b border-slate-200 bg-white'>

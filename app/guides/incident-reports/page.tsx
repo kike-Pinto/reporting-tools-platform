@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
 import { guides } from '@/lib/guides'
@@ -135,6 +136,22 @@ const relatedCategories = [
 export default function IncidentReportsHubPage() {
   return (
     <main className='min-h-screen bg-slate-50 text-slate-900'>
+      <BreadcrumbSchema
+        items={[
+          {
+            name: 'Home',
+            url: 'https://reporting-tools-platform.vercel.app',
+          },
+          {
+            name: 'Guides',
+            url: 'https://reporting-tools-platform.vercel.app/guides',
+          },
+          {
+            name: 'Incident Reports',
+            url: 'https://reporting-tools-platform.vercel.app/guides/incident-reports',
+          },
+        ]}
+      />
       <Navbar />
 
       <section className='relative overflow-hidden border-b border-red-200 bg-red-50'>
