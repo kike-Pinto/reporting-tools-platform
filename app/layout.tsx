@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import OrganizationSchema from '@/components/seo/OrganizationSchema'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -56,7 +57,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body>{children}</body>
+      <body>
+        <OrganizationSchema />
+        {children}
+      </body>
     </html>
   )
 }
