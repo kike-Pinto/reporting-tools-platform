@@ -4,6 +4,8 @@ import ShiftHandoverTool from '@/components/handover/ShiftHandoverTool'
 import ShiftHandoverSEO from '@/components/handover/ShiftHandoverSEO'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import SoftwareSchema from '@/components/seo/SoftwareSchema'
 
 export const metadata: Metadata = {
   title: 'Shift Handover Generator',
@@ -22,6 +24,38 @@ export const metadata: Metadata = {
 export default function ShiftHandoverGeneratorPage() {
   return (
     <main className='min-h-screen bg-slate-50 text-slate-900'>
+      <BreadcrumbSchema
+        items={[
+          {
+            name: 'Home',
+            url: 'https://reporting-tools-platform.vercel.app',
+          },
+          {
+            name: 'Tools',
+            url: 'https://reporting-tools-platform.vercel.app/tools',
+          },
+          {
+            name: 'Shift Handover Generator',
+            url: 'https://reporting-tools-platform.vercel.app/tools/shift-handover-generator',
+          },
+        ]}
+      />
+
+      <SoftwareSchema
+        name='Shift Handover Generator'
+        description='Create structured shift handover reports with completed work, equipment status, pending tasks, incidents, recommendations, live preview and PDF export.'
+        url='https://reporting-tools-platform.vercel.app/tools/shift-handover-generator'
+        featureList={[
+          'Outgoing and incoming shift details',
+          'Completed work documentation',
+          'Equipment status tracking',
+          'Pending tasks and priorities',
+          'Incident and risk documentation',
+          'Recommendations for the incoming shift',
+          'Live report preview',
+          'Professional PDF export',
+        ]}
+      />
       <Navbar />
 
       <section className='relative overflow-hidden border-b border-slate-200 bg-white'>

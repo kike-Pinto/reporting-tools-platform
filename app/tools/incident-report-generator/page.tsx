@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 import IncidentReportTool from '@/components/incident/IncidentReportTool'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import SoftwareSchema from '@/components/seo/SoftwareSchema'
 
 export const metadata: Metadata = {
   title: 'Incident Report Generator',
@@ -21,6 +23,39 @@ export const metadata: Metadata = {
 export default function IncidentReportGeneratorPage() {
   return (
     <main className='min-h-screen bg-slate-50 text-slate-900'>
+      <BreadcrumbSchema
+        items={[
+          {
+            name: 'Home',
+            url: 'https://reporting-tools-platform.vercel.app',
+          },
+          {
+            name: 'Tools',
+            url: 'https://reporting-tools-platform.vercel.app/tools',
+          },
+          {
+            name: 'Incident Report Generator',
+            url: 'https://reporting-tools-platform.vercel.app/tools/incident-report-generator',
+          },
+        ]}
+      />
+
+      <SoftwareSchema
+        name='Incident Report Generator'
+        description='Create structured incident reports with event details, severity, immediate actions, root causes, corrective actions, live preview and PDF export.'
+        url='https://reporting-tools-platform.vercel.app/tools/incident-report-generator'
+        featureList={[
+          'Incident date, location and type',
+          'Severity and status tracking',
+          'People involved',
+          'Detailed incident description',
+          'Immediate actions taken',
+          'Root cause and contributing factors',
+          'Corrective actions and recommendations',
+          'Live report preview',
+          'Professional PDF export',
+        ]}
+      />
       <Navbar />
 
       <section className='relative overflow-hidden border-b border-slate-200 bg-white'>

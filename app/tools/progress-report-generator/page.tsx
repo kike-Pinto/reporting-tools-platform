@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
 import ProgressReportTool from '@/components/progress/ProgressReportTool'
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import SoftwareSchema from '@/components/seo/SoftwareSchema'
 
 export const metadata: Metadata = {
   title: 'Progress Report Generator',
@@ -21,6 +23,38 @@ export const metadata: Metadata = {
 export default function ProgressReportGeneratorPage() {
   return (
     <main className='min-h-screen bg-slate-50 text-slate-900'>
+      <BreadcrumbSchema
+        items={[
+          {
+            name: 'Home',
+            url: 'https://reporting-tools-platform.vercel.app',
+          },
+          {
+            name: 'Tools',
+            url: 'https://reporting-tools-platform.vercel.app/tools',
+          },
+          {
+            name: 'Progress Report Generator',
+            url: 'https://reporting-tools-platform.vercel.app/tools/progress-report-generator',
+          },
+        ]}
+      />
+
+      <SoftwareSchema
+        name='Progress Report Generator'
+        description='Create structured project progress reports with planned progress, actual progress, activities, delays, next steps, live preview and PDF export.'
+        url='https://reporting-tools-platform.vercel.app/tools/progress-report-generator'
+        featureList={[
+          'Project and reporting period details',
+          'Planned progress tracking',
+          'Actual progress tracking',
+          'Activity and milestone documentation',
+          'Issues and delay reporting',
+          'Next steps and priorities',
+          'Live report preview',
+          'Professional PDF export',
+        ]}
+      />
       <Navbar />
 
       <section className='relative overflow-hidden border-b border-slate-200 bg-white'>

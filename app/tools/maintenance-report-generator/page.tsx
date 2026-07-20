@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
 import MaintenanceReportTool from '@/components/maintenance/MaintenanceReportTool'
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema'
+import SoftwareSchema from '@/components/seo/SoftwareSchema'
 
 export const metadata: Metadata = {
   title: 'Maintenance Report Generator',
@@ -21,6 +23,38 @@ export const metadata: Metadata = {
 export default function MaintenanceReportGeneratorPage() {
   return (
     <main className='min-h-screen bg-slate-50 text-slate-900'>
+      <BreadcrumbSchema
+        items={[
+          {
+            name: 'Home',
+            url: 'https://reporting-tools-platform.vercel.app',
+          },
+          {
+            name: 'Tools',
+            url: 'https://reporting-tools-platform.vercel.app/tools',
+          },
+          {
+            name: 'Maintenance Report Generator',
+            url: 'https://reporting-tools-platform.vercel.app/tools/maintenance-report-generator',
+          },
+        ]}
+      />
+
+      <SoftwareSchema
+        name='Maintenance Report Generator'
+        description='Create structured equipment maintenance reports with work completed, findings, parts used, recommendations, live preview and PDF export.'
+        url='https://reporting-tools-platform.vercel.app/tools/maintenance-report-generator'
+        featureList={[
+          'Equipment and asset identification',
+          'Maintenance type and work summary',
+          'Completed task documentation',
+          'Inspection findings',
+          'Parts and materials used',
+          'Recommendations and follow-up actions',
+          'Live report preview',
+          'Professional PDF export',
+        ]}
+      />
       <Navbar />
 
       <section className='relative overflow-hidden border-b border-slate-200 bg-white'>
